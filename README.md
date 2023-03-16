@@ -27,13 +27,13 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 `<pub-id pub-id-type="doi">` is preferred capture, and this should be fed back to bioRxiv. In addition, encoda needs to be able to appropriately decode `<ext-link>` elements in references, so that these can be represented in the JSON, because it is otherwise perfectly acceptable capture in JATS (for example, when the link is not a DOI).
 
-## Manuscript specific XSLT
-
-### [/src/2021.11.12.468444/remove-supplementary-materials.xsl](/src/2021.11.12.468444/remove-supplementary-materials.xsl)
+### [/src/remove-supplementary-materials.xsl](/src/remove-supplementary-materials.xsl)
 
 This stylesheet is transforming an XML document by removing any "sec" element with a "sec-type" attribute value of "supplementary-material", and copying the remaining elements into a new "body" element in the output document.
 
 TODO: We need an expression of whether we believe this is work for biorXiv, encoda or EPP team.
+
+## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
 

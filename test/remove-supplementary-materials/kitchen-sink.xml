@@ -163,7 +163,7 @@
 </article-meta>
 <notes>
 <notes notes-type="competing-interest-statement">
-<title>Competing interest statement</title><p>The authors have declared no competing interest.</p></notes>
+<title>COMPETING INTEREST STATEMENT</title><p>The authors have declared no competing interest.</p></notes>
 <fn-group content-type="external-links">
 <fn fn-type="dataset"><p>
 <ext-link ext-link-type="uri" xlink:href="https://vdjdb.cdr3.net">https://vdjdb.cdr3.net</ext-link>.
@@ -381,13 +381,6 @@
 <p><bold>Table S1.</bold> Enrichment of public <bold>&#x03B2;</bold>CDR3s in CD8&#x002B; thymocytes vs DPCD3&#x002B;.</p>
 <p><bold>Table S2.</bold> Enrichment of virus-specific <bold>&#x03B2;</bold>CDR3s from databases<sup>14,15</sup> in clustered CD8&#x002B; thymocytes.</p>
 <p><bold>Table S3.</bold> List of peptides represented on the chord plot. Related to 4I.</p>
-</sec>
-<sec sec-type="supplementary-material">
-<title>Supporting information</title>
-<supplementary-material>
-<label>Supplemental figures</label>
-<media xlink:href="supplements/468444_file02.pdf" />
-</supplementary-material>
 </sec>
 </body>
 <back>
