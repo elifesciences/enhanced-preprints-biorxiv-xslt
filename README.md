@@ -29,7 +29,7 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 ### [/src/convert-app-to-sec.xsl](/src/convert-app-to-sec.xsl)
 
-This xsl converts `<app>` elements to `<sec>` elements. The `<app>` element is used for appendices, but encoda does not have support for it meaning that this content is entirely missing from the resultant JSON. Converting these appendices to sections is a workaround that ensures the content is retained. Work is require in encoda to support the decoding of `<app>` elements.
+This xsl converts `<app>` elements to `<sec>` elements. The `<app>` element is used for appendices, but encoda does not have support for it meaning that this content is entirely missing from the resultant JSON. Converting these appendices to sections is a workaround that ensures the content is retained. Work is required in encoda to support the decoding of `<app>` elements. An example of a preprint with appendices is 10.1101/2022.11.10.516056. 
 
 ## Manuscript specific XSLT
 
