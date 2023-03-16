@@ -27,6 +27,10 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 `<pub-id pub-id-type="doi">` is preferred capture, and this should be fed back to bioRxiv. In addition, encoda needs to be able to appropriately decode `<ext-link>` elements in references, so that these can be represented in the JSON, because it is otherwise perfectly acceptable capture in JATS (for example, when the link is not a DOI).
 
+### [/src/convert-app-to-sec.xsl](/src/convert-app-to-sec.xsl)
+
+This xsl converts `<app>` elements to `<sec>` elements. The `<app>` element is used for appendices, but encoda does not have support for it meaning that this content is entirely missing from the resultant JSON. Converting these appendices to sections is a workaround that ensures the content is retained. Work is require in encoda to support the decoding of `<app>` elements.
+
 ## Manuscript specific XSLT
 
 ### [/src/2021.11.12.468444/remove-supplementary-materials.xsl](/src/2021.11.12.468444/remove-supplementary-materials.xsl)
