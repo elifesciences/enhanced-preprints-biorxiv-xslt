@@ -29,7 +29,7 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 ### [/src/workaround-for-organisation-authors.xsl](/src/workaround-for-organisation-authors.xsl)
 
-This xsl is a workaround for handling group authors (organisations) in the author list. Encoda converts these into a useful representation in the JSON, but there is no support for author that are organisations in EPP client, so this needs updating.
+This xsl is a workaround for handling group authors (organisations) in both the author list and in references. Encoda converts these into a useful representation in the JSON, but there is no support for authors that are organisations in EPP client, so this needs updating.
 
 ## Manuscript specific XSLT
 

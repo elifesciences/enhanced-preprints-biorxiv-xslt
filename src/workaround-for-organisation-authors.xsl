@@ -32,4 +32,12 @@
         </contrib>
     </xsl:template>
 
+    <xsl:template match="mixed-citation/*[name()=('collab','on-behalf-of')]">
+        <string-name>
+            <surname>
+                <xsl:apply-templates select="* | text()"/>
+            </surname>
+        </string-name>
+    </xsl:template>
+
 </xsl:stylesheet>
