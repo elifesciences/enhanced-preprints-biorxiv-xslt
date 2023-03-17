@@ -7,6 +7,11 @@ on:
     tags:
       - '*'
 
+env:
+  GITHASH: $(shell git log -1 --pretty=format:"%H")
+  GITSHORTHASH: $(shell git log -1 --pretty=format:"%H" | head -c 8)
+  DATETIME: $(shell date -u '+%Y%m%d.%H%M')
+  GITBRANCH: $(shell git branch --show-current)
 
 jobs:
   documentation-check:
@@ -60,8 +65,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: ghcr.io/elifeciences/enhanced-preprints-biorxiv-xslt:latest
+        run: |
+          	docker buildx build \
+              -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:latest \
+              -t ghcr.io/enhanced-preprints-biorxiv-xslt:$(shell git log -1 --pretty=format:"%H") \
+              -t ghcr.io/enhanced-preprints-biorxiv-xslt:$(shell git branch --show-current)-$(shell git log -1 --pretty=format:"%H" | head -c 8)-$(shell date -u '+%Y%m%d.%H%M') \
+              --platform linux/amd64,linux/arm64 --target prod --push .
