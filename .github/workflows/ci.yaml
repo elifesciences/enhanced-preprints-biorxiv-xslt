@@ -19,7 +19,6 @@ jobs:
         run: ./scripts/verify-documentation.sh
   project-tests:
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/master'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -44,6 +43,7 @@ jobs:
           name: test-results
           path: ./project-tests.log
   build-and-push:
+    needs: [project-tests]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
