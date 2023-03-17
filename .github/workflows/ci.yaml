@@ -68,4 +68,4 @@ jobs:
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:latest \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITHASH \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITBRANCH-$GITSHORTHASH-$DATETIME \
-            --platform linux/amd64,linux/arm64 --target epp-biorxiv-xslt --push .
+            --platform linux/amd64,linux/arm64 --push .
