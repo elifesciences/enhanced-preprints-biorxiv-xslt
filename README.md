@@ -27,6 +27,10 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 `<pub-id pub-id-type="doi">` is preferred capture, and this should be fed back to bioRxiv. In addition, encoda needs to be able to appropriately decode `<ext-link>` elements in references, so that these can be represented in the JSON, because it is otherwise perfectly acceptable capture in JATS (for example, when the link is not a DOI).
 
+### [/src/workaround-for-organisation-authors.xsl](/src/workaround-for-organisation-authors.xsl)
+
+This xsl is a workaround for handling group authors (organisations) in the author list. Encoda converts these into a useful representation in the JSON, but there is no support for author that are organisations in EPP client, so this needs updating.
+
 ## Manuscript specific XSLT
 
 ### [/src/2021.11.12.468444/remove-supplementary-materials.xsl](/src/2021.11.12.468444/remove-supplementary-materials.xsl)
