@@ -27,6 +27,12 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 `<pub-id pub-id-type="doi">` is preferred capture, and this should be fed back to bioRxiv. In addition, encoda needs to be able to appropriately decode `<ext-link>` elements in references, so that these can be represented in the JSON, because it is otherwise perfectly acceptable capture in JATS (for example, when the link is not a DOI).
 
+### [/src/collate-reference-lists.xsl](/src/collate-reference-lists.xsl)
+
+This xsl handles multiple reference lists in a preprint. If the preprint has mutliple reference lists (an example of this is 10.1101/2022.12.20.521179), then the references from any extra reference lists are added to the first one. This means that the references are retained (although the separation of the reference lists and the extra headings cannot be retained). 
+
+Encoda is currently unable to handle to handke files with mutliple reference lists. This will need resolving first, becfore EPP client being updated, so that mutliple reference lists can be rendered with their headings. 
+
 ## Manuscript specific XSLT
 
 ### [/src/2021.11.12.468444/remove-supplementary-materials.xsl](/src/2021.11.12.468444/remove-supplementary-materials.xsl)
