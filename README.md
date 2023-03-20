@@ -13,10 +13,6 @@ In the entry for each XSL file please link to the file in github.
 
 ## Global XSLT
 
-### [/src/convert-all-caps-title-to-title-case.xsl](/src/convert-all-caps-title-to-title-case.xsl)
-
-This is a candidate for removal. If titles are provided as all caps in the original we should not be changing it - there are too many exceptions (words that should remain as upper case) to appropriately handle this.
-
 ### [/src/change-label-and-title-elements.xsl](/src/change-label-and-title-elements.xsl)
 
 This stylesheet is transforming an XML document by adding a "label" element to any "title" element that has a preceding "label" element, and removing any "label" element that has a following "title" element. Work is required in encoda to approprately decode these labels, so that they can then be represented in the resultant JSON.
