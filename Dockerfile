@@ -28,4 +28,4 @@ ENTRYPOINT ["apply-xslt"]
 FROM base as test
 WORKDIR /app
 COPY . /app
-CMD ["/app/project_tests.sh"]
+ENTRYPOINT ["/app/project_tests.sh"]
