@@ -575,5 +575,15 @@
 <graphic xlink:href="223354v2_tblS3.tif"/>
 </table-wrap>
 </sec>
+<ref-list>
+<title>References for Supplemental Materials and Methods</title>
+<ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref>
+<ref id="c65"><label>65.</label><mixed-citation publication-type="journal"><string-name><given-names>M. S.</given-names> <surname>Kowalczyk</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell RNA-seq reveals changes in cell cycle and differentiation programs upon aging of hematopoietic stem cells</article-title>. <source>Genome Res</source> <volume>25</volume>, <fpage>1860</fpage>&#x2013;<lpage>1872</lpage> (<year>2015</year>).</mixed-citation></ref>
+</ref-list>
+<ref-list>
+<title>Another reference list</title>
+<ref id="c66"><label>66.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Reversed graph embedding resolves complex single-cell trajectories</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>979</fpage>&#x2013;<lpage>982</lpage> (<year>2017</year>).</mixed-citation></ref>
+<ref id="c67"><label>67.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell mRNA quantification and differential analysis with Census</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>309</fpage>&#x2013;<lpage>315</lpage> (<year>2017</year>).</mixed-citation></ref>
+</ref-list>
 </back>
 </article>
