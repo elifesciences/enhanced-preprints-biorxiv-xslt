@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:11 as base
 
 RUN apt-get update && apt-get install -y wget libxml2-utils
 
@@ -10,11 +10,7 @@ RUN echo "#!/bin/bash\njava -jar /usr/share/java/saxon.jar -s:\$1 -xsl:\$2" > /u
 
 RUN chmod +x /usr/local/bin/apply-xslt
 
-RUN touch /JATS-archivearticle1.dtd
-
 RUN touch /tmp/JATS-archivearticle1.dtd
-
-ENV DOCKER_EPP_BIORXIV_XSLT=1
 
 WORKDIR /app
 
@@ -24,4 +20,12 @@ RUN chmod +x -R /app/scripts/*
 
 COPY src /app/src
 
-CMD ["/bin/bash"]
+ENTRYPOINT ["/app/scripts/transform.sh"]
+
+FROM base as apply-xslt
+ENTRYPOINT ["apply-xslt"]
+
+FROM base as test
+WORKDIR /app
+COPY . /app
+CMD ["/app/project_tests.sh"]
