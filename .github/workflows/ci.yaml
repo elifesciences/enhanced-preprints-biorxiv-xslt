@@ -31,8 +31,8 @@ jobs:
 
       - name: Run tests in docker container
         run: |
-          docker buildx build -t epp-biorxiv-xslt-test -f Dockerfile.test .
-          docker run --rm epp-biorxiv-xslt-test /app/project_tests.sh
+          docker buildx build -t epp-biorxiv-xslt:test --target test .
+          docker run --rm epp-biorxiv-xslt:test
 
       - name: Output project-tests.log
         run: cat ./project-tests.log
@@ -64,7 +64,7 @@ jobs:
           GITSHORTHASH=$(git log -1 --pretty=format:"%H" | head -c 8)
           DATETIME=$(date -u '+%Y%m%d.%H%M')
           GITBRANCH=$(git branch --show-current)
-          docker buildx build \
+          docker buildx build --target prod \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:latest \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITHASH \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITBRANCH-$GITSHORTHASH-$DATETIME \
