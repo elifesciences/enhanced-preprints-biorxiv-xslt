@@ -37,6 +37,19 @@ Changes are required to encoda so as to decode and encode appendices, and then p
 
 This stylesheet is transforming an XML document by removing any "sec" element with a "sec-type" attribute value of "supplementary-material". These supplementary material sections are only partially retained by encoda  - the files themselves need representation as downloadable files in the JSON. As it stands the labels and filepaths are decoded and re-encoded as paragraphs. The work to fix this is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/116. The current rendering on EPP as a result is less than ideal, where labels and filepaths are rendered in a series of paragraphs. The purpose of this xsl is to remove these sections until encoda and EPP can be updated to render downloadable supplementary files on the page.
 
+### [/src/collate-reference-lists.xsl](/src/collate-reference-lists.xsl)
+
+This xsl handles multiple reference lists in a preprint. If the preprint has mutliple reference lists (an example of this is 10.1101/2022.12.20.521179), then the references from any extra reference lists are added to the first one. This means that the references are retained (although the separation of the reference lists and the extra headings cannot be retained). 
+
+Encoda is currently unable to handle to handke files with mutliple reference lists. This will need resolving first, becfore EPP client being updated, so that mutliple reference lists can be rendered with their headings. 
+
+Changes are required to encoda so as to decode and encode appendices, and then possible changes are required in EPP depending on how this is representated in the JSON. 
+
+### [/src/remove-supplementary-materials.xsl](/src/remove-supplementary-materials.xsl)
+
+This stylesheet is transforming an XML document by removing any "sec" element with a "sec-type" attribute value of "supplementary-material". These supplementary material sections are only partially retained by encoda  - the files themselves need representation as downloadable files in the JSON. As it stands the labels and filepaths are decoded and re-encoded as paragraphs. The work to fix this is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/116. The current rendering on EPP as a result is less than ideal, where labels and filepaths are rendered in a series of paragraphs. The purpose of this xsl is to remove these sections until encoda and EPP can be updated to render downloadable supplementary files on the page.
+
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
@@ -57,7 +70,8 @@ This xsl is adding a missing affiliation for the first author. Affiliations a li
 
 ### [/src/2021.09.24.461751/workaround-for-statements.xsl](/src/2021.09.24.461751/workaround-for-statements.xsl)
 
-This xsl is a wrokaround for `<statement>` tags for Proofs in 2021.09.24.461751. These are decoded appropriately by encoda as `Claim` objects with the `claimType` `Proof`, but there is no support in EPP to render these items. The xsl therefore converts proofs that are captured as images to `<fig>` so that these can be rendered, and removes `<statement>` in the case where it contains content not purely captured as an image. We do not yet know how proofs might be captured in other preprints so this is retained as manuscript specific for now. 
+
+This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751. These are decoded appropriately by encoda as `Claim` objects with the `claimType` `Proof`, but there is no support in EPP to render these items. The xsl therefore converts proofs that are captured as images to `<fig>` so that these can be rendered, and removes `<statement>` in the case where it contains content not purely captured as an image. We do not yet know how proofs might be captured in other preprints so this is retained as manuscript specific for now. 
 
 The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
 
