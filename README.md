@@ -104,28 +104,28 @@ Some examples:
 
 ## Build docker image
 ```
-docker buildx build -t epp-biorxiv-xslt .
+docker buildx build -t epp-biorxiv-xslt --target prod .
 ```
 
 ## Apply transform to XML
 ```
-cat test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml | docker run --rm -i epp-biorxiv-xslt /app/scripts/transform.sh --doi 2022.05.30.22275761
+cat test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml | docker run --rm -i epp-biorxiv-xslt
 ```
 
 Output to a file:
 ```
-cat test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml | docker run --rm -i epp-biorxiv-xslt /app/scripts/transform.sh --doi 2022.05.30.22275761 > output.xml
+cat test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml | docker run --rm -i epp-biorxiv-xslt > output.xml
 ```
 
 Introduce logging:
 ```
 touch session.log
-cat test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml | docker run --rm -i -v "./session.log:/session.log" epp-biorxiv-xslt /app/scripts/transform.sh --doi 2022.05.30.22275761 --log /session.log
+cat test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml | docker run --rm -i -v "./session.log:/session.log" epp-biorxiv-xslt --log /session.log
 ```
 
 Apply only a single xslt:
 ```
-cat test/fixtures/kitchen-sink.xml | docker run --rm -i epp-biorxiv-xslt /app/scripts/transform.sh /app/src/change-label-and-title-elements.xsl
+cat test/fixtures/kitchen-sink.xml | docker run --rm -i epp-biorxiv-xslt /app/src/change-label-and-title-elements.xsl
 ```
 
 ## Process a folder of biorXiv XML
@@ -154,7 +154,6 @@ Run with logs:
 
 ## Run projects tests entirely within docker container
 ```
-docker buildx build -t epp-biorxiv-xslt .
-docker buildx build -t epp-biorxiv-xslt-test -f Dockerfile.test .
-docker run --rm epp-biorxiv-xslt-test /app/project_tests.sh
+docker buildx build -t epp-biorxiv-xslt:test --target test .
+docker run --rm epp-biorxiv-xslt:test
 ```

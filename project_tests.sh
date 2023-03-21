@@ -66,20 +66,16 @@ function transform_xml() {
         exit 1
     fi
 
+    if [ -n "$2" ] && [ ! -e "$2" ]; then
+        echo "Error: XSLT file is empty (${2})" >&2
+        exit 1
+    fi
+
     if [[ -n "${SESSION_LOG_FILE}" ]]; then
-        local debug=" --log ${SCRIPT_DIR}/project-tests.log --log-info ${1#*fixtures/} --log-noprefix"
+        local debug=" --log ${SCRIPT_DIR}/project-tests.log --log-info ${1#*fixtures/}"
     fi
 
-    if [ "${2:-}" = "--doi" ]; then
-        cat "${1}" | "${SCRIPT_DIR}/scripts/transform.sh" --doi "${3}"${debug:-}
-    else
-        if [ -n "$2" ] && [ ! -e "$2" ]; then
-            echo "Error: XSLT file is empty (${2})" >&2
-            exit 1
-        fi
-
-        cat "${1}" | "${SCRIPT_DIR}/scripts/transform.sh" "${2:-}"${debug:-}
-    fi
+    cat "${1}" | "${SCRIPT_DIR}/scripts/transform.sh" "${2:-}"${debug:-}
 }
 
 function expected() {
@@ -137,7 +133,7 @@ for manuscript_dir in ${SCRIPT_DIR}/src/*/; do
     if [ -d "${SCRIPT_DIR}/test/all/${manuscript_doi}" ]; then
         for xml_file in ${SCRIPT_DIR}/test/all/${manuscript_doi}/*.xml; do
             echo "Running test for (${xml_file#*test/})"
-            transform_xml "${SCRIPT_DIR}/test/fixtures/${manuscript_doi}/$(basename ${xml_file})" --doi "${manuscript_doi}" > "${TEST_FILE}"
+            transform_xml "${SCRIPT_DIR}/test/fixtures/${manuscript_doi}/$(basename ${xml_file})" > "${TEST_FILE}"
 
             expected "${TEST_FILE}" "${xml_file}" "${SCRIPT_DIR}/test/fixtures/${manuscript_doi}/$(basename ${xml_file})" "${xml_file}"
         done
