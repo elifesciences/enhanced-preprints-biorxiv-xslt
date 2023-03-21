@@ -51,8 +51,6 @@ FULL_PATH_DEST_DIR="$(realpath "${DEST_DIR}")"
 function transform_xml() {
     local xml_file="${1}"
     local xml_filename="$(basename ${xml_file})"
-    local doi=$(cat ${xml_file} | sed 's/xmlns=".*"//g' | xmllint -xpath 'string(/article/front/article-meta/article-id)' -)
-    local doi_suffix="${doi#*10.1101/}"
     local xml_file_source_dir="$(dirname "${xml_file}")"
     local xml_file_dest_dir="${FULL_PATH_DEST_DIR}${xml_file_source_dir#${FULL_PATH_SOURCE_DIR}}"
 
@@ -62,7 +60,7 @@ function transform_xml() {
         local session_log=" --log ${SESSION_LOG_FILE}"
     fi
 
-    cat "${xml_file}" | "${SCRIPT_DIR}/transform.sh" --doi "${doi_suffix}"${session_log:-} > "${xml_file_dest_dir}/${xml_filename}"
+    cat "${xml_file}" | "${SCRIPT_DIR}/transform.sh"${session_log:-} > "${xml_file_dest_dir}/${xml_filename}"
 }
 
 for xml_file in $(find "${FULL_PATH_SOURCE_DIR}" -type f -name '*.xml'); do
