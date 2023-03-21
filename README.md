@@ -94,7 +94,7 @@ Some examples:
 
 ## Build docker image
 ```
-docker buildx build -t epp-biorxiv-xslt --target prod.
+docker buildx build -t epp-biorxiv-xslt --target prod .
 ```
 
 ## Apply transform to XML
