@@ -580,6 +580,100 @@
 <p>The table is organized according to the clockwise order of the chord plot segments.</p></caption>
 <graphic xlink:href="223354v2_tblS3.tif"/>
 </table-wrap>
+<table-wrap id="tab4">
+<label>Table S4</label>
+<caption><p>Pairwise t-tests comparing the AUC values for different training and testing set combinations. AUCs were obtained across 100 random samples of 500 images from the test sets. P-values adjusted for multiple comparisons using Bonferroni correction. ** not significant</p></caption>
+<alternatives>
+<table frame="hsides" rules="all">
+<thead>
+<tr>
+<th align="left">Experiment 1</th>
+<th align="left">Experiment 2</th>
+<th align="left">Mean 1</th>
+<th align="left">Mean 2</th>
+<th align="left">difference</th>
+<th align="left">p.ad j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.897</td>
+<td align="left">0.031</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (90&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.903</td>
+<td align="left">0.026</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (70&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.899</td>
+<td align="left">0.03</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (50&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.842</td>
+<td align="left">0.087</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (30&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.824</td>
+<td align="left">0.105</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (10&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.755</td>
+<td align="left">0.174</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.736</td>
+<td align="left">0.193</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OMP (no Apes) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.743</td>
+<td align="left">0.186</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">COCO on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.578</td>
+<td align="left">0.351</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<graphic xlink:href="2212.00741v1_tbl1a.jpg"/>
+<graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+</alternatives>
+</table-wrap>
 </sec>
 <app-group>
 <app id="app1">
