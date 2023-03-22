@@ -49,7 +49,7 @@ This stylesheet is transforming an XML document by removing any "sec" element wi
 
 Currently EPP client has no support for HTML tables, and no support for either mathML or latex representations of maths. Encoda will always use the machine readable version of content when available, i.e. the representation that is not an image. Therefore, when XML which has both machine readable and image representations of the same content, the image representation is stripped making the content unavailable in EPP. This xsl removes the machine readable representation of content when an image representation is available (both will be captured in an `<alternatives>` tag), so that the image version is at least rendered by EPP.
 
-This xsl can be removed once support for machine readable tables (html) and maths (mathML and/orlatex) is added.
+This xsl can be removed once support for machine readable tables (html) and maths (mathML and/orlatex) is added in EPP and/or encoda is updated so that both representations are included in the JSON.
 
 ## Manuscript specific XSLT
 
