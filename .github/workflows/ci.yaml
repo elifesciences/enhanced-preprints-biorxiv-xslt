@@ -64,7 +64,7 @@ jobs:
           GITSHORTHASH=$(git log -1 --pretty=format:"%H" | head -c 8)
           DATETIME=$(date -u '+%Y%m%d.%H%M')
           GITBRANCH=$(git branch --show-current)
-          docker buildx build --target prod \
+          docker buildx build \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:latest \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITHASH \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITBRANCH-$GITSHORTHASH-$DATETIME \

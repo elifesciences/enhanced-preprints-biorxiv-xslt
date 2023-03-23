@@ -15,14 +15,14 @@ RUN touch /tmp/JATS-archivearticle1.dtd
 FROM base as apply-xslt
 ENTRYPOINT ["apply-xslt"]
 
+FROM base as test
+WORKDIR /app
+COPY . /app
+ENTRYPOINT ["/app/project_tests.sh"]
+
 FROM base as prod
 WORKDIR /app
 COPY scripts /app/scripts
 RUN chmod +x -R /app/scripts/*
 COPY src /app/src
 ENTRYPOINT ["/app/scripts/transform.sh"]
-
-FROM base as test
-WORKDIR /app
-COPY . /app
-ENTRYPOINT ["/app/project_tests.sh"]
