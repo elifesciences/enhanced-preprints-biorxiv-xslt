@@ -197,7 +197,7 @@
 <p>We hypothesized that high-resolution sequencing of the TCR repertoire of developing thymocytes and peripheral T cells would yield insights into repertoire selection and function towards pathogens. We focused on the development of CD8<sup>&#x002B;</sup> T cells as they represent the main effectors against viral pathogens, those that have had most chances to influence the evolution of our immune system. We obtained samples from organ donors allowing access to thymocytes and peripheral T cells, as well as datasets from patients undergoing vaccinations or with infections; we also used TCR data available from multiple public repositories.</p>
 <p>We identified a population of CD8<sup>&#x002B;</sup> T cells harboring diversified and polyspecific &#x03B1;/&#x03B2; TCRs that each can bind to multiple unrelated viral peptides, notably those from commonly encountered viruses such as EBV, CMV or influenza. We hypothesize that these cells represent a first line of defense that is promptly mobilized in response to infections, possibly containing them before a more specific response subsequently ensures their control. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2;TCRs for broad antiviral responses and heterologous immunity.</p>
 <p>Protect hexadecimal notation: &#x03B2; &#x1D4A9; &#x00c5;</p>
-<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></alternatives></inline-formula> such that the predicted firing rate could be represented as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></alternatives></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></alternatives></inline-formula>, where <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></alternatives></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
+<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></inline-formula> such that the predicted firing rate could be represented as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></inline-formula>, where <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
 </sec>
 <sec id="s2">
 <title>Results</title>
@@ -578,6 +578,11 @@
 <caption><title>List of peptides represented on the chord plot. Related to 4G right.</title>
 <p>The table is organized according to the clockwise order of the chord plot segments.</p></caption>
 <graphic xlink:href="223354v2_tblS3.tif"/>
+</table-wrap>
+<table-wrap id="tab4">
+<label>Table S4</label>
+<caption><p>Pairwise t-tests comparing the AUC values for different training and testing set combinations. AUCs were obtained across 100 random samples of 500 images from the test sets. P-values adjusted for multiple comparisons using Bonferroni correction. ** not significant</p></caption>
+<graphic xlink:href="2212.00741v1_tbl1a.jpg"/><graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
 </table-wrap>
 </sec>
 <sec id="app1"><title>Appendix 1</title><sec id="s10">
