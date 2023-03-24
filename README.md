@@ -76,6 +76,10 @@ This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751.
 
 The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
 
+### [/src/2021.06.21.449261/fix-references.xsl](/src/2021.06.21.449261/fix-references.xsl)
+
+This xsl is to handle some incorrect tagging in XML file from bioRxiv, which leads to poor display (due to the different ways that our/bioRxiv's platforms render references). This has been fed back to bioRxiv for the future.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
