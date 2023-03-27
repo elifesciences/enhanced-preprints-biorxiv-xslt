@@ -69,8 +69,11 @@ It can be fixed by treating affiliations as mixed content (pulling in the text c
 
 This xsl is adding a missing affiliation for the first author. Affiliations a linked to using an `<xref>` element, which is a child of the author's `<contrib contrib-type="author">` element. This was presumably a typesetting error that could be (or have been) fixed on bioRxiv's end, but we haven't established how best to feedback this kind of problem. This is one of the 'examples' we launched with back in October, and has now been published as an (old style) VOR, so I'm not sure how we want to specifically handle it.
 
-### [/src/2021.09.24.461751/workaround-for-statements.xsl](/src/2021.09.24.461751/workaround-for-statements.xsl)
+### [/src/2022.11.23.517579/add-missing-affiliation-links.xsl](/src/2022.11.23.517579/add-missing-affiliation-links.xsl)
 
+This xsl is adding a missing affiliation link for all authors. Currently no affiliations display for any authors. This can be solved with a tagging change and will be fed back to bioRxiv for the future.
+
+### [/src/2021.09.24.461751/workaround-for-statements.xsl](/src/2021.09.24.461751/workaround-for-statements.xsl)
 
 This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751. These are decoded appropriately by encoda as `Claim` objects with the `claimType` `Proof`, but there is no support in EPP to render these items. The xsl therefore converts proofs that are captured as images to `<fig>` so that these can be rendered, and removes `<statement>` in the case where it contains content not purely captured as an image. We do not yet know how proofs might be captured in other preprints so this is retained as manuscript specific for now. 
 
