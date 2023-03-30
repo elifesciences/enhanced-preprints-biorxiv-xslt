@@ -732,6 +732,67 @@
 </sec>
 </app>
 </app-group>
+<glossary>
+<title>Abbreviations</title>
+<def-list>
+<def-item>
+<term><italic>I</italic><sub><italic>Ks</italic></sub></term>
+<def><p>delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></def>
+</def-item>
+<def-item>
+<term>LQTS</term>
+<def><p>long QT syndrome</p></def>
+</def-item>
+<def-item>
+<term>DIDS</term>
+<def><p>4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></def>
+</def-item>
+<def-item>
+<term>SITS</term>
+<def><p>4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></def>
+</def-item>
+<def-item>
+<term>HMR1556</term>
+<def><p>(3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></def>
+</def-item>
+<def-item>
+<term>G-V</term>
+<def><p>conductance-voltage relationship</p></def>
+</def-item>
+<def-item>
+<term><italic>k</italic></term>
+<def><p>slope factor</p></def>
+</def-item>
+<def-item>
+<term>V<sub>1/2</sub></term>
+<def><p>voltage at half-maximal activation</p></def>
+</def-item>
+<def-item>
+<term>WT</term>
+<def><p>wild type</p></def>
+</def-item>
+<def-item>
+<term>ps-<italic>I</italic><sub><italic>Ks</italic></sub></term>
+<def><p>pseudo-KCNE1-KCNQ1</p></def>
+</def-item>
+<def-item>
+<term>MD</term>
+<def><p>molecular dynamics</p></def>
+</def-item>
+<def-item>
+<term>MM</term>
+<def><p>molecular mechanics</p></def>
+</def-item>
+<def-item>
+<term>PBSA</term>
+<def><p>Poisson-Boltzmann surface area</p></def>
+</def-item>
+<def-item>
+<term>GBSA</term>
+<def><p>generalized Born surface area.</p></def>
+</def-item>
+</def-list>
+</glossary>
 <ref-list>
 <title>References for Supplemental Materials and Methods</title>
 <ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref>
