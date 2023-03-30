@@ -51,6 +51,12 @@ Currently EPP client has no support for HTML tables, and no support for either m
 
 This xsl can be removed once support for machine readable tables (html) and maths (mathML and/or latex) is added in EPP and/or encoda is updated so that both representations are included in the JSON. Requirement captured in [this ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/567).
 
+### [/src/convert-glossaries.xsl](/src/convert-glossaries.xsl)
+
+In JATS glossaries are captured using `<glossary>`. These typically contain a `<def-list>` (very similar to the description list in HTML). Encoda needs adjusting so as to appropriately decode the glossary (and def-list if it doesn't already) and encode this in JSON. After that EPP may need updating so as to render these appropriately.
+
+In the meantime, this xsl transforms a def list into a simple list, with each definition being a list item in that list and each term being a nest list-item in the respective defs list-item.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
