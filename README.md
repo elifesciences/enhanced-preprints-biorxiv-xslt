@@ -57,6 +57,14 @@ In JATS glossaries are captured using `<glossary>`. These typically contain a `<
 
 In the meantime, this xsl transforms a def list into a simple list, with each definition being a list item in that list and each term being a nest list-item in the respective defs list-item.
 
+### [/src/remove-country-from-aff.xsl](/src/remove-country-from-aff.xsl)
+
+In JATS the `<aff>` element can be treated as mixed content. In other words, it can be somewhat prescriptive about how the content inside should be rendered - both the elements and text should be included in the order provided. In this [ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/343) encoda was adjusted so that "any text not within the `<institution>` or address tags is appended to the organization name.". The issue with this approach alongside [the approach on EPP](https://github.com/elifesciences/enhanced-preprints-client/blob/e2584c6da18dc71a6e80f078d7be86ebd434509f/src/components/atoms/institutions/institutions.tsx#L19) is that the order of semantic content within aff is assumed - it's assumed that country will always appear last. This is not always the case, as is true for [this preprint](https://www.biorxiv.org/content/10.1101/2023.02.27.530167v2) where the postcode appears after the country. In the JSON the country is pulled out of context, leaving extra punctuation in the `name`, and on EPP the affiliation is rendered with extra punctuation.
+
+This can be solved in mutliple ways. One is to ask bioRxiv to not treat their affiliations as mixed-content - which has already been done. Another is for encoda to be adjusted so as to retain the original order of the content as it is supplied (I'm unsure if this will be possible). 
+
+In the meantime, this xsl simply strips all country tags (retaining the content within) from any affs, so that the affiliation string can be rendered appropriately. It does mean that some semantic information is lost (the `address` in the HTML).
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
