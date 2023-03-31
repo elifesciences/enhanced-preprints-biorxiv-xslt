@@ -14,7 +14,23 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="aff/country">
+    <xsl:template match="country[ancestor::aff]">
+        <xsl:apply-templates select="*|text()"/>
+    </xsl:template>
+
+    <xsl:template match="state[ancestor::aff]">
+        <xsl:apply-templates select="*|text()"/>
+    </xsl:template>
+
+    <xsl:template match="addr-line[ancestor::aff]">
+        <xsl:apply-templates select="*|text()"/>
+    </xsl:template>
+
+    <xsl:template match="city[ancestor::aff]">
+        <xsl:apply-templates select="*|text()"/>
+    </xsl:template>
+
+    <xsl:template match="postal-code[ancestor::aff]">
         <xsl:apply-templates select="*|text()"/>
     </xsl:template>
     
