@@ -55,7 +55,7 @@ This xsl can be removed once support for machine readable tables (html) and math
 
 In JATS glossaries are captured using `<glossary>`. These typically contain a `<def-list>` (very similar to the description list in HTML). Encoda needs adjusting so as to appropriately decode the glossary (and def-list if it doesn't already) and encode this in JSON. After that EPP may need updating so as to render these appropriately.
 
-In the meantime, this xsl transforms a def list into a simple list, with each definition being a list item in that list and each term being a nest list-item in the respective defs list-item.
+In the meantime, this xsl transforms a def list into a simple list, with each definition/term pair being a list item in that list with their own p tags.
 
 ### [/src/remove-localities-from-aff.xsl](/src/remove-localities-from-aff.xsl)
 
