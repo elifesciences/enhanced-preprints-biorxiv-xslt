@@ -121,14 +121,14 @@
 <xref ref-type="aff" rid="a2">2</xref>
 </contrib>
 <on-behalf-of>the other Brain Interfacing Laboratory</on-behalf-of>
-<aff id="a1"><label>1</label><institution>Sorbonne Universit&#x00E9;, INSERM, Immunology-Immunopathology-Immunotherapy (i3)</institution>, Paris, <country>France</country></aff>
-<aff id="a2"><label>2</label><institution>AP-HP, H&#x00F4;pital Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re, Clinical Investigation Center for Biotherapies (CIC-BTi) and Immunology-Inflammation-Infectiology and Dermatology Department (3iD)</institution>, Paris, <country>France</country></aff>
-<aff id="a3"><label>3</label><institution>Universit&#x00E9; de Paris, Institut Cochin</institution>, CNRS, INSERM, Paris, <country>France</country></aff>
-<aff id="a4"><label>4</label><institution>ILTOO pharma, Statistical department</institution>, Paris, <country>France</country></aff>
-<aff id="a5"><label>5</label><institution>CRCINA, INSERM, CNRS, Universit&#x00E9; d&#x2019;Angers, Universit&#x00E9; de Nantes</institution>, Nantes, <country>France</country></aff>
+<aff id="a1"><label>1</label><institution>Sorbonne Universit&#x00E9;, INSERM, Immunology-Immunopathology-Immunotherapy (i3)</institution>, Paris, France</aff>
+<aff id="a2"><label>2</label><institution>AP-HP, H&#x00F4;pital Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re, Clinical Investigation Center for Biotherapies (CIC-BTi) and Immunology-Inflammation-Infectiology and Dermatology Department (3iD)</institution>, Paris, France</aff>
+<aff id="a3"><label>3</label><institution>Universit&#x00E9; de Paris, Institut Cochin</institution>, CNRS, INSERM, Paris, France</aff>
+<aff id="a4"><label>4</label><institution>ILTOO pharma, Statistical department</institution>, Paris, France</aff>
+<aff id="a5"><label>5</label><institution>CRCINA, INSERM, CNRS, Universit&#x00E9; d&#x2019;Angers, Universit&#x00E9; de Nantes</institution>, Nantes, France</aff>
 <aff id="a6"><label>6</label><institution>Center of Life Sciences</institution>, Skoltech, Moscow, Russia</aff>
-<aff id="a7"><label>7</label><institution>Assistance Publique H&#x00F4;pitaux de Paris, Service de Diab&#x00E9;tologie et Immunologie Clinique, Cochin Hospital</institution>, Paris, <country>France</country></aff>
-<aff id="a1"><label>9</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
+<aff id="a7"><label>7</label><institution>Assistance Publique H&#x00F4;pitaux de Paris, Service de Diab&#x00E9;tologie et Immunologie Clinique, Cochin Hospital</institution>, Paris, France</aff>
+<aff id="a1"><label>9</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, campus UAB, Cerdanyola del Vall&#x00E8;s, 08193 Barcelona, Catalonia, Spain</aff>
 </contrib-group>
 <author-notes>
 <fn id="n1" fn-type="present-address"><label>8</label><p>Present Institution: Parean biotechnologies, Saint-Malo, France</p></fn>
@@ -199,7 +199,7 @@
 <p>We hypothesized that high-resolution sequencing of the TCR repertoire of developing thymocytes and peripheral T cells would yield insights into repertoire selection and function towards pathogens. We focused on the development of CD8<sup>&#x002B;</sup> T cells as they represent the main effectors against viral pathogens, those that have had most chances to influence the evolution of our immune system. We obtained samples from organ donors allowing access to thymocytes and peripheral T cells, as well as datasets from patients undergoing vaccinations or with infections; we also used TCR data available from multiple public repositories.</p>
 <p>We identified a population of CD8<sup>&#x002B;</sup> T cells harboring diversified and polyspecific &#x03B1;/&#x03B2; TCRs that each can bind to multiple unrelated viral peptides, notably those from commonly encountered viruses such as EBV, CMV or influenza. We hypothesize that these cells represent a first line of defense that is promptly mobilized in response to infections, possibly containing them before a more specific response subsequently ensures their control. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2;TCRs for broad antiviral responses and heterologous immunity.</p>
 <p>Protect hexadecimal notation: &#x03B2; &#x1D4A9; &#x00c5;</p>
-<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></inline-formula> such that the predicted firing rate could be represented as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></inline-formula>, where <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
+<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></alternatives></inline-formula> such that the predicted firing rate could be represented as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></alternatives></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></alternatives></inline-formula>, where <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></alternatives></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
 </sec>
 <sec id="s2">
 <title>Results</title>
@@ -591,7 +591,96 @@
 <table-wrap id="tab4">
 <label>Table S4</label>
 <caption><p>Pairwise t-tests comparing the AUC values for different training and testing set combinations. AUCs were obtained across 100 random samples of 500 images from the test sets. P-values adjusted for multiple comparisons using Bonferroni correction. ** not significant</p></caption>
-<graphic xlink:href="2212.00741v1_tbl1a.jpg"/><graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+<alternatives>
+<table frame="hsides" rules="all">
+<thead>
+<tr>
+<th align="left">Experiment 1</th>
+<th align="left">Experiment 2</th>
+<th align="left">Mean 1</th>
+<th align="left">Mean 2</th>
+<th align="left">difference</th>
+<th align="left">p.ad j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.897</td>
+<td align="left">0.031</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (90&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.903</td>
+<td align="left">0.026</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (70&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.899</td>
+<td align="left">0.03</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (50&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.842</td>
+<td align="left">0.087</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (30&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.824</td>
+<td align="left">0.105</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (10&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.755</td>
+<td align="left">0.174</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.736</td>
+<td align="left">0.193</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OMP (no Apes) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.743</td>
+<td align="left">0.186</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">COCO on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.578</td>
+<td align="left">0.351</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<graphic xlink:href="2212.00741v1_tbl1a.jpg"/>
+<graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+</alternatives>
 </table-wrap>
 </sec>
 <app-group>

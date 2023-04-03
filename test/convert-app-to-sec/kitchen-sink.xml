@@ -128,6 +128,7 @@
 <aff id="a5"><label>5</label><institution>CRCINA, INSERM, CNRS, Universit&#x00E9; d&#x2019;Angers, Universit&#x00E9; de Nantes</institution>, Nantes, <country>France</country></aff>
 <aff id="a6"><label>6</label><institution>Center of Life Sciences</institution>, Skoltech, Moscow, Russia</aff>
 <aff id="a7"><label>7</label><institution>Assistance Publique H&#x00F4;pitaux de Paris, Service de Diab&#x00E9;tologie et Immunologie Clinique, Cochin Hospital</institution>, Paris, <country>France</country></aff>
+<aff id="a1"><label>9</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
 </contrib-group>
 <author-notes>
 <fn id="n1" fn-type="present-address"><label>8</label><p>Present Institution: Parean biotechnologies, Saint-Malo, France</p></fn>
@@ -721,6 +722,67 @@
 <p>Another endovascular technique is photothrombosis, which does not require an additional surgery to implement, limiting disruption of the microelectrode array. <bold><italic><xref ref-type="bibr" rid="c42">Gulati et al. (2015</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c28">Ramanathan et al. (2018</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c50">Khateeb et al. (2019</xref></italic></bold>). This approach uses rose bengal, a photosenstive dye, injected intravenously into the circulatory system. When 561nm green light is shined over a blood vessel, the dye undergoes a local conformational change and generates singlet oxygen, damaging arterial endothelial cells and initiating the clotting cascade&#x2013;resulting in damage resembling an ischemic stroke <bold><italic><xref ref-type="bibr" rid="c10">Watson et al. (1985</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c11">Carmichael (2005</xref></italic></bold>). This approach can be used to deliver a well-localized lesional boundary. In rodents, this can be done entirely non-invasively because green light penetrates through the thin layer of skull. In larger animals, a method of light delivery is needed. If an optical fiber is chronically implanted at the time of electrode array insertion, light can be delivered without surgery and lesions can be made without disrupting the array, but this chronically implanted fiber may act as a route for infection. Alternatively, the fiber could be placed though a burr hole made at the time of the lesion, but this may compromise localization accuracy like other burr-hole techniques.</p>
 <p>Chemical lesioning is done by injecting a damaging chemical into the cortical region. These chemicals can be excitotoxic pharmacologic agents like ibotenic acid that selectively and directly damage neuronal cell bodies <bold><italic><xref ref-type="bibr" rid="c8">Murata et al. (2008</xref></italic></bold>), or they can be vasoconstrictors like endothelin-1 that create anoxic cortical injury <bold><italic><xref ref-type="bibr" rid="c23">Dai et al. (2017</xref></italic></bold>). These chemicals have the same potential drawbacks of other injection-based methods: either a permanent pathway is added to allow precise injection in the area of the microelectrode array, creating a route for infection, or injection is done through a burr hole, making it difficult to localize to the region of the array and disrupting experimental continuity. It is also difficult to control the spread of the chemicals, preventing precision in lesion extent.</p>
 </sec></sec>
+<glossary>
+<title>Abbreviations</title>
+<def-list>
+<def-item>
+<term><italic>I</italic><sub><italic>Ks</italic></sub></term>
+<def><p>delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></def>
+</def-item>
+<def-item>
+<term>LQTS</term>
+<def><p>long QT syndrome</p></def>
+</def-item>
+<def-item>
+<term>DIDS</term>
+<def><p>4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></def>
+</def-item>
+<def-item>
+<term>SITS</term>
+<def><p>4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></def>
+</def-item>
+<def-item>
+<term>HMR1556</term>
+<def><p>(3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></def>
+</def-item>
+<def-item>
+<term>G-V</term>
+<def><p>conductance-voltage relationship</p></def>
+</def-item>
+<def-item>
+<term><italic>k</italic></term>
+<def><p>slope factor</p></def>
+</def-item>
+<def-item>
+<term>V<sub>1/2</sub></term>
+<def><p>voltage at half-maximal activation</p></def>
+</def-item>
+<def-item>
+<term>WT</term>
+<def><p>wild type</p></def>
+</def-item>
+<def-item>
+<term>ps-<italic>I</italic><sub><italic>Ks</italic></sub></term>
+<def><p>pseudo-KCNE1-KCNQ1</p></def>
+</def-item>
+<def-item>
+<term>MD</term>
+<def><p>molecular dynamics</p></def>
+</def-item>
+<def-item>
+<term>MM</term>
+<def><p>molecular mechanics</p></def>
+</def-item>
+<def-item>
+<term>PBSA</term>
+<def><p>Poisson-Boltzmann surface area</p></def>
+</def-item>
+<def-item>
+<term>GBSA</term>
+<def><p>generalized Born surface area.</p></def>
+</def-item>
+</def-list>
+</glossary>
 <ref-list>
 <title>References for Supplemental Materials and Methods</title>
 <ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref>

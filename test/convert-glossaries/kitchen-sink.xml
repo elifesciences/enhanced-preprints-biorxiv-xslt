@@ -199,7 +199,7 @@
 <p>We hypothesized that high-resolution sequencing of the TCR repertoire of developing thymocytes and peripheral T cells would yield insights into repertoire selection and function towards pathogens. We focused on the development of CD8<sup>&#x002B;</sup> T cells as they represent the main effectors against viral pathogens, those that have had most chances to influence the evolution of our immune system. We obtained samples from organ donors allowing access to thymocytes and peripheral T cells, as well as datasets from patients undergoing vaccinations or with infections; we also used TCR data available from multiple public repositories.</p>
 <p>We identified a population of CD8<sup>&#x002B;</sup> T cells harboring diversified and polyspecific &#x03B1;/&#x03B2; TCRs that each can bind to multiple unrelated viral peptides, notably those from commonly encountered viruses such as EBV, CMV or influenza. We hypothesize that these cells represent a first line of defense that is promptly mobilized in response to infections, possibly containing them before a more specific response subsequently ensures their control. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2;TCRs for broad antiviral responses and heterologous immunity.</p>
 <p>Protect hexadecimal notation: &#x03B2; &#x1D4A9; &#x00c5;</p>
-<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></inline-formula> such that the predicted firing rate could be represented as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></inline-formula>, where <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
+<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></alternatives></inline-formula> such that the predicted firing rate could be represented as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></alternatives></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></alternatives></inline-formula>, where <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></alternatives></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
 </sec>
 <sec id="s2">
 <title>Results</title>
@@ -591,7 +591,96 @@
 <table-wrap id="tab4">
 <label>Table S4</label>
 <caption><p>Pairwise t-tests comparing the AUC values for different training and testing set combinations. AUCs were obtained across 100 random samples of 500 images from the test sets. P-values adjusted for multiple comparisons using Bonferroni correction. ** not significant</p></caption>
-<graphic xlink:href="2212.00741v1_tbl1a.jpg"/><graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+<alternatives>
+<table frame="hsides" rules="all">
+<thead>
+<tr>
+<th align="left">Experiment 1</th>
+<th align="left">Experiment 2</th>
+<th align="left">Mean 1</th>
+<th align="left">Mean 2</th>
+<th align="left">difference</th>
+<th align="left">p.ad j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.897</td>
+<td align="left">0.031</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (90&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.903</td>
+<td align="left">0.026</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (70&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.899</td>
+<td align="left">0.03</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (50&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.842</td>
+<td align="left">0.087</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (30&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.824</td>
+<td align="left">0.105</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (10&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.755</td>
+<td align="left">0.174</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.736</td>
+<td align="left">0.193</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OMP (no Apes) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.743</td>
+<td align="left">0.186</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">COCO on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.578</td>
+<td align="left">0.351</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<graphic xlink:href="2212.00741v1_tbl1a.jpg"/>
+<graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+</alternatives>
 </table-wrap>
 </sec>
 <app-group>
@@ -644,67 +733,7 @@
 </sec>
 </app>
 </app-group>
-<glossary>
-<title>Abbreviations</title>
-<def-list>
-<def-item>
-<term><italic>I</italic><sub><italic>Ks</italic></sub></term>
-<def><p>delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></def>
-</def-item>
-<def-item>
-<term>LQTS</term>
-<def><p>long QT syndrome</p></def>
-</def-item>
-<def-item>
-<term>DIDS</term>
-<def><p>4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></def>
-</def-item>
-<def-item>
-<term>SITS</term>
-<def><p>4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></def>
-</def-item>
-<def-item>
-<term>HMR1556</term>
-<def><p>(3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></def>
-</def-item>
-<def-item>
-<term>G-V</term>
-<def><p>conductance-voltage relationship</p></def>
-</def-item>
-<def-item>
-<term><italic>k</italic></term>
-<def><p>slope factor</p></def>
-</def-item>
-<def-item>
-<term>V<sub>1/2</sub></term>
-<def><p>voltage at half-maximal activation</p></def>
-</def-item>
-<def-item>
-<term>WT</term>
-<def><p>wild type</p></def>
-</def-item>
-<def-item>
-<term>ps-<italic>I</italic><sub><italic>Ks</italic></sub></term>
-<def><p>pseudo-KCNE1-KCNQ1</p></def>
-</def-item>
-<def-item>
-<term>MD</term>
-<def><p>molecular dynamics</p></def>
-</def-item>
-<def-item>
-<term>MM</term>
-<def><p>molecular mechanics</p></def>
-</def-item>
-<def-item>
-<term>PBSA</term>
-<def><p>Poisson-Boltzmann surface area</p></def>
-</def-item>
-<def-item>
-<term>GBSA</term>
-<def><p>generalized Born surface area.</p></def>
-</def-item>
-</def-list>
-</glossary>
+<sec><title>Abbreviations</title><list list-type="simple"><list-item><p><italic>I</italic><sub><italic>Ks</italic></sub><list list-type="simple"><list-item><p>delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></list-item></list></p></list-item><list-item><p>LQTS<list list-type="simple"><list-item><p>long QT syndrome</p></list-item></list></p></list-item><list-item><p>DIDS<list list-type="simple"><list-item><p>4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></list-item></list></p></list-item><list-item><p>SITS<list list-type="simple"><list-item><p>4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></list-item></list></p></list-item><list-item><p>HMR1556<list list-type="simple"><list-item><p>(3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></list-item></list></p></list-item><list-item><p>G-V<list list-type="simple"><list-item><p>conductance-voltage relationship</p></list-item></list></p></list-item><list-item><p><italic>k</italic><list list-type="simple"><list-item><p>slope factor</p></list-item></list></p></list-item><list-item><p>V<sub>1/2</sub><list list-type="simple"><list-item><p>voltage at half-maximal activation</p></list-item></list></p></list-item><list-item><p>WT<list list-type="simple"><list-item><p>wild type</p></list-item></list></p></list-item><list-item><p>ps-<italic>I</italic><sub><italic>Ks</italic></sub><list list-type="simple"><list-item><p>pseudo-KCNE1-KCNQ1</p></list-item></list></p></list-item><list-item><p>MD<list list-type="simple"><list-item><p>molecular dynamics</p></list-item></list></p></list-item><list-item><p>MM<list list-type="simple"><list-item><p>molecular mechanics</p></list-item></list></p></list-item><list-item><p>PBSA<list list-type="simple"><list-item><p>Poisson-Boltzmann surface area</p></list-item></list></p></list-item><list-item><p>GBSA<list list-type="simple"><list-item><p>generalized Born surface area.</p></list-item></list></p></list-item></list></sec>
 <ref-list>
 <title>References for Supplemental Materials and Methods</title>
 <ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref>
