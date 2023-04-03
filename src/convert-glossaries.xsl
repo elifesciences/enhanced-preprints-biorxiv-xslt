@@ -27,22 +27,18 @@
     
     <xsl:template match="def-item">
         <list-item>
-            <p>
-               <xsl:apply-templates select="*"/>
-            </p>
+            <xsl:apply-templates select="*"/>
         </list-item>
     </xsl:template>
     
     <xsl:template match="def-item/term">
-         <xsl:apply-templates select="*|text()"/>
+         <p>
+             <xsl:apply-templates select="*|text()"/>
+         </p>
     </xsl:template>
     
     <xsl:template match="def-item/def">
-        <list list-type="simple">
-            <list-item>
-                <xsl:apply-templates select="*"/>
-            </list-item>
-        </list>
+        <xsl:apply-templates select="*"/>
     </xsl:template>
     
 </xsl:stylesheet>
