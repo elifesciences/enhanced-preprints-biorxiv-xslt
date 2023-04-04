@@ -101,7 +101,7 @@ This xsl is to handle some incorrect tagging in XML file from bioRxiv, which lea
 
 ### [/src/2023.02.02.526762/remove-list-labels.xsl](/src/2023.02.02.526762/remove-list-labels.xsl)
 
-This xsl is to better display a list in 2023.02.02.526762. The authors have used a non-standard list-item indicator - a hyphen - which has been captured as the `<label>` for each `<list-item>`. This is perfectly acceptable capture, but is not supported by Encoda. In addition the list has the `list-type` `simple`, but is rendered as a bulleted list in EPP. SEncoda needs updating to handle custom labels for list items, as in this case, and EPP needs updating to render simple lists without indicators, and to be able to render any custom list-item labels.
+This xsl is to better display a list in 2023.02.02.526762. The authors have used a non-standard list-item indicator - a hyphen - which has been captured as the `<label>` for each `<list-item>`. This is perfectly acceptable capture in the XML, but it is not supported by encoda. In addition the list has the `list-type` `simple`, but is rendered as a bulleted list in EPP. Encoda needs updating to handle custom labels for list items, as in this case, and EPP needs updating to render simple lists without indicators, and to be able to render any custom list-item labels.
 
 # Modify bioRxiv XML in preparation for Encoda
 
