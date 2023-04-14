@@ -73,6 +73,7 @@ As explained in [this comment from Nokome](https://github.com/elifesciences/enha
 
 This xsl removes the `<issue>` tag from a reference when it also has a `<volume>` tag, resulting in the level of nesting currently assumed by client in the JSON. This means that the journal title will be rendered by EPP (although the issue will still missing until support for that is also added).
 
+
 ### [/src/handle-etal-in-refs.xsl](/src/handle-etal-in-refs.xsl)
 
 The [`<etal>`](https://jats.nlm.nih.gov/archiving/tag-library/1.3/element/etal.html) tag in JATS is used to indicate the presence of many unnamed contributors. This element is used when authors have made use of `et al.` in their references (rather than listing out all contributors). 
