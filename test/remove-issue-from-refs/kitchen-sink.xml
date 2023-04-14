@@ -117,18 +117,18 @@
 <xref ref-type="corresp" rid="cor1">&#x002A;</xref>
 </contrib>
 <contrib contrib-type="author">
-<name><surname>the Brain Interfacing Laboratory</surname></name>
+<collab>the Brain Interfacing Laboratory</collab>
 <xref ref-type="aff" rid="a2">2</xref>
 </contrib>
-<contrib contrib-type="author"><name><surname>the other Brain Interfacing Laboratory</surname></name></contrib>
-<aff id="a1"><label>1</label><institution>Sorbonne Universit&#x00E9;, INSERM, Immunology-Immunopathology-Immunotherapy (i3)</institution>, Paris, France</aff>
-<aff id="a2"><label>2</label><institution>AP-HP, H&#x00F4;pital Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re, Clinical Investigation Center for Biotherapies (CIC-BTi) and Immunology-Inflammation-Infectiology and Dermatology Department (3iD)</institution>, Paris, France</aff>
-<aff id="a3"><label>3</label><institution>Universit&#x00E9; de Paris, Institut Cochin</institution>, CNRS, INSERM, Paris, France</aff>
-<aff id="a4"><label>4</label><institution>ILTOO pharma, Statistical department</institution>, Paris, France</aff>
-<aff id="a5"><label>5</label><institution>CRCINA, INSERM, CNRS, Universit&#x00E9; d&#x2019;Angers, Universit&#x00E9; de Nantes</institution>, Nantes, France</aff>
+<on-behalf-of>the other Brain Interfacing Laboratory</on-behalf-of>
+<aff id="a1"><label>1</label><institution>Sorbonne Universit&#x00E9;, INSERM, Immunology-Immunopathology-Immunotherapy (i3)</institution>, Paris, <country>France</country></aff>
+<aff id="a2"><label>2</label><institution>AP-HP, H&#x00F4;pital Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re, Clinical Investigation Center for Biotherapies (CIC-BTi) and Immunology-Inflammation-Infectiology and Dermatology Department (3iD)</institution>, Paris, <country>France</country></aff>
+<aff id="a3"><label>3</label><institution>Universit&#x00E9; de Paris, Institut Cochin</institution>, CNRS, INSERM, Paris, <country>France</country></aff>
+<aff id="a4"><label>4</label><institution>ILTOO pharma, Statistical department</institution>, Paris, <country>France</country></aff>
+<aff id="a5"><label>5</label><institution>CRCINA, INSERM, CNRS, Universit&#x00E9; d&#x2019;Angers, Universit&#x00E9; de Nantes</institution>, Nantes, <country>France</country></aff>
 <aff id="a6"><label>6</label><institution>Center of Life Sciences</institution>, Skoltech, Moscow, Russia</aff>
-<aff id="a7"><label>7</label><institution>Assistance Publique H&#x00F4;pitaux de Paris, Service de Diab&#x00E9;tologie et Immunologie Clinique, Cochin Hospital</institution>, Paris, France</aff>
-<aff id="a1"><label>9</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, campus UAB, Cerdanyola del Vall&#x00E8;s, 08193 Barcelona, Catalonia, Spain</aff>
+<aff id="a7"><label>7</label><institution>Assistance Publique H&#x00F4;pitaux de Paris, Service de Diab&#x00E9;tologie et Immunologie Clinique, Cochin Hospital</institution>, Paris, <country>France</country></aff>
+<aff id="a1"><label>9</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
 </contrib-group>
 <author-notes>
 <fn id="n1" fn-type="present-address"><label>8</label><p>Present Institution: Parean biotechnologies, Saint-Malo, France</p></fn>
@@ -191,14 +191,15 @@
 </front>
 <body>
 <sec id="s1">
-<title><label>1.0</label> Introduction</title>
+<label>1.0</label>
+<title>Introduction</title>
 <p>Specificity is considered a hallmark of the adaptive immune response. For T cells, specificity is mediated by T cell receptors (TCRs), which interact with peptides presented by major histocompatibility complex (MHC) molecules through their complementary-determining-region-3 (CDR3). TCRs are formed by rearrangements between hundreds of gene segments at the alpha and beta loci, theoretically generating &#x003E;10<sup>60</sup> possible sequences (<italic><xref ref-type="bibr" rid="c1">1</xref>&#x2013;<xref ref-type="bibr" rid="c3">3</xref></italic>). Each rearrangement has its probability of generation, which has been modeled to vary by about 10 orders of magnitude for the beta chain alone (<italic><xref ref-type="bibr" rid="c4">4</xref></italic>). During their development within the thymus, T cells undergo a selection largely based on the strength of their activation by thymic antigen-presenting cells that eliminates &#x003E;80% of them (<italic><xref ref-type="bibr" rid="c5">5</xref>&#x2013;<xref ref-type="bibr" rid="c7">7</xref></italic>). For each individual, this process releases a pool of T cells expressing a repertoire of approximately 10<sup>8</sup> unique TCRs (<italic><xref ref-type="bibr" rid="c8">8</xref></italic>).</p>
 <p>How evolution shaped a process that selects cells that would efficiently respond to antigens that are not yet present, i.e. from an infectious agent to come, is a central question of immunology. The paradigm is that the production and selection of a diverse enough repertoire of TCRs should always provide a proper, though rare, specificity for any given need. Expansion of such rare T cells would then provide enough fighters for an effective immune response and later enough antigen-experienced cells for immune memory (<italic><xref ref-type="bibr" rid="c9">9</xref></italic>). Thus, it is widely accepted that &#x201C;<italic>T cell-mediated immunity to infection is due to the proliferation and differentiation of rare clones in the preimmune repertoire that by chance express TCRs specific for peptide-MHC (pMHC) ligands derived from the microorganism</italic>&#x201D;(<italic><xref ref-type="bibr" rid="c10">10</xref></italic>).</p>
 <p>However, this theory is challenged by overlooked data questioning the essence of specificity. First, a child with an X-linked severe combined immunodeficiency who had a reverse mutation in a single T cell progenitor was protected from infections despite having a very restricted repertoire of only about 1,000 different TCRs (<italic><xref ref-type="bibr" rid="c11">11</xref></italic>). How such a repertoire (10<sup>&#x2212;5</sup> of a normal repertoire size) could handle the numerous infections occurring during childhood awaits explanation. Second, robust experimental and epidemiological data have highlighted the importance of heterologous immunity, i.e. immunity to one pathogen afforded by the exposure to unrelated pathogens (<italic><xref ref-type="bibr" rid="c12">12</xref>&#x2013;<xref ref-type="bibr" rid="c14">14</xref></italic>). Likewise, for example, (i) memory T cells that are specific for one virus can become activated during infection with an unrelated virus (<italic><xref ref-type="bibr" rid="c15">15</xref></italic>), (ii) there are numerous virus-specific memory phenotype T cells in unexposed individuals (<italic><xref ref-type="bibr" rid="c16">16</xref></italic>), (iii) CMV infection enhances the immune response to influenza (<italic><xref ref-type="bibr" rid="c17">17</xref></italic>) and (iv) tumor-resident memory HBV-specific T cell responses correlate with hepatocellular carcinoma outcome(<xref ref-type="bibr" rid="c18">18</xref>).</p>
 <p>We hypothesized that high-resolution sequencing of the TCR repertoire of developing thymocytes and peripheral T cells would yield insights into repertoire selection and function towards pathogens. We focused on the development of CD8<sup>&#x002B;</sup> T cells as they represent the main effectors against viral pathogens, those that have had most chances to influence the evolution of our immune system. We obtained samples from organ donors allowing access to thymocytes and peripheral T cells, as well as datasets from patients undergoing vaccinations or with infections; we also used TCR data available from multiple public repositories.</p>
 <p>We identified a population of CD8<sup>&#x002B;</sup> T cells harboring diversified and polyspecific &#x03B1;/&#x03B2; TCRs that each can bind to multiple unrelated viral peptides, notably those from commonly encountered viruses such as EBV, CMV or influenza. We hypothesize that these cells represent a first line of defense that is promptly mobilized in response to infections, possibly containing them before a more specific response subsequently ensures their control. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2;TCRs for broad antiviral responses and heterologous immunity.</p>
 <p>Protect hexadecimal notation: &#x03B2; &#x1D4A9; &#x00c5;</p>
-<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></inline-formula> such that the predicted firing rate could be represented as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></inline-formula>, where <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
+<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></alternatives></inline-formula> such that the predicted firing rate could be represented as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></alternatives></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></alternatives></inline-formula>, where <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></alternatives></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
 </sec>
 <sec id="s2">
 <title>Results</title>
@@ -386,12 +387,19 @@
 <p><bold>Table S2.</bold> Enrichment of virus-specific <bold>&#x03B2;</bold>CDR3s from databases<sup>14,15</sup> in clustered CD8&#x002B; thymocytes.</p>
 <p><bold>Table S3.</bold> List of peptides represented on the chord plot. Related to 4I.</p>
 </sec>
+<sec sec-type="supplementary-material">
+<title>Supporting information</title>
+<supplementary-material>
+<label>Supplemental figures</label>
+<media xlink:href="supplements/468444_file02.pdf"/>
+</supplementary-material>
+</sec>
 </body>
 <back>
 <ref-list>
 <title>References</title>
-<ref id="c1"><label>1.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Dupic</surname></string-name>, <string-name><given-names>Q.</given-names> <surname>Marcou</surname></string-name>, <string-name><given-names>A. M.</given-names> <surname>Walczak</surname></string-name>, <string-name><given-names>T.</given-names> <surname>Mora</surname></string-name>, <article-title>Genesis of the &#x03B1;&#x03B2; T-cell receptor</article-title>. <pub-id pub-id-type="doi">10.1146/Annurev.Es.18.110187.001321</pub-id>, <source>bioRxiv</source> (<year>2018</year>), doi:<pub-id pub-id-type="doi">10.1101/353128</pub-id>.</mixed-citation></ref>
-<ref id="c2"><label>2.</label><mixed-citation publication-type="website"><string-name><surname>Peyrache</surname>, <given-names>A.</given-names></string-name>, <string-name><surname>Petersen</surname>, <given-names>P. C.</given-names></string-name> &#x0026; <string-name><surname>Buzsaki</surname>, <given-names>G.</given-names></string-name> <article-title>Extracellular recordings from multi-site silicon probes in the anterior thalamus and subicular formation of freely moving mice</article-title>. <source>CRCNS.org</source> doi:<pub-id pub-id-type="doi">10.6080/K0G15XS1</pub-id>.</mixed-citation></ref>
+<ref id="c1"><label>1.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Dupic</surname></string-name>, <string-name><given-names>Q.</given-names> <surname>Marcou</surname></string-name>, <string-name><given-names>A. M.</given-names> <surname>Walczak</surname></string-name>, <string-name><given-names>T.</given-names> <surname>Mora</surname></string-name>, <article-title>Genesis of the &#x03B1;&#x03B2; T-cell receptor</article-title>. <ext-link ext-link-type="uri" xlink:href="https://Doi.Org/10.1146/Annurev.Es.18.110187.001321">https://Doi.Org/10.1146/Annurev.Es.18.110187.001321</ext-link>, <source>bioRxiv</source> (<year>2018</year>), doi:<pub-id pub-id-type="doi">10.1101/353128</pub-id>.</mixed-citation></ref>
+<ref id="c2"><label>2.</label><mixed-citation publication-type="website"><string-name><surname>Peyrache</surname>, <given-names>A.</given-names></string-name>, <string-name><surname>Petersen</surname>, <given-names>P. C.</given-names></string-name> &#x0026; <string-name><surname>Buzsaki</surname>, <given-names>G.</given-names></string-name> <article-title>Extracellular recordings from multi-site silicon probes in the anterior thalamus and subicular formation of freely moving mice</article-title>. <source>CRCNS.org</source> doi:<ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.6080/K0G15XS1">http://dx.doi.org/10.6080/K0G15XS1</ext-link>.</mixed-citation></ref>
 <ref id="c3"><label>3.</label><mixed-citation publication-type="journal"><string-name><given-names>A.</given-names> <surname>Murugan</surname></string-name>, <string-name><given-names>T.</given-names> <surname>Mora</surname></string-name>, <string-name><given-names>A. M.</given-names> <surname>Walczak</surname></string-name>, <string-name><given-names>C. G.</given-names> <surname>Callan</surname></string-name>, <article-title>Statistical inference of the generation probability of T-cell receptors from sequence repertoires</article-title>. <source>Proceedings of the National Academy of Sciences</source>. <volume>109</volume>, <fpage>16161</fpage>&#x2013;<lpage>16166</lpage> (<year>2012</year>).</mixed-citation></ref>
 <ref id="c4"><label>4.</label><mixed-citation publication-type="journal"><string-name><given-names>P.</given-names> <surname>Bradley</surname></string-name>, <string-name><given-names>P. G.</given-names> <surname>Thomas</surname></string-name>, <article-title>Using T Cell Receptor Repertoires to Understand the Principles of Adaptive Immune Recognition</article-title>. <source>Annual Review of Immunology</source>. <volume>37</volume>, <fpage>547</fpage>&#x2013;<lpage>570</lpage> (<year>2019</year>).</mixed-citation></ref>
 <ref id="c5"><label>5.</label><mixed-citation publication-type="journal"><string-name><given-names>L.</given-names> <surname>Klein</surname></string-name>, <string-name><given-names>B.</given-names> <surname>Kyewski</surname></string-name>, <string-name><given-names>P. M.</given-names> <surname>Allen</surname></string-name>, <string-name><given-names>K. A.</given-names> <surname>Hogquist</surname></string-name>, <article-title>Positive and negative selection of the T cell repertoire: what thymocytes see (and don&#x2019;t see)</article-title>. <source>Nat Rev Immunol</source>. <volume>14</volume>, <fpage>377</fpage>&#x2013;<lpage>391</lpage> (<year>2014</year>).</mixed-citation></ref>
@@ -420,7 +428,7 @@
 <ref id="c28"><label>28.</label><mixed-citation publication-type="journal"><string-name><given-names>M.</given-names> <surname>Shugay</surname></string-name>, <string-name><given-names>D. V.</given-names> <surname>Bagaev</surname></string-name>, <string-name><given-names>I. V.</given-names> <surname>Zvyagin</surname></string-name>, <string-name><given-names>R. M.</given-names> <surname>Vroomans</surname></string-name>, <string-name><given-names>J. C.</given-names> <surname>Crawford</surname></string-name>, <string-name><given-names>G.</given-names> <surname>Dolton</surname></string-name>, <string-name><given-names>E. A.</given-names> <surname>Komech</surname></string-name>, <string-name><given-names>A. L.</given-names> <surname>Sycheva</surname></string-name>, <string-name><given-names>A. E.</given-names> <surname>Koneva</surname></string-name>, <string-name><given-names>E. S.</given-names> <surname>Egorov</surname></string-name>, <string-name><given-names>A. V.</given-names> <surname>Eliseev</surname></string-name>, <string-name><given-names>E.</given-names> <surname>Van Dyk</surname></string-name>, <string-name><given-names>P.</given-names> <surname>Dash</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Attaf</surname></string-name>, <string-name><given-names>C.</given-names> <surname>Rius</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Ladell</surname></string-name>, <string-name><given-names>J. E.</given-names> <surname>McLaren</surname></string-name>, <string-name><given-names>K. K.</given-names> <surname>Matthews</surname></string-name>, <string-name><given-names>E. B.</given-names> <surname>Clemens</surname></string-name>, <string-name><given-names>D. C.</given-names> <surname>Douek</surname></string-name>, <string-name><given-names>F.</given-names> <surname>Luciani</surname></string-name>, <string-name><given-names>D.</given-names> <surname>van Baarle</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Kedzierska</surname></string-name>, <string-name><given-names>C.</given-names> <surname>Kesmir</surname></string-name>, <string-name><given-names>P. G.</given-names> <surname>Thomas</surname></string-name>, <string-name><given-names>D. A.</given-names> <surname>Price</surname></string-name>, <string-name><given-names>A. K.</given-names> <surname>Sewell</surname></string-name>, <string-name><given-names>D. M.</given-names> <surname>Chudakov</surname></string-name>, <article-title>VDJdb: a curated database of T-cell receptor sequences with known antigen specificity</article-title>. <source>Nucleic Acids Research</source>. <volume>46</volume>, <fpage>D419</fpage>&#x2013;<lpage>D427</lpage> (<year>2018</year>).</mixed-citation></ref>
 <ref id="c29"><label>29.</label><mixed-citation publication-type="journal"><string-name><given-names>G.</given-names> <surname>Dolton</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Lissina</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Skowera</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Ladell</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Tungatt</surname></string-name>, <string-name><given-names>E.</given-names> <surname>Jones</surname></string-name>, <string-name><given-names>D.</given-names> <surname>Kronenberg-Versteeg</surname></string-name>, <string-name><given-names>H.</given-names> <surname>Akpovwa</surname></string-name>, <string-name><given-names>J. M.</given-names> <surname>Pentier</surname></string-name>, <string-name><given-names>C. J.</given-names> <surname>Holland</surname></string-name>, <string-name><given-names>A. J.</given-names> <surname>Godkin</surname></string-name>, <string-name><given-names>D. K.</given-names> <surname>Cole</surname></string-name>, <string-name><given-names>M. A.</given-names> <surname>Neller</surname></string-name>, <string-name><given-names>J. J.</given-names> <surname>Miles</surname></string-name>, <string-name><given-names>D. A.</given-names> <surname>Price</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Peakman</surname></string-name>, <string-name><given-names>A. K.</given-names> <surname>Sewell</surname></string-name>, <article-title>Comparison of peptidemajor histocompatibility complex tetramers and dextramers for the identification of antigenspecific T cells</article-title>. <source>Clinical and Experimental Immunology</source>, <volume>17</volume> (<year>2014</year>).</mixed-citation></ref>
 <ref id="c30"><label>30.</label><mixed-citation publication-type="journal"><string-name><given-names>S. E.</given-names> <surname>Mann</surname></string-name>, <string-name><given-names>Z.</given-names> <surname>Zhou</surname></string-name>, <string-name><given-names>L. G.</given-names> <surname>Landry</surname></string-name>, <string-name><given-names>A. S.</given-names> <surname>Anderson</surname></string-name>, <string-name><given-names>A. K.</given-names> <surname>Alkanani</surname></string-name>, <string-name><given-names>J.</given-names> <surname>Fischer</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Peakman</surname></string-name>, <string-name><given-names>R.</given-names> <surname>Mallone</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Campbell</surname></string-name>, <string-name><given-names>A. W.</given-names> <surname>Michels</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Nakayama</surname></string-name>, <article-title>Multiplex T Cell Stimulation Assay Utilizing a T Cell Activation Reporter-Based Detection System</article-title>. <source>Frontiers in Immunology</source>. <volume>11</volume>, <fpage>17</fpage> (<year>2020</year>).</mixed-citation></ref>
-<ref id="c31"><label>31.</label><mixed-citation publication-type="journal"><string-name><given-names>S.</given-names> <surname>Culina</surname></string-name>, <string-name><given-names>A. I.</given-names> <surname>Lalanne</surname></string-name>, <string-name><given-names>G.</given-names> <surname>Afonso</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Cerosaletti</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Pinto</surname></string-name>, <string-name><given-names>G.</given-names> <surname>Sebastiani</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Kuranda</surname></string-name>, <string-name><given-names>L.</given-names> <surname>Nigi</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Eugster</surname></string-name>, <string-name><given-names>T.</given-names> <surname>&#x00D8;sterbye</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Maugein</surname></string-name>, <string-name><given-names>J. E.</given-names> <surname>McLaren</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Ladell</surname></string-name>, <string-name><given-names>E.</given-names> <surname>Larger</surname></string-name>, <string-name><given-names>J.-P.</given-names> <surname>Beressi</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Lissina</surname></string-name>, <string-name><given-names>V.</given-names> <surname>Appay</surname></string-name>, <string-name><given-names>H. W.</given-names> <surname>Davidson</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Buus</surname></string-name>, <string-name><given-names>D. A.</given-names> <surname>Price</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Kuhn</surname></string-name>, <string-name><given-names>E.</given-names> <surname>Bonifacio</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Battaglia</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Caillat-Zucman</surname></string-name>, <string-name><given-names>F.</given-names> <surname>Dotta</surname></string-name>, <string-name><given-names>R.</given-names> <surname>Scharfmann</surname></string-name>, <string-name><given-names>B.</given-names> <surname>Kyewski</surname></string-name>, <string-name><given-names>R.</given-names> <surname>Mallone</surname></string-name>, <string-name><surname>ImMaDiab Study Group</surname></string-name>, <article-title>Islet-reactive CD8 &#x002B; T cell frequencies in the pancreas, but not in blood, distinguish type 1 diabetic patients from healthy donors</article-title>. <source>Sci. Immunol.</source> <volume>3</volume>, <fpage>eaao4013</fpage> (<year>2018</year>).</mixed-citation></ref>
+<ref id="c31"><label>31.</label><mixed-citation publication-type="journal"><string-name><given-names>S.</given-names> <surname>Culina</surname></string-name>, <string-name><given-names>A. I.</given-names> <surname>Lalanne</surname></string-name>, <string-name><given-names>G.</given-names> <surname>Afonso</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Cerosaletti</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Pinto</surname></string-name>, <string-name><given-names>G.</given-names> <surname>Sebastiani</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Kuranda</surname></string-name>, <string-name><given-names>L.</given-names> <surname>Nigi</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Eugster</surname></string-name>, <string-name><given-names>T.</given-names> <surname>&#x00D8;sterbye</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Maugein</surname></string-name>, <string-name><given-names>J. E.</given-names> <surname>McLaren</surname></string-name>, <string-name><given-names>K.</given-names> <surname>Ladell</surname></string-name>, <string-name><given-names>E.</given-names> <surname>Larger</surname></string-name>, <string-name><given-names>J.-P.</given-names> <surname>Beressi</surname></string-name>, <string-name><given-names>A.</given-names> <surname>Lissina</surname></string-name>, <string-name><given-names>V.</given-names> <surname>Appay</surname></string-name>, <string-name><given-names>H. W.</given-names> <surname>Davidson</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Buus</surname></string-name>, <string-name><given-names>D. A.</given-names> <surname>Price</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Kuhn</surname></string-name>, <string-name><given-names>E.</given-names> <surname>Bonifacio</surname></string-name>, <string-name><given-names>M.</given-names> <surname>Battaglia</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Caillat-Zucman</surname></string-name>, <string-name><given-names>F.</given-names> <surname>Dotta</surname></string-name>, <string-name><given-names>R.</given-names> <surname>Scharfmann</surname></string-name>, <string-name><given-names>B.</given-names> <surname>Kyewski</surname></string-name>, <string-name><given-names>R.</given-names> <surname>Mallone</surname></string-name>, <collab>ImMaDiab Study Group</collab>, <article-title>Islet-reactive CD8 &#x002B; T cell frequencies in the pancreas, but not in blood, distinguish type 1 diabetic patients from healthy donors</article-title>. <source>Sci. Immunol.</source> <volume>3</volume>, <fpage>eaao4013</fpage> (<year>2018</year>).</mixed-citation></ref>
 <ref id="c32"><label>32.</label><mixed-citation publication-type="journal"><string-name><given-names>J. J.</given-names> <surname>Adams</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Narayanan</surname></string-name>, <string-name><given-names>M. E.</given-names> <surname>Birnbaum</surname></string-name>, <string-name><given-names>S. S.</given-names> <surname>Sidhu</surname></string-name>, <string-name><given-names>S. J.</given-names> <surname>Blevins</surname></string-name>, <string-name><given-names>M. H.</given-names> <surname>Gee</surname></string-name>, <string-name><given-names>L. V.</given-names> <surname>Sibener</surname></string-name>, <string-name><given-names>B. M.</given-names> <surname>Baker</surname></string-name>, <string-name><given-names>D. M.</given-names> <surname>Kranz</surname></string-name>, <string-name><given-names>K. C.</given-names> <surname>Garcia</surname></string-name>, <article-title>Structural interplay between germline interactions and adaptive recognition determines the bandwidth of TCR-peptide-MHC cross-reactivity</article-title>. <source>Nature Immunology</source>. <volume>17</volume>, <fpage>87</fpage>&#x2013;<lpage>94</lpage> (<year>2016</year>).</mixed-citation></ref>
 <ref id="c33"><label>33.</label><mixed-citation publication-type="journal"><string-name><given-names>M. E.</given-names> <surname>Birnbaum</surname></string-name>, <string-name><given-names>J. L.</given-names> <surname>Mendoza</surname></string-name>, <string-name><given-names>D. K.</given-names> <surname>Sethi</surname></string-name>, <string-name><given-names>S.</given-names> <surname>Dong</surname></string-name>, <string-name><given-names>J.</given-names> <surname>Glanville</surname></string-name>, <string-name><given-names>J.</given-names> <surname>Dobbins</surname></string-name>, <string-name><given-names>E.</given-names> <surname>&#x00D6;zkan</surname></string-name>, <string-name><given-names>M. M.</given-names> <surname>Davis</surname></string-name>, <string-name><given-names>K. W.</given-names> <surname>Wucherpfennig</surname></string-name>, <string-name><given-names>K. C.</given-names> <surname>Garcia</surname></string-name>, <article-title>Deconstructing the Peptide-MHC Specificity of T Cell Recognition</article-title>. <source>Cell</source>. <volume>157</volume>, <fpage>1073</fpage>&#x2013;<lpage>1087</lpage> (<year>2014</year>).</mixed-citation></ref>
 <ref id="c34"><label>34.</label><mixed-citation publication-type="journal"><string-name><given-names>D.</given-names> <surname>Mason</surname></string-name>, <article-title>A very high level of crossreactivity is an essential feature of the T-cell receptor</article-title>. <source>Immunology Today</source>. <volume>19</volume>, <fpage>395</fpage>&#x2013;<lpage>404</lpage> (<year>1998</year>).</mixed-citation></ref>
@@ -453,7 +461,7 @@
 <ref id="c61"><label>61.</label><mixed-citation publication-type="other"><string-name><given-names>J. H.</given-names> <surname>Krijthe</surname></string-name>, <article-title>Rtsne: T-distributed stochastic neighbor embedding using Barnes-Hut implementation</article-title>. <italic>R package version 0.13</italic>, URL <ext-link ext-link-type="uri" xlink:href="https://github.com/jkrijthe/Rtsne">https://github.com/jkrijthe/Rtsne</ext-link> (<year>2015</year>).</mixed-citation></ref>
 <ref id="c62"><label>62.</label><mixed-citation publication-type="other"><string-name><given-names>Z.</given-names> <surname>Sethna</surname></string-name>, <string-name><given-names>Y.</given-names> <surname>Elhanati</surname></string-name>, C. G. C. Jr, <string-name><given-names>T.</given-names> <surname>Mora</surname></string-name>, <article-title>OLGA: fast computation of generation probabilities of B- and T-cell receptor amino acid sequences and motifs</article-title>, <volume>8</volume>.</mixed-citation></ref>
 <ref id="c63"><label>63.</label><mixed-citation publication-type="journal"><string-name><surname>Liu</surname> <given-names>Y</given-names></string-name>, <string-name><surname>Brincat</surname> <given-names>SL</given-names></string-name>, <string-name><surname>Miller</surname> <given-names>EK</given-names></string-name>, <string-name><surname>Hasselmo</surname> <given-names>ME</given-names></string-name>. <article-title>A Geometric Characterization of Population Coding in the Prefrontal Cortex and Hippocampus during a Paired-Associate Learning Task</article-title>. <source>Journal of Cognitive Neuroscience</source>. <year>2020</year> 8; <volume>32</volume>(). doi: 10.1162/jocn{\_}a{\_}01569.</mixed-citation></ref>
-<ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref><ref id="c65"><label>65.</label><mixed-citation publication-type="journal"><string-name><given-names>M. S.</given-names> <surname>Kowalczyk</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell RNA-seq reveals changes in cell cycle and differentiation programs upon aging of hematopoietic stem cells</article-title>. <source>Genome Res</source> <volume>25</volume>, <fpage>1860</fpage>&#x2013;<lpage>1872</lpage> (<year>2015</year>).</mixed-citation></ref><ref id="c66"><label>66.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Reversed graph embedding resolves complex single-cell trajectories</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>979</fpage>&#x2013;<lpage>982</lpage> (<year>2017</year>).</mixed-citation></ref><ref id="c67"><label>67.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell mRNA quantification and differential analysis with Census</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>309</fpage>&#x2013;<lpage>315</lpage> (<year>2017</year>).</mixed-citation></ref></ref-list>
+</ref-list>
 <ack>
 <title>Acknowledgments:</title>
 <p>The authors would like to express their gratitude to the organ donors and their families who allowed the collection of samples for research under sad circumstances. The authors would also like to thank Prof. Pascal Leprince, Dr. Guillaume Lebreton, and Dr. Marina Rigolet of the cardiac surgery team, Prof. Bruno Riou and the graft coordination team of the Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re hospital for their invaluable contribution to sample collection. The authors thank the UMR 8199 LIGAN-PM Genomics platform (Lille, France) for efficient sequencing. We also thank Thierry Mora, and Aleksandra Walczak for helpful discussion.</p>
@@ -583,10 +591,102 @@
 <table-wrap id="tab4">
 <label>Table S4</label>
 <caption><p>Pairwise t-tests comparing the AUC values for different training and testing set combinations. AUCs were obtained across 100 random samples of 500 images from the test sets. P-values adjusted for multiple comparisons using Bonferroni correction. ** not significant</p></caption>
-<graphic xlink:href="2212.00741v1_tbl1a.jpg"/><graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+<alternatives>
+<table frame="hsides" rules="all">
+<thead>
+<tr>
+<th align="left">Experiment 1</th>
+<th align="left">Experiment 2</th>
+<th align="left">Mean 1</th>
+<th align="left">Mean 2</th>
+<th align="left">difference</th>
+<th align="left">p.ad j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.897</td>
+<td align="left">0.031</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (90&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.903</td>
+<td align="left">0.026</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (70&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.899</td>
+<td align="left">0.03</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (50&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.842</td>
+<td align="left">0.087</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (30&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.824</td>
+<td align="left">0.105</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (10&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.755</td>
+<td align="left">0.174</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.736</td>
+<td align="left">0.193</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OMP (no Apes) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.743</td>
+<td align="left">0.186</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">COCO on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.578</td>
+<td align="left">0.351</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<graphic xlink:href="2212.00741v1_tbl1a.jpg"/>
+<graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+</alternatives>
 </table-wrap>
 </sec>
-<sec id="app1"><title>Appendix 1</title><sec id="s10">
+<app-group>
+<app id="app1">
+<title>Appendix 1</title>
+<sec id="s10">
 <title>Design Considerations</title>
 <p>A technique that combines electrophysiology with permanent inactivation of neuronal activity will meet three main design considerations:</p>
 <list list-type="order">
@@ -608,7 +708,12 @@
 <title>Cross-compatibility</title>
 <p>Ideally, a technique that combines electrophysiology with inactivation could be used in any area of cortex, with any multielectrode probe, and in several species in order to enable causal investigation in a large variety of contexts. Flexibility over the cortical area studied and the multielectrode probes used will enable easy adoption into existing neuroelectrophysiology recording setups across many neuroscience contexts. Compatibility with a variety of animal models will further increase the technique&#x2019;s utility. Electrophysiology studies and animal models of brain disease have spanned many species, from rodents to large animals <bold><italic><xref ref-type="bibr" rid="c31">Rousche and Normann (1998</xref></italic></bold>, 1999); <bold><italic>Le et al. (2014</italic></bold>); <bold><italic><xref ref-type="bibr" rid="c30">Finnie and Blumbergs (2002</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c58">Lind et al. (2007</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c52">Kleinschnitz et al. (2015</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c28">Fan et al. (2017</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c25">Nudo et al. (2003</xref></italic></bold>). While each species offers its own experimental benefits and limitations, the majority of tools and techniques in this space have been developed for rodents. Rather than being limited to rodents, an inactivation technique would ideally also be compatible with large animals such as rhesus macaques, due to their dexterity, ability to perform complex movements, and extensive history in electrophysiology studies of motor control <bold><italic><xref ref-type="bibr" rid="c44">Higo (2021</xref></italic></bold>).</p>
 </sec>
-</sec></sec><sec id="app2"><title>Appendix 2</title><p>Manipulations are temporary inactivations of neuronal activity, while terminations are permanent inactivations. There are several existing methods for achieving a manipulation or a termination. Although each existing method has its own strengths, none is able to meet all three of the previously mentioned design considerations of: stable electrophysiology pre- and post-inactivation, ability to localize and control the size of the inactivation, and cross-species and large-animal compatibility.</p><sec id="s11">
+</sec>
+</app>
+<app id="app2">
+<title>Appendix 2</title>
+<p>Manipulations are temporary inactivations of neuronal activity, while terminations are permanent inactivations. There are several existing methods for achieving a manipulation or a termination. Although each existing method has its own strengths, none is able to meet all three of the previously mentioned design considerations of: stable electrophysiology pre- and post-inactivation, ability to localize and control the size of the inactivation, and cross-species and large-animal compatibility.</p>
+<sec id="s11">
 <title>Existing Manipulation Methods</title>
 <p>Existing temporary inactivation methods include intracortical microstimulation, optogenetics, pharmacology, transcranial stimulation, cooling loops, and chemogenetics.</p>
 <p>Intracortical microstimulation, where small pulses of current are applied to cortex, can be used to temporarily disrupt neuronal activity <bold><italic><xref ref-type="bibr" rid="c17">Churchland and Shenoy (2007</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c65">Mazurek and Schieber (2017</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c59">Vyas et al. (2020</xref></italic></bold>). It can be performed using the same neuroelectrophysiology electrodes being used to record, requiring no additional surgical access <bold><italic><xref ref-type="bibr" rid="c11">Weiss et al. (2019</xref></italic></bold>). However, it can be challenging to sustain a behavioral effect with continuous microstimulation.</p>
@@ -617,14 +722,87 @@
 <p>Non-invasive methods like transcranial magnetic stimulation (TMS), transcranial direct stimulation (tDCS), and transcranial focal ultrasound lead to very temporary inactivation <bold><italic><xref ref-type="bibr" rid="c53">Klomjai et al. (2015</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c13">Woods et al. (2016</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c17">Zhang et al. (2021</xref></italic></bold>). In addition to the short timescale of these inactivations, their effects are dispersed as the signal must travel through the skull. These methods provide neither the spatial resolution nor the temporal duration needed for probing local neuronal circuitry.</p>
 <p>Cooling loops are implanted devices that effectively silence nearby cells by affecting action potential generation, axon conduction velocity, and synaptic transmission <bold><italic><xref ref-type="bibr" rid="c61">Lomber et al. (1999</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c60">Lomber and Payne (2000</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c62">Long and Fee (2008</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c14">Chen et al. (2020</xref></italic></bold>). These devices would be implanted at the same time as the microelectrode array, and they would not require surgical access to use. However, cooling cannot easily be maintained across days while the animal is in its home environment. In addition to damaging valuable nearby tissue during the implant surgery and introducing another foreign body, cooling inactivates on the scale of millimeters, limiting the ability to titrate the size of the inactivation any smaller <bold><italic><xref ref-type="bibr" rid="c21">Coomber et al. (2011</xref></italic></bold>).</p>
 <p>A region of cortex can also be temporarily inactivated with chemogenetic silencing, using chemically activated proteins to inhibit neuronal activity <bold><italic><xref ref-type="bibr" rid="c44">Sternson and Roth (2014</xref></italic></bold>). The chemical is injected intravenously, so the process would not disrupt the placement of the microelectrode array. As with optogenetic silencing, chemogenetics would require the development of rhesus compatible constructs. Additionally, chronic inactivation over days may be logistically challenging, as the half life of CNO is on the order of hours.</p>
-</sec><sec id="s12">
+</sec>
+<sec id="s12">
 <title>Existing Termination Methods</title>
 <p>Existing termination methods include physical damage, endovascular occlusion, Rose Bengal mediated photothrombosis, and chemical lesioning.</p>
 <p>There are several well established techniques for mechanically damaging a small area of cortex to create a lesion, including blade lesioning <bold><italic><xref ref-type="bibr" rid="c46">Horsley and Schafer (1888</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c38">Sherrington (1893</xref></italic></bold>), vacuum aspiration <bold><italic><xref ref-type="bibr" rid="c24">Darling et al. (2016</xref></italic></bold>), vascular cauterization <bold><italic><xref ref-type="bibr" rid="c75">Nudo et al. (2003</xref></italic></bold>), and vascular ligation <bold><italic><xref ref-type="bibr" rid="c23">Rumajogee et al. (2016</xref></italic></bold>). All of these techniques require surgical access to cortex, which would likely disrupt an existing implanted microelectode array. Additionally, the sedation necessary for the surgery would prevent behavioral testing on the day of the lesion, precluding measurements of acute inactivation. Further, these techniques often create large lesions, and do not offer sub-millimeter precision.</p>
 <p>Endovascular techniques are commonly used as models of stroke. For example, endovascular physical occlusion of the middle cerebral artery (MCA) of one hemisphere is a common rodent model of stroke <bold><italic><xref ref-type="bibr" rid="c32">Fluri et al. (2015</xref></italic></bold>), but it is challenging to precisely control the extent of cortical damage. MCA occlusion could cause indiscriminate injury to a large regions of cortex, due to continued, widespread neuronal death after the occlusion. It could potentially damage the area in which the microelectrode array is implanted, preventing meaningful recordings. As one descends into smaller branches of the MCA, survivability, localization, and reproducibility of ischemic results improve <bold><italic><xref ref-type="bibr" rid="c55">Kuraoka et al. (2009</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c19">Clark et al. (2019</xref></italic></bold>), but it is technically challenging to be precise with the occlusion without coming close to the implanted array, again risking disrupting the implantation site.</p>
 <p>Another endovascular technique is photothrombosis, which does not require an additional surgery to implement, limiting disruption of the microelectrode array. <bold><italic><xref ref-type="bibr" rid="c42">Gulati et al. (2015</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c28">Ramanathan et al. (2018</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c50">Khateeb et al. (2019</xref></italic></bold>). This approach uses rose bengal, a photosenstive dye, injected intravenously into the circulatory system. When 561nm green light is shined over a blood vessel, the dye undergoes a local conformational change and generates singlet oxygen, damaging arterial endothelial cells and initiating the clotting cascade&#x2013;resulting in damage resembling an ischemic stroke <bold><italic><xref ref-type="bibr" rid="c10">Watson et al. (1985</xref></italic></bold>); <bold><italic><xref ref-type="bibr" rid="c11">Carmichael (2005</xref></italic></bold>). This approach can be used to deliver a well-localized lesional boundary. In rodents, this can be done entirely non-invasively because green light penetrates through the thin layer of skull. In larger animals, a method of light delivery is needed. If an optical fiber is chronically implanted at the time of electrode array insertion, light can be delivered without surgery and lesions can be made without disrupting the array, but this chronically implanted fiber may act as a route for infection. Alternatively, the fiber could be placed though a burr hole made at the time of the lesion, but this may compromise localization accuracy like other burr-hole techniques.</p>
 <p>Chemical lesioning is done by injecting a damaging chemical into the cortical region. These chemicals can be excitotoxic pharmacologic agents like ibotenic acid that selectively and directly damage neuronal cell bodies <bold><italic><xref ref-type="bibr" rid="c8">Murata et al. (2008</xref></italic></bold>), or they can be vasoconstrictors like endothelin-1 that create anoxic cortical injury <bold><italic><xref ref-type="bibr" rid="c23">Dai et al. (2017</xref></italic></bold>). These chemicals have the same potential drawbacks of other injection-based methods: either a permanent pathway is added to allow precise injection in the area of the microelectrode array, creating a route for infection, or injection is done through a burr hole, making it difficult to localize to the region of the array and disrupting experimental continuity. It is also difficult to control the spread of the chemicals, preventing precision in lesion extent.</p>
-</sec></sec>
-<sec><title>Abbreviations</title><list list-type="simple"><list-item><p><italic>I</italic><sub><italic>Ks</italic></sub></p><p>delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></list-item><list-item><p>LQTS</p><p>long QT syndrome</p></list-item><list-item><p>DIDS</p><p>4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></list-item><list-item><p>SITS</p><p>4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></list-item><list-item><p>HMR1556</p><p>(3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></list-item><list-item><p>G-V</p><p>conductance-voltage relationship</p></list-item><list-item><p><italic>k</italic></p><p>slope factor</p></list-item><list-item><p>V<sub>1/2</sub></p><p>voltage at half-maximal activation</p></list-item><list-item><p>WT</p><p>wild type</p></list-item><list-item><p>ps-<italic>I</italic><sub><italic>Ks</italic></sub></p><p>pseudo-KCNE1-KCNQ1</p></list-item><list-item><p>MD</p><p>molecular dynamics</p></list-item><list-item><p>MM</p><p>molecular mechanics</p></list-item><list-item><p>PBSA</p><p>Poisson-Boltzmann surface area</p></list-item><list-item><p>GBSA</p><p>generalized Born surface area.</p></list-item></list></sec>
+</sec>
+</app>
+</app-group>
+<glossary>
+<title>Abbreviations</title>
+<def-list>
+<def-item>
+<term><italic>I</italic><sub><italic>Ks</italic></sub></term>
+<def><p>delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></def>
+</def-item>
+<def-item>
+<term>LQTS</term>
+<def><p>long QT syndrome</p></def>
+</def-item>
+<def-item>
+<term>DIDS</term>
+<def><p>4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></def>
+</def-item>
+<def-item>
+<term>SITS</term>
+<def><p>4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></def>
+</def-item>
+<def-item>
+<term>HMR1556</term>
+<def><p>(3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></def>
+</def-item>
+<def-item>
+<term>G-V</term>
+<def><p>conductance-voltage relationship</p></def>
+</def-item>
+<def-item>
+<term><italic>k</italic></term>
+<def><p>slope factor</p></def>
+</def-item>
+<def-item>
+<term>V<sub>1/2</sub></term>
+<def><p>voltage at half-maximal activation</p></def>
+</def-item>
+<def-item>
+<term>WT</term>
+<def><p>wild type</p></def>
+</def-item>
+<def-item>
+<term>ps-<italic>I</italic><sub><italic>Ks</italic></sub></term>
+<def><p>pseudo-KCNE1-KCNQ1</p></def>
+</def-item>
+<def-item>
+<term>MD</term>
+<def><p>molecular dynamics</p></def>
+</def-item>
+<def-item>
+<term>MM</term>
+<def><p>molecular mechanics</p></def>
+</def-item>
+<def-item>
+<term>PBSA</term>
+<def><p>Poisson-Boltzmann surface area</p></def>
+</def-item>
+<def-item>
+<term>GBSA</term>
+<def><p>generalized Born surface area.</p></def>
+</def-item>
+</def-list>
+</glossary>
+<ref-list>
+<title>References for Supplemental Materials and Methods</title>
+<ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref>
+<ref id="c65"><label>65.</label><mixed-citation publication-type="journal"><string-name><given-names>M. S.</given-names> <surname>Kowalczyk</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell RNA-seq reveals changes in cell cycle and differentiation programs upon aging of hematopoietic stem cells</article-title>. <source>Genome Res</source> <volume>25</volume>, <fpage>1860</fpage>&#x2013;<lpage>1872</lpage> (<year>2015</year>).</mixed-citation></ref>
+</ref-list>
+<ref-list>
+<title>Another reference list</title>
+<ref id="c66"><label>66.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Reversed graph embedding resolves complex single-cell trajectories</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>979</fpage>&#x2013;<lpage>982</lpage> (<year>2017</year>).</mixed-citation></ref>
+<ref id="c67"><label>67.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell mRNA quantification and differential analysis with Census</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>309</fpage>&#x2013;<lpage>315</lpage> (<year>2017</year>).</mixed-citation></ref>
+</ref-list>
 </back>
 </article>
