@@ -67,6 +67,12 @@ This can be solved in mutliple ways. One is to ask bioRxiv to not treat their af
 
 In the meantime, this xsl simply strips all address/locale tags (retaining the content within) from any affs, so that the affiliation string can be rendered appropriately. It does mean that some semantic information is lost (the `address` in the HTML).
 
+### [/src/remove-issue-from-refs.xsl](/src/remove-issue-from-refs.xsl)
+
+As explained in [this comment from Nokome](https://github.com/elifesciences/enhanced-preprints-issues/issues/121#issuecomment-1408037824), when a journal reference has an `<issue>` tag in the XML, this is captured by encoda in a nested representation of `Periodical` under `PublicationIssue`. Becuase the client [curently does not handle this level of nesting](https://github.com/elifesciences/enhanced-preprints-client/blob/5aa55ce5f707af5048d5011ba0c7c12f912124db/src/components/atoms/reference/reference.tsx#L7), the result is both a missing issue number and journal title for a reference. 
+
+This xsl removes the `<issue>` tag, resulting in less nesting of information in the representation from encoda, allowing the journal title to be rendered by EPP (the issue is still missing however).
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
