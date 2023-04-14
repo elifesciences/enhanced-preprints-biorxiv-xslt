@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="mixed-citation/issue|
-                         element-citation/issue"/>
+    <xsl:template match="mixed-citation[volume]/issue |
+                         element-citation[volume]/issue"/>
     
 </xsl:stylesheet>
