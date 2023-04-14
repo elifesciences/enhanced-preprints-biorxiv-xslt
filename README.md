@@ -71,7 +71,7 @@ In the meantime, this xsl simply strips all address/locale tags (retaining the c
 
 As explained in [this comment from Nokome](https://github.com/elifesciences/enhanced-preprints-issues/issues/121#issuecomment-1408037824), when a journal reference has an `<issue>` tag as well as a `<volume>` tag in the XML, this affects the representation of that content in th JSON produced by encoda - `Periodical` is nested under both `PublicationVolume` and `PublicationIssue`. Because the client [curently does not handle this level of nesting](https://github.com/elifesciences/enhanced-preprints-client/blob/5aa55ce5f707af5048d5011ba0c7c12f912124db/src/components/atoms/reference/reference.tsx#L7), the result is both a missing issue number and journal title for a reference. 
 
-This xsl removes the `<issue>` tag from w reference when it also has a `<volume>` tag, resulting in the level of nesting currently assumed by client in the JSON. This means that the journal title will be rendered by EPP (although the issue will still missing until support for that is also added).
+This xsl removes the `<issue>` tag from a reference when it also has a `<volume>` tag, resulting in the level of nesting currently assumed by client in the JSON. This means that the journal title will be rendered by EPP (although the issue will still missing until support for that is also added).
 
 ## Manuscript specific XSLT
 
