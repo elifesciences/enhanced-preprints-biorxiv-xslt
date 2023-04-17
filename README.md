@@ -73,6 +73,15 @@ As explained in [this comment from Nokome](https://github.com/elifesciences/enha
 
 This xsl removes the `<issue>` tag from a reference when it also has a `<volume>` tag, resulting in the level of nesting currently assumed by client in the JSON. This means that the journal title will be rendered by EPP (although the issue will still missing until support for that is also added).
 
+
+### [/src/handle-etal-in-refs.xsl](/src/handle-etal-in-refs.xsl)
+
+The [`<etal>`](https://jats.nlm.nih.gov/archiving/tag-library/1.3/element/etal.html) tag in JATS is used to indicate the presence of many unnamed contributors. This element is used when authors have made use of `et al.` in their references (rather than listing out all contributors). 
+
+Encoda does not decode this element, and therefore et al. is not included in the JSON giving the misleading impression that any authors listed before the et al are the sole contributors to that reference. 
+
+This XSL replaces the `<etal>` element with a surname as a workaround, meaning that this content is represnted in the JSON, and as a result within the HTML rendered by EPP. Support needs adding to encoda (and potentially subsequently client depending on the representation in the JSON), in order for this content to be rendered without this xsl.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
