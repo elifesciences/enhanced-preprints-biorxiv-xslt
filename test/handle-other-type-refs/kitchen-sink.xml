@@ -199,7 +199,7 @@
 <p>We hypothesized that high-resolution sequencing of the TCR repertoire of developing thymocytes and peripheral T cells would yield insights into repertoire selection and function towards pathogens. We focused on the development of CD8<sup>&#x002B;</sup> T cells as they represent the main effectors against viral pathogens, those that have had most chances to influence the evolution of our immune system. We obtained samples from organ donors allowing access to thymocytes and peripheral T cells, as well as datasets from patients undergoing vaccinations or with infections; we also used TCR data available from multiple public repositories.</p>
 <p>We identified a population of CD8<sup>&#x002B;</sup> T cells harboring diversified and polyspecific &#x03B1;/&#x03B2; TCRs that each can bind to multiple unrelated viral peptides, notably those from commonly encountered viruses such as EBV, CMV or influenza. We hypothesize that these cells represent a first line of defense that is promptly mobilized in response to infections, possibly containing them before a more specific response subsequently ensures their control. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2;TCRs for broad antiviral responses and heterologous immunity.</p>
 <p>Protect hexadecimal notation: &#x03B2; &#x1D4A9; &#x00c5;</p>
-<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></inline-formula> such that the predicted firing rate could be represented as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></inline-formula>, where <inline-formula><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
+<p>A paragraph with examples of inline-formula. After fitting Least Squares Regression for the base model (<italic>Z</italic><sub>0</sub>, 0 lag, no cue signal), we obtained the weights <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline55.gif"/></alternatives></inline-formula> such that the predicted firing rate could be represented as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline56.gif"/></alternatives></inline-formula>. Where firing rate used to fit the data can then be expressed as <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline57.gif"/></alternatives></inline-formula>, where <inline-formula><alternatives><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="520660v1_inline58.gif"/></alternatives></inline-formula>. The <italic>N<sub>u</sub></italic> represents the number of fitted units.</p>
 </sec>
 <sec id="s2">
 <title>Results</title>
@@ -591,7 +591,96 @@
 <table-wrap id="tab4">
 <label>Table S4</label>
 <caption><p>Pairwise t-tests comparing the AUC values for different training and testing set combinations. AUCs were obtained across 100 random samples of 500 images from the test sets. P-values adjusted for multiple comparisons using Bonferroni correction. ** not significant</p></caption>
-<graphic xlink:href="2212.00741v1_tbl1a.jpg"/><graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+<alternatives>
+<table frame="hsides" rules="all">
+<thead>
+<tr>
+<th align="left">Experiment 1</th>
+<th align="left">Experiment 2</th>
+<th align="left">Mean 1</th>
+<th align="left">Mean 2</th>
+<th align="left">difference</th>
+<th align="left">p.ad j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.897</td>
+<td align="left">0.031</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (90&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.903</td>
+<td align="left">0.026</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (70&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.899</td>
+<td align="left">0.03</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (50&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.842</td>
+<td align="left">0.087</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (30&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.824</td>
+<td align="left">0.105</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (10&#x0025;) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.755</td>
+<td align="left">0.174</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OAP (100&#x0025;) on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.736</td>
+<td align="left">0.193</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">OMP (no Apes) on OAP</td>
+<td align="left">0.929</td>
+<td align="left">0.743</td>
+<td align="left">0.186</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">OMP (no Apes) on OMP</td>
+<td align="left">COCO on OMP</td>
+<td align="left">0.929</td>
+<td align="left">0.578</td>
+<td align="left">0.351</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<graphic xlink:href="2212.00741v1_tbl1a.jpg"/>
+<graphic xlink:href="2212.00741v1_tbl1b.jpg"/>
+</alternatives>
 </table-wrap>
 </sec>
 <app-group>
@@ -714,7 +803,7 @@
 <title>Another reference list</title>
 <ref id="c66"><label>66.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Reversed graph embedding resolves complex single-cell trajectories</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>979</fpage>&#x2013;<lpage>982</lpage> (<year>2017</year>).</mixed-citation></ref>
 <ref id="c67"><label>67.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell mRNA quantification and differential analysis with Census</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>309</fpage>&#x2013;<lpage>315</lpage> (<year>2017</year>).</mixed-citation></ref>
-<ref id="c68"><label>68.</label><mixed-citation publication-type="other"><string-name><surname>Nykanen</surname> <given-names>L</given-names></string-name>, <string-name><surname>Nykanen</surname>, <given-names>I.</given-names></string-name> (<year>1991</year>) <article-title>Distilled beverages</article-title>. <source>Volatile Compounds in Foods and Beverages</source>, ed <string-name><surname>Maarse</surname> <given-names>H</given-names></string-name> (<publisher-name>Dekker Inc, New York</publisher-name>), pp <fpage>548</fpage>&#x2013;<lpage>580</lpage>.</mixed-citation></ref>
+<ref id="c68"><label>68.</label><mixed-citation publication-type="book"><string-name><surname>Nykanen</surname> <given-names>L</given-names></string-name>, <string-name><surname>Nykanen</surname>, <given-names>I.</given-names></string-name> (<year>1991</year>) <chapter-title>Distilled beverages</chapter-title>. <source>Volatile Compounds in Foods and Beverages</source>, ed <string-name><surname>Maarse</surname> <given-names>H</given-names></string-name> (<publisher-name>Dekker Inc, New York</publisher-name>), pp <fpage>548</fpage>&#x2013;<lpage>580</lpage>.</mixed-citation></ref>
 </ref-list>
 </back>
 </article>

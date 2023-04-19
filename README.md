@@ -90,6 +90,16 @@ Encoda [currently only decodes](https://github.com/stencila/encoda/blob/202d8da5
 
 This xsl will convert any `fpage` found in a reference that does not also have an `lpage` or `elocation-id` to `elocation-id`, so that it can be decoded by encoda and rendered by EPP.
 
+### [/src/handle-other-type-refs.xsl](/src/handle-other-type-refs.xsl)
+
+This xsl seeks to introduce approriate `publication-type` values for references, based on what child elements or content is present, so that it can be better decoded by encoda and therefore better rendered by EPP. It be inappropriate in some cases to change the `publication-type` (for example when not enough semantic information is provided, or conflicting tags are present as a result of errors), so this xsl will not change all instances.
+
+Encoda has [certain rules](https://github.com/stencila/encoda/blob/202d8da5e5c3381b318910df1fd8878df4b1456d/src/codecs/jats/index.ts#L1295-L1446) that dictate how a reference is decoded. One thing that affects how a reference is decoded is what `publication-type` it is captured as in the XML. Typesetters may use the `publication-type` '`other`' when uncertain of what kind of content is being captured as a reference. Encoda provides less support for content when it's captured as `publication-type="other"`, resulting in fragmented or missing reference information on EPP.
+
+In most cases the use of `publication-type="other"` is a mistake (or incorrect) - ideally vendors would always capture the correct semantic publication type (and this has been fed back to bioRxiv) - but determining the correct type of reference (and what information should be included and how to appropriately capture it) requires a level of attention or manual intervention that we can't expect to be introduced in the near term. 
+
+In addition some of the rules in encoda could possibly be relaxed in order to decode more of the pieces of information that are supplied.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
