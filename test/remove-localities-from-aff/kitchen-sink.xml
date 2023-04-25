@@ -32,103 +32,72 @@
 <contrib-group>
 <contrib contrib-type="author">
 <name><surname>Quiniou</surname><given-names>Valentin</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
-<xref ref-type="aff" rid="a2">2</xref>
 <xref ref-type="author-notes" rid="n1">8</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Barennes</surname><given-names>Pierre</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
-<xref ref-type="aff" rid="a2">2</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Mhanna</surname><given-names>Vanessa</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
 <xref ref-type="author-notes" rid="n2">&#x2020;</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Stys</surname><given-names>Paul</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
 <xref ref-type="author-notes" rid="n2">&#x2020;</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Vantomme</surname><given-names>H&#x00E9;l&#x00E8;ne</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
-<xref ref-type="aff" rid="a2">2</xref>
 <xref ref-type="author-notes" rid="n2">&#x2020;</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Zhou</surname><given-names>Zhicheng</given-names></name>
-<xref ref-type="aff" rid="a3">3</xref>
 <xref ref-type="author-notes" rid="n2">&#x2020;</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Martina</surname><given-names>Federica</given-names></name>
-<xref ref-type="aff" rid="a2">2</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Coatnoan</surname><given-names>Nicolas</given-names></name>
-<xref ref-type="aff" rid="a2">2</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Barbi&#x00E9;-Sastre</surname><given-names>Mich&#x00E8;le</given-names></name>
-<xref ref-type="aff" rid="a2">2</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Pham</surname><given-names>Hang-Phuong</given-names></name>
-<xref ref-type="aff" rid="a4">4</xref>
 <xref ref-type="author-notes" rid="n1">8</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Clemenceau</surname><given-names>B&#x00E9;atrice</given-names></name>
-<xref ref-type="aff" rid="a5">5</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Vi&#x00E9;</surname><given-names>Henri</given-names></name>
-<xref ref-type="aff" rid="a5">5</xref>
 </contrib>
 <contrib contrib-type="author">
 <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-7826-7942</contrib-id>
 <name><surname>Shugay</surname><given-names>Mikhail</given-names></name>
-<xref ref-type="aff" rid="a6">6</xref>
 </contrib>
 <contrib contrib-type="author">
 <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-5898-555X</contrib-id>
 <name><surname>Six</surname><given-names>Adrien</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Brandao</surname><given-names>Barbara</given-names></name>
-<xref ref-type="aff" rid="a3">3</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Mallone</surname><given-names>Roberto</given-names></name>
-<xref ref-type="aff" rid="a3">3</xref>
-<xref ref-type="aff" rid="a7">7</xref>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Mariotti-Ferrandiz</surname><given-names>Encarnita</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
 </contrib>
 <contrib contrib-type="author" corresp="yes">
 <name><surname>Klatzmann</surname><given-names>David</given-names></name>
-<xref ref-type="aff" rid="a1">1</xref>
-<xref ref-type="aff" rid="a2">2</xref>
 <xref ref-type="corresp" rid="cor1">&#x002A;</xref>
 </contrib>
 <contrib contrib-type="author">
 <collab>the Brain Interfacing Laboratory</collab>
-<xref ref-type="aff" rid="a2">2</xref>
 </contrib>
 <on-behalf-of>the other Brain Interfacing Laboratory</on-behalf-of>
-<aff id="a1"><label>1</label><institution>Sorbonne Universit&#x00E9;, INSERM, Immunology-Immunopathology-Immunotherapy (i3)</institution>, Paris, France</aff>
-<aff id="a2"><label>2</label><institution>AP-HP, H&#x00F4;pital Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re, Clinical Investigation Center for Biotherapies (CIC-BTi) and Immunology-Inflammation-Infectiology and Dermatology Department (3iD)</institution>, Paris, France</aff>
-<aff id="a3"><label>3</label><institution>Universit&#x00E9; de Paris, Institut Cochin</institution>, CNRS, INSERM, Paris, France</aff>
-<aff id="a4"><label>4</label><institution>ILTOO pharma, Statistical department</institution>, Paris, France</aff>
-<aff id="a5"><label>5</label><institution>CRCINA, INSERM, CNRS, Universit&#x00E9; d&#x2019;Angers, Universit&#x00E9; de Nantes</institution>, Nantes, France</aff>
-<aff id="a6"><label>6</label><institution>Center of Life Sciences</institution>, Skoltech, Moscow, Russia</aff>
-<aff id="a7"><label>7</label><institution>Assistance Publique H&#x00F4;pitaux de Paris, Service de Diab&#x00E9;tologie et Immunologie Clinique, Cochin Hospital</institution>, Paris, France</aff>
-<aff id="a1"><label>9</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, campus UAB, Cerdanyola del Vall&#x00E8;s, 08193 Barcelona, Catalonia, Spain</aff>
+<aff><label>1</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, campus UAB, Cerdanyola del Vall&#x00E8;s, 08193 Barcelona, Catalonia, Spain</aff>
 </contrib-group>
 <author-notes>
 <fn id="n1" fn-type="present-address"><label>8</label><p>Present Institution: Parean biotechnologies, Saint-Malo, France</p></fn>
