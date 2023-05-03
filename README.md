@@ -127,6 +127,12 @@ This xsl is to handle some incorrect tagging in XML file from bioRxiv, which lea
 
 This xsl is to better display a list in 2023.02.02.526762. The authors have used a non-standard list-item indicator - a hyphen - which has been captured as the `<label>` for each `<list-item>`. This is perfectly acceptable capture in the XML, but it is not supported by encoda. In addition the list has the `list-type` `simple`, but is rendered as a bulleted list in EPP. Encoda needs updating to handle custom labels for list items, as in this case, and EPP needs updating to render simple lists without indicators, and to be able to render any custom list-item labels.
 
+### [/src/2023.03.01.530673/remove-list-labels.xsl](/src/2023.03.01.530673/remove-list-labels.xsl)
+
+This xsl is to better display a list in 2023.03.01.530673. bioRxiv's vendors have captured this bulleted list using the list-type `simple` but with each list-item accompanied by a label which is a bullet. While this is not ideal capture, it's still perfectly correct (maybe they wanted to use a specific bullet point character instead of whatever the default is for their platform). 
+
+On EPP `simple` lists are also rendered as bulleted lists. This is a problem - they should be rendered with no marker. The result of this capture on EPP is a bulleted list where each item has an extra marker followed by a new line (EPP also needs adjusting to better handle custom labels in lists - to not include this new line) before the content. Changing this capture to a `bullet` type list and removing the labels means that this can be rendered appropriately in the meantime.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
