@@ -26,7 +26,7 @@
         <aff id="aff1">
             <xsl:apply-templates select="@*[name()!='id']"/>
             <label>1</label>
-            <xsl:apply-templates select="*[name()!='label']"/>
+            <xsl:apply-templates select="node()[name()!='label']"/>
         </aff>
     </xsl:template>
 
