@@ -67,6 +67,25 @@ This can be solved in mutliple ways. One is to ask bioRxiv to not treat their af
 
 In the meantime, this xsl simply strips all address/locale tags (retaining the content within) from any affs, so that the affiliation string can be rendered appropriately. It does mean that some semantic information is lost (the `address` in the HTML).
 
+### [/src/remove-institution-from-aff.xsl](/src/remove-institution-from-aff.xsl)
+
+In JATS the `<aff>` element can be treated as mixed content. In other words, it can be somewhat prescriptive about how the content inside should be rendered - both the elements and text should be included in the order provided. In this [ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/343) encoda was adjusted so that "any text not within the `<institution>` or address tags is appended to the organization name." When text content is present before an `<institution>` element inside `<aff>`, this content is appended to the `<institution>`, and the punctuation and content of the affiliaiton is as a result broken. For example 
+```xml
+<aff id="a5"><label>5</label>Cell Biology Program, <institution>Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center</institution>, New York, NY, USA</aff>
+```
+
+Gets decoded into:
+```json
+{
+  "type": "Organization",
+  "name": "Sloan Kettering Institute, Memorial Sloan Kettering Cancer CenterCell Biology Program, ,, New York, NY, USA"
+}
+```
+
+`Sloan Kettering Institute, Memorial Sloan Kettering Cancer CenterCell Biology Program, ,, New York, NY, USA` is not an acceptable rendering of this affiliation. As a result this xsl simply removes all `<institution>` elements from within aff, to skip this behaviour, and render the affiliation as originally provided. 
+
+This can be solved in mutliple ways. One is to ask bioRxiv to not treat their affiliations as mixed-content - which has already been done. Another is for encoda to be adjusted so as to retain the original order of the content as it is supplied (I'm unsure if this will be possible).
+
 ### [/src/remove-issue-from-refs.xsl](/src/remove-issue-from-refs.xsl)
 
 As explained in [this comment from Nokome](https://github.com/elifesciences/enhanced-preprints-issues/issues/121#issuecomment-1408037824), when a journal reference has an `<issue>` tag as well as a `<volume>` tag in the XML, this affects the representation of that content in th JSON produced by encoda - `Periodical` is nested under both `PublicationVolume` and `PublicationIssue`. Because the client [curently does not handle this level of nesting](https://github.com/elifesciences/enhanced-preprints-client/blob/5aa55ce5f707af5048d5011ba0c7c12f912124db/src/components/atoms/reference/reference.tsx#L7), the result is both a missing issue number and journal title for a reference. 
