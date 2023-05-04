@@ -82,6 +82,14 @@ Encoda does not decode this element, and therefore et al. is not included in the
 
 This XSL replaces the `<etal>` element with a surname as a workaround, meaning that this content is represnted in the JSON, and as a result within the HTML rendered by EPP. Support needs adding to encoda (and potentially subsequently client depending on the representation in the JSON), in order for this content to be rendered without this xsl.
 
+### [/src/handle-fpage-as-elocation-id.xsl](/src/handle-fpage-as-elocation-id.xsl)
+
+JATS has a specific tag for elocation id (which is a piece of reference information somewhat equivalent to page number in online only journals) - `<elocation-id>`. Some vendors will use `<fpage>` instead of `<elocation-id>` to capture these, which while semantically incorrect, should be supported.
+
+Encoda [currently only decodes](https://github.com/stencila/encoda/blob/202d8da5e5c3381b318910df1fd8878df4b1456d/src/codecs/jats/index.ts#L1369-L1370) an `<fpage>` (`<lpage>`) if is an integer (as an aside this is not ideal either - page numbers are not always integers, and may include letters or other characters by convention). There is also a [workaround in encoda](https://github.com/stencila/encoda/blob/202d8da5e5c3381b318910df1fd8878df4b1456d/src/codecs/jats/index.ts#L1395-L1407) noting that `fpage` is sometimes used in place of `elocation-id`, but this function will only handle cases where it starts with a `e` - which is convention that eLife use, but is not consistent within journal publishing. 
+
+This xsl will convert any `fpage` found in a reference that does not also have an `lpage` or `elocation-id` to `elocation-id`, so that it can be decoded by encoda and rendered by EPP.
+
 ### [/src/handle-other-type-refs.xsl](/src/handle-other-type-refs.xsl)
 
 This xsl seeks to introduce approriate `publication-type` values for references, based on what child elements or content is present, so that it can be better decoded by encoda and therefore better rendered by EPP. It be inappropriate in some cases to change the `publication-type` (for example when not enough semantic information is provided, or conflicting tags are present as a result of errors), so this xsl will not change all instances.
