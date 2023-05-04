@@ -127,6 +127,10 @@ This xsl is to handle some incorrect tagging in XML file from bioRxiv, which lea
 
 This xsl is to better display a list in 2023.02.02.526762. The authors have used a non-standard list-item indicator - a hyphen - which has been captured as the `<label>` for each `<list-item>`. This is perfectly acceptable capture in the XML, but it is not supported by encoda. In addition the list has the `list-type` `simple`, but is rendered as a bulleted list in EPP. Encoda needs updating to handle custom labels for list items, as in this case, and EPP needs updating to render simple lists without indicators, and to be able to render any custom list-item labels.
 
+### [/src/2023.03.13.532331/fix-author-emails.xsl](/src/2023.03.13.532331/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
