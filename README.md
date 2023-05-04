@@ -139,6 +139,12 @@ This xsl is to better display a list in 2023.02.02.526762. The authors have used
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.03.01.530673/remove-list-labels.xsl](/src/2023.03.01.530673/remove-list-labels.xsl)
+
+This xsl is to better display a list in 2023.03.01.530673. bioRxiv's vendors have captured this bulleted list using the list-type `simple` but with each list-item accompanied by a label which is a bullet. While this is not ideal capture, it's still perfectly correct (maybe they wanted to use a specific bullet point character instead of whatever the default is for their platform). 
+
+On EPP `simple` lists are also rendered as bulleted lists. This is a problem - they should be rendered with no marker. The reason this is the case is because encoda does not capture the semantic information related to what list marker should be used (rather just whether it's ordered or unordered). The result of this capture in encoda is a bulleted list where each item has an extra marker followed by a new line in EPP. (Encoda also needs adjusting to better handle custom labels in lists - to not include this new line - currently these are captured as a separate paragraph, which is inappropriate - once these changes have been made EPP client will require adjusting). Changing this capture to a `bullet` type list and removing the labels means that this can be rendered appropriately on EPP in the meantime.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
