@@ -168,6 +168,10 @@ On EPP `simple` lists are also rendered as bulleted lists. This is a problem - t
 
 This xsl removes the corresponding author status from the third last author Huanhuan Li. They are marked (presumably incorrectly) as a corresponding author in the author's original PDF file, but in the 'For correspondence' statement they are not mentioned. bioRxiv have faithfully captured this status. This becomes an issue due to the differences in the way corresponding author information is rendered on bioRxiv and EPP. bioRxiv simply render the 'For correspondence' statement. EPP captures the author email under each author - as a result the email for the second last author is provided under Huanhuan Li which is incorrect. There isn't really an action here - it;s a mistake which stems from the authors and is made more visible/worse due to the way this information is rendered on EPP.
 
+### [/src/2023.03.29.534786/fix-list-markers.xsl](/src/2023.03.29.534786/fix-list-markers.xsl)
+
+This xsl fixes the list markers in lists in figure captions in 2023.03.29.534786 (v1). We need better support for the various different types of list in EPP - this is possibly captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/640 (Encoda has already been updated for one aspect of this, EPP now needs changing as a result; the output of Encoda for when list items have labels could be improved however, as these are currently decoded as separate paragraphs). In this preprint, lists are used to refer to particular panels within an image. But since we're not displaying the correct marker based on either the `<label>` or on the `list-type` attribute, the information about which panel the text corresponds to is lost. This xsl introduces this text inside paragraphs and ensure that the figure titles are captured appropriately. 
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
