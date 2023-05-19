@@ -168,6 +168,10 @@ On EPP `simple` lists are also rendered as bulleted lists. This is a problem - t
 
 This xsl removes the corresponding author status from the third last author Huanhuan Li. They are marked (presumably incorrectly) as a corresponding author in the author's original PDF file, but in the 'For correspondence' statement they are not mentioned. bioRxiv have faithfully captured this status. This becomes an issue due to the differences in the way corresponding author information is rendered on bioRxiv and EPP. bioRxiv simply render the 'For correspondence' statement. EPP captures the author email under each author - as a result the email for the second last author is provided under Huanhuan Li which is incorrect. There isn't really an action here - it;s a mistake which stems from the authors and is made more visible/worse due to the way this information is rendered on EPP.
 
+### [/src/2021.08.16.455933/fix-affs.xsl](/src/2021.08.16.455933/fix-affs.xsl)
+
+This xsl removes subscript formatting from two affiliations in 2021.08.16.455933. This is presumably a mistake in typesetting, although it's one that _should be_ relatively innocuous. The content that is tagged as subscript is currently stripped from the resultant output in encoda, resulting in missing information and broken punctuation on EPP. Instead this would ideally be retained as subscript content (and the typesetting error would not be present in the first place).
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
