@@ -23,6 +23,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install node dependencies
+        run: yarn
+
+      - name: Run jest tests
+        run: yarn test
+
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
