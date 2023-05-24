@@ -182,6 +182,14 @@ This xsl removes subscript formatting from two affiliations in 2021.08.16.455933
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.02.13.528273/fix-title-list-and-affs.xsl](/src/2023.02.13.528273/fix-title-list-and-affs.xsl)
+
+This xsl carries out three main changes:
+1. It changes the title from all caps to sentence case.
+2. It ensures that both affiliations are mapped to all authors (as it stands none are displayed on EPP). This is somewhat similar to `handle-singular-aff-no-links` above, which is applied to all files (if we see further instances of this, we may consider bumping this up to all as well).
+3. It changes the capture of the list at the end of the Introduction. There already is [a ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/640) that (should?) covers better handling of labels for list markers in Encoda, which if complete would remove the need for this xsl (and result in the same or similar rendering on EPP). 
+
+Since all these changes are tagging related or covered in existing tickets, no further tickets need raising.
 
 # Modify bioRxiv XML in preparation for Encoda
 
