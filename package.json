@@ -24,7 +24,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "start": "node dist/server.js",
-    "start:dev": "ts-node-dev src/server.ts"
+    "start": "node dist/app/server.js",
+    "start:dev": "ts-node-dev src/app/server.ts"
   }
 }
