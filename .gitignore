@@ -1,3 +1,6 @@
 *.log
 actual-*.xml
 /*.xml
+/node_modules
+/dist
+
