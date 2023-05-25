@@ -269,3 +269,20 @@ Run with logs:
 docker buildx build -t epp-biorxiv-xslt:test --target test .
 docker run --rm epp-biorxiv-xslt:test
 ```
+
+## Build docker image (api)
+```
+docker buildx build -t epp-biorxiv-xslt-api -f Dockerfile.api .
+```
+
+## Run api from image
+```
+docker run -p 8080:8080 -i epp-biorxiv-xslt-api
+```
+
+## Test api
+```
+curl --location 'http://localhost:8080' \
+--header 'Content-Type: application/xml' \
+--data '<root><child>content</child></root>'
+```
