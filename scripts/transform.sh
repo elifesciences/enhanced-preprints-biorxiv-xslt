@@ -6,10 +6,11 @@ TRANSFORM_FILE="$(mktemp)"
 OUTPUT_FILE="$(mktemp)"
 
 usage() {
-    echo "Usage: $0 [-l|--log SESSION_LOG_FILE] [--log-info SESSION_LOG_FILE_INFO] [XSL_FILE]"
+    echo "Usage: $0 [--input-xml INPUT_XML_FILE] [-l|--log SESSION_LOG_FILE] [--log-info SESSION_LOG_FILE_INFO] [XSL_FILE]"
     exit 1
 }
 
+INPUT_XML_FILE=""
 XSL_FILE=""
 DOI=""
 SESSION_LOG_FILE=""
@@ -23,6 +24,10 @@ while [[ "$#" -gt 0 ]]; do
         ;;
     --log-info)
         SESSION_LOG_FILE_INFO="$2"
+        shift 2
+        ;;
+    -i | --input-xml)
+        INPUT_XML_FILE="$2"
         shift 2
         ;;
     -h | --help)
@@ -85,11 +90,16 @@ function set_doi() {
     echo "${article_id#*10.1101/}"
 }
 
-function handle_stdin() {
-    local input="$(cat /dev/stdin)"
-
-    if [[ "${input: -1}" != $'\n' ]]; then
-        input="${input}"$'\n'
+function handle_input_xml() {
+    if [[ -n "$INPUT_XML_FILE" && -n "$(echo "$INPUT_XML_FILE" | tr -d '[:space:]')" ]]; then
+        # read from variable
+        local input="$(cat "$INPUT_XML_FILE")"
+    else
+        # read from stdin
+        local input="$(cat /dev/stdin)"
+        if [[ "${input: -1}" != $'\n' ]]; then
+            input="${input}"$'\n'
+        fi
     fi
 
     echo "${input}"
@@ -162,7 +172,7 @@ function transform_xml() {
     rm -rf "${xslt_file_dir}"
 }
 
-handle_stdin | encode_xmlns_attribute | encode_hexadecimal_notation > "${INPUT_FILE}"
+handle_input_xml | encode_xmlns_attribute | encode_hexadecimal_notation > "${INPUT_FILE}"
 DOI=$(set_doi "${INPUT_FILE}")
 
 # Apply XSLT transform

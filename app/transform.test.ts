@@ -1,9 +1,9 @@
 import transform from './transform';
 
 describe('transform', () => {
-  it('should transform the XML string', () => {
+  it('should transform the XML string', async () => {
     const xml = '<message>Hello world!</message>';
     const transformedXml = transform(xml);
-    expect(transformedXml).toEqual('<transformed><message>Hello world!</message></transformed>');
+    expect(await transformedXml).toStrictEqual({xml: '<message>Hello world!</message>', logs: []});
   });
 });

@@ -210,7 +210,7 @@ Some examples:
 
 - `./test/change-label-and-title-elements/kitchen-sink.xml` contains the expected XML of `./test/fixtures/kitchen-sink.xml` that has gone through the `./src/change-label-and-title-elements.xsl` transform.
 
-- `./test/all/kitchen-sink.xml` contains the expected XML of `./test/fixtures/kitchen-sink.xml` that has gone through all of the transforms directly in the `./src` folder.
+- `./test/all/kitchen-sink.xml` contains the expected XML of `./test/fixtures/kitchen-sink.xml` that has gone through all the transforms directly in the `./src` folder.
 
 - `./test/2022.05.30.22275761/remove-supplementary-materials/2022.05.30.22275761.xml` contains the expected XML of `./test/fixtures/2022.05.30.22275761/2022.05.30.22275761.xml` that has gone through the `./src/2022.05.30.22275761/remove-supplementary-materials.xsl` transform.
 
@@ -272,17 +272,16 @@ docker run --rm epp-biorxiv-xslt:test
 
 ## Build docker image (api)
 ```
-docker buildx build -t epp-biorxiv-xslt-api -f Dockerfile.api .
+docker buildx build -t epp-biorxiv-xslt:api --target api .
 ```
 
 ## Run api from image
 ```
-docker run -p 8080:8080 -i epp-biorxiv-xslt-api
+docker run -p 8080:80 epp-biorxiv-xslt:api
 ```
 
 ## Test api
 ```
 curl --location 'http://localhost:8080' \
---header 'Content-Type: application/xml' \
 --data '<root><child>content</child></root>'
 ```
