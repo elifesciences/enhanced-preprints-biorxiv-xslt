@@ -1,28 +1,37 @@
 import { exec } from 'child_process';
-import { writeFileSync, unlinkSync, readFileSync, existsSync } from 'fs';
+import {
+  writeFileSync,
+  unlinkSync,
+  readFileSync,
+  existsSync,
+  mkdtempSync,
+  rmdirSync
+} from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
 
-const transform = async (xml: string, transformScript: string = '/app/scripts/transform.sh') : Promise<{xml: string, logs: string[]}> => {
+const transform = async (xml: string, transformScript: string = '/app/scripts/transform.sh') : Promise<{xml: string, logs?: string[]}> => {
   return new Promise((resolve, reject) => {
     if (!existsSync(transformScript)) {
-      resolve({xml, logs: []});
+      // If access to transformScript is not available then return xml unchanged.
+      resolve({xml});
       return;
     }
 
-    // Create a temporary file path
-    const tmpFilePath = join(tmpdir(), 'temp.xml');
-    // Create a temporary log file
-    const logFilePath = join(tmpdir(), 'temp.log');
+    // Create tmp folder and files
+    const tmpDirPath = mkdtempSync(join(tmpdir(), 'transform-'));
+    const tmpXmlPath = join(tmpDirPath, 'temp.xml');
+    const tmpLogPath = join(tmpDirPath, 'temp.log');
 
     // Write the inputXml to the temporary file
-    writeFileSync(tmpFilePath, xml);
+    writeFileSync(tmpXmlPath, xml);
 
-    exec(`${transformScript} --input-xml "${tmpFilePath}" --log "${logFilePath}"`, (error, stdout, stderr) => {
-      const logs = readFileSync(logFilePath, 'utf-8').split('\n').filter(i => i !== '');
+    exec(`${transformScript} --input-xml "${tmpXmlPath}" --log "${tmpLogPath}"`, (error, stdout, stderr) => {
+      const logs = readFileSync(tmpLogPath, 'utf-8').split('\n').filter(i => i !== '');
       // Remove the temporary files
-      unlinkSync(tmpFilePath);
-      unlinkSync(logFilePath);
+      unlinkSync(tmpXmlPath);
+      unlinkSync(tmpLogPath);
+      rmdirSync(tmpDirPath);
 
       if (error) {
         console.warn(`Error: ${error.message}`);
