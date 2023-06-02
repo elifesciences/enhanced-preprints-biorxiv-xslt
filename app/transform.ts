@@ -23,7 +23,7 @@ const transform = async (xml: string, transformScript: string = '/app/scripts/tr
     const tmpXmlPath = join(tmpDirPath, 'temp.xml');
     const tmpLogPath = join(tmpDirPath, 'temp.log');
 
-    // Write the inputXml to the temporary file
+    // Write the input xml to the temporary file
     writeFileSync(tmpXmlPath, xml);
 
     exec(`${transformScript} --input-xml "${tmpXmlPath}" --log "${tmpLogPath}"`, (error, stdout, stderr) => {
