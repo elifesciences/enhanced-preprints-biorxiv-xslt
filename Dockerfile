@@ -1,3 +1,4 @@
+# Base stage for building Java app
 FROM openjdk:11 as base
 
 RUN apt-get update && apt-get install -y wget libxml2-utils
@@ -22,7 +23,26 @@ ENTRYPOINT ["/app/project_tests.sh"]
 
 FROM base as prod
 WORKDIR /app
-COPY scripts /app/scripts
-RUN chmod +x -R /app/scripts/*
-COPY src /app/src
+COPY scripts ./scripts
+RUN chmod +x -R ./scripts/*
+COPY src ./src
 ENTRYPOINT ["/app/scripts/transform.sh"]
+
+FROM node:lts-buster-slim as node_base
+WORKDIR /app
+COPY package*.json ./
+COPY yarn.lock ./
+RUN yarn install --production
+COPY . .
+RUN yarn build
+
+FROM base as api
+WORKDIR /app
+COPY --from=node_base /usr/local/bin/node /usr/local/bin/
+COPY --from=node_base /app/node_modules ./node_modules
+COPY --from=node_base /app/dist ./dist
+COPY scripts ./scripts
+RUN chmod +x -R ./scripts/*
+COPY src ./src
+ENV PORT 80
+CMD [ "node", "dist/server.js" ]
