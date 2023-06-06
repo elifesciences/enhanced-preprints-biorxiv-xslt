@@ -8,6 +8,6 @@ describe('POST /', () => {
     const res = await request(app).post('/').send(xml);
 
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toStrictEqual({xml: '<root><child>content</child></root>', logs: []});
+    expect(res.body).toStrictEqual({xml: '<root><child>content</child></root>'});
   });
 });
