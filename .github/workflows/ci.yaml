@@ -17,6 +17,20 @@ jobs:
 
       - name: Check for entry for each XSL in documentation
         run: ./scripts/verify-documentation.sh
+  check-api-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run api in docker container
+        run: |
+          docker buildx build -t epp-biorxiv-xslt:api --target api .
+          docker run -p 3000:80 epp-biorxiv-xslt:api
+
+      - name: Check api
+        run: |
+          curl --location 'http://localhost:3000' --data '<root><child>content</child></root>'
   project-tests:
     runs-on: ubuntu-latest
     steps:

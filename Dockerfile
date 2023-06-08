@@ -21,7 +21,7 @@ WORKDIR /app
 COPY . /app
 ENTRYPOINT ["/app/project_tests.sh"]
 
-FROM node:lts-buster-slim as node_base
+FROM node:hydrogen-alpine3.18 as node_base
 WORKDIR /app
 COPY package*.json ./
 COPY yarn.lock ./
