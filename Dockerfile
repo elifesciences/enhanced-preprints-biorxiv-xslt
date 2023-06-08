@@ -21,13 +21,6 @@ WORKDIR /app
 COPY . /app
 ENTRYPOINT ["/app/project_tests.sh"]
 
-FROM base as prod
-WORKDIR /app
-COPY scripts ./scripts
-RUN chmod +x -R ./scripts/*
-COPY src ./src
-ENTRYPOINT ["/app/scripts/transform.sh"]
-
 FROM node:lts-buster-slim as node_base
 WORKDIR /app
 COPY package*.json ./
@@ -46,3 +39,10 @@ RUN chmod +x -R ./scripts/*
 COPY src ./src
 ENV PORT 80
 CMD [ "node", "dist/server.js" ]
+
+FROM base as prod
+WORKDIR /app
+COPY scripts ./scripts
+RUN chmod +x -R ./scripts/*
+COPY src ./src
+ENTRYPOINT ["/app/scripts/transform.sh"]
