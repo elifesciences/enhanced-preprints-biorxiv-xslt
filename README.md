@@ -182,7 +182,6 @@ This xsl removes subscript formatting from two affiliations in 2021.08.16.455933
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
-
 ### [/src/2023.01.03.522550/fix-affs.xsl](/src/2023.01.03.522550/fix-affs.xsl)
 
 This xsl is to ensure that the correct information is included for 4 affiliations. bioRxiv's vendors have captured these affiliations in a poor fashion as a result of an oddity in the way the authors presented these affiliations in their preprint PDF (Departments of <sup>3</sup>Medicine, <sup>4</sup>Human Genetics and <sup>5</sup>Biochemistry, McGill University, Montréal, Québec, Canada H3T 1E2). 
@@ -197,6 +196,12 @@ This xsl carries out three main changes:
 3. It changes the capture of the list at the end of the Introduction. There already is [a ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/640) that (should?) covers better handling of labels for list markers in Encoda, which if complete would remove the need for this xsl (and result in the same or similar rendering on EPP). 
 
 Since all these changes are tagging related or covered in existing tickets, no further tickets need raising.
+
+
+### [/src/2023.01.31.526541/fix-author-emails.xsl](/src/2023.01.31.526541/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
 
 ### [/src/2022.07.22.501195/fix-author-emails.xsl](/src/2022.07.22.501195/fix-author-emails.xsl)
 
