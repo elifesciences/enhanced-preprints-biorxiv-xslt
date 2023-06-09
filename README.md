@@ -208,6 +208,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 
+### [/src/2022.04.14.22272888/fix-author-emails.xsl](/src/2022.04.14.22272888/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
 ### [/src/2023.04.04.535526/fix-author-emails.xsl](/src/2023.04.04.535526/fix-author-emails.xsl)
 
 This xsl fixes the complete mess that the authors and bioRxiv have made in terms of identifying who is a corresonding author.  The first author is the only one who's provided an email, and no other contact information is available, so they will have to be corresponding. Similarly bioRxiv's vendors have incorrectly captured both last authors as corresponding authors (instead of as equal authors, as they should be).
@@ -215,7 +219,6 @@ This xsl fixes the complete mess that the authors and bioRxiv have made in terms
 ### [/src/2023.03.20.533567/fix-author-fn.xsl](/src/2023.03.20.533567/fix-author-fn.xsl)
 
 bioRxiv's vendors have captured a footnote (indicating the sole corrresponding author is the lead contact) as an affiliation. This xsl changes the capture of this footnote so that it is semantically correct.
-
 
 # Modify bioRxiv XML in preparation for Encoda
 
