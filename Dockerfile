@@ -1,4 +1,4 @@
-ARG node_version=18.16-alpine3.17
+ARG node_version=18.16-slim
 
 # Base stage for building Java app
 FROM openjdk:11 as base
