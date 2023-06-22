@@ -26,11 +26,13 @@ jobs:
       - name: Run api in docker container
         run: |
           docker buildx build -t epp-biorxiv-xslt:api --target api .
-          docker run -p 3000:80 epp-biorxiv-xslt:api
+          docker run -d -p 3000:80 epp-biorxiv-xslt:api
+          sleep 5 # wait for the container to start up
 
       - name: Check api
         run: |
           curl --location 'http://localhost:3000' --data '<root><child>content</child></root>'
+          docker stop $(docker ps -q) # stop running containers
   project-tests:
     runs-on: ubuntu-latest
     steps:
