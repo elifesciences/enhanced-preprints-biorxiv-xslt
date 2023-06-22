@@ -21,7 +21,7 @@ WORKDIR /app
 COPY . /app
 ENTRYPOINT ["/app/project_tests.sh"]
 
-FROM node:3.18-slim as node_base
+FROM node:18.16-slim as node_base
 WORKDIR /app
 COPY package*.json ./
 COPY yarn.lock ./
