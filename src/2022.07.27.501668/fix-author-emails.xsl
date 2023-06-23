@@ -36,7 +36,7 @@
                     <xsl:apply-templates select="@*"/>
                     <xsl:attribute name="corresp">yes</xsl:attribute>
                     <xsl:apply-templates select="name"/>
-                    <email>luoj@upmc.edu</email>
+                    <email>standley@biken.osaka-u.ac.jp</email>
                     <xsl:apply-templates select="*[name()!='name' and not(@ref-type='author-notes')]"/>
                 </xsl:copy>
             </xsl:when>
