@@ -26,7 +26,7 @@
             <xsl:when test="./name/surname='Sherif'">
                 <xsl:copy>
                     <xsl:apply-templates select="@*[name()!='corresp']"/>
-                    <xsl:apply-templates select="name"/>
+                    <name><surname>Sherif</surname><given-names>Aalaa Alrahman</given-names></name>
                     <xsl:apply-templates select="*[name()!='name' and not(@ref-type='corresp')]"/>
                     <xref ref-type="author-notes" rid="n1">&#x002A;</xref>
                 </xsl:copy>
@@ -36,7 +36,7 @@
                     <xsl:apply-templates select="@*"/>
                     <xsl:attribute name="corresp">yes</xsl:attribute>
                     <xsl:apply-templates select="name"/>
-                    <email>luoj@upmc.edu</email>
+                    <email>standley@biken.osaka-u.ac.jp</email>
                     <xsl:apply-templates select="*[name()!='name' and not(@ref-type='author-notes')]"/>
                 </xsl:copy>
             </xsl:when>
