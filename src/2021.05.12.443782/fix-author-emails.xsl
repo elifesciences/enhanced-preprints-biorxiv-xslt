@@ -4,31 +4,29 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     exclude-result-prefixes="xs"
     version="3.0">
-
+    
     <xsl:output method="xml" encoding="UTF-8"/>
-
+    
     <xsl:template match="*|@*|text()">
         <xsl:copy>
             <xsl:apply-templates select="*|@*|text()"/>
         </xsl:copy>
     </xsl:template>
-
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author']">
+    
+    <xsl:template match="article[//article-meta/article-version='1.3']//article-meta//contrib[@contrib-type='author']">
         <xsl:choose>
-            <xsl:when test="./name/surname='DeKraker'">
+            <xsl:when test="./name/surname='Parichy'">
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:attribute name="corresp">yes</xsl:attribute>
                     <xsl:apply-templates select="name"/>
-                    <email>jordan.dekraker@mail.mcgill.ca</email>
-                    <xsl:apply-templates select="*[name()!='name' and not(@ref-type='corresp')]"/>
+                    <email>dparichy@virginia.edu</email>
+                    <xsl:apply-templates select="*[name()!='name']"/>
                 </xsl:copy>
             </xsl:when>
             <xsl:when test="@corresp='yes'">
                 <xsl:copy>
-                    <xsl:apply-templates select="@*[name()!='corresp']"/>
-                    <xsl:apply-templates select="*[not(@ref-type='corresp')]"/>
-                    <xref ref-type="fn" rid="fn1">&#x002A;</xref>
+                    <xsl:apply-templates select="@*[name()!='corresp']|*"/>
                 </xsl:copy>
             </xsl:when>
             <xsl:otherwise>
@@ -38,9 +36,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes/corresp">
-        <fn id="fn1"><p>co-senior authors</p></fn>
-    </xsl:template>
-
+    
+    <xsl:template match="article[//article-meta/article-version='1.3']//article-meta/author-notes/corresp"/>
+    
 </xsl:stylesheet>
