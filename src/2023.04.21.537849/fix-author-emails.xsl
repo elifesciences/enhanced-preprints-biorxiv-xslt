@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author'=]">
+    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author']">
         <xsl:choose>
             <xsl:when test="./name/surname='Hung'">
                 <xsl:copy>
