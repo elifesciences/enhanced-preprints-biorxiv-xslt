@@ -4,20 +4,15 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     exclude-result-prefixes="xs"
     version="3.0">
-    
+
     <xsl:output method="xml" encoding="UTF-8"/>
-    
+
     <xsl:template match="*|@*|text()">
         <xsl:copy>
             <xsl:apply-templates select="*|@*|text()"/>
         </xsl:copy>
     </xsl:template>
-    
-    <xsl:template match="article//article-meta//contrib[@contrib-type='author' and name/surname='Li' and name/given-names='Huanhuan']">
-        <xsl:copy>
-            <xsl:apply-templates select="@*[name()!='corresp']"/>
-            <xsl:apply-templates select="*[not(@ref-type='corresp')]"/>
-        </xsl:copy>
-    </xsl:template>
-    
+
+    <xsl:template match="article[//article-meta/article-version='1.3']//sec[p[1]='Dear Editor,']"/>
+
 </xsl:stylesheet>
