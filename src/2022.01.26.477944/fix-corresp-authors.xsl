@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="article[//article-meta/article-version='1.2']//article-meta//contrib[@contrib-type='author' and name/surname='Li' and name/given-names='Huanhuan']">
+    <xsl:template match="article//article-meta//contrib[@contrib-type='author' and name/surname='Li' and name/given-names='Huanhuan']">
         <xsl:copy>
             <xsl:apply-templates select="@*[name()!='corresp']"/>
             <xsl:apply-templates select="*[not(@ref-type='corresp')]"/>

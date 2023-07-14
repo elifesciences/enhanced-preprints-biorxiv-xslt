@@ -1,3 +1,5 @@
+ARG node_version=18.16-slim
+
 # Base stage for building Java app
 FROM openjdk:11 as base
 
@@ -21,13 +23,14 @@ WORKDIR /app
 COPY . /app
 ENTRYPOINT ["/app/project_tests.sh"]
 
-FROM node:lts-buster-slim as node_base
+FROM node:${node_version} as node_base
 WORKDIR /app
 COPY package*.json ./
 COPY yarn.lock ./
-RUN yarn install --production
+RUN yarn install
 COPY . .
 RUN yarn build
+RUN yarn install --production
 
 FROM base as api
 WORKDIR /app
