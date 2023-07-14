@@ -310,6 +310,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 The second version of this article has numerous errors in the typesetting, whereby the article title for the journal references has not been captured appropriately. Instead both the article title and the journal title have been captured within a source element. Due to how Encoda is decoding this information it results in a lot of duplicated information being rendered on EPP. The XSL ensures that the article title is captured appropiately using `<article-title>` for affected references.
 
+### [/src/2023.03.22.533725/remove-ack.xsl](/src/2023.03.22.533725/remove-ack.xsl)
+
+In this article bioRxiv's vendors have captured an empty acknowledgements section. In the original PDF this seems to be a header for other sections containing content which are sometimes placed in acknowledgements, but bioRxiv have decided to captured these as separate, sibling sections instead. This xsl simply removes the separate acknowledgements, which seems like the most approproate approach here.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
