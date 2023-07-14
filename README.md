@@ -306,6 +306,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.03.01.530673/fix-references-in-v2.xsl](/src/2023.03.01.530673/fix-references-in-v2.xsl)
+
+The second version of this article has numerous errors in the typesetting, whereby the article title for the journal references has not been captured appropriately. Instead both the article title and the journal title have been captured within a source element. Due to how Encoda is decoding this information it results in a lot of duplicated information being rendered on EPP. The XSL ensures that the article title is captured appropiately using `<article-title>` for affected references.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
