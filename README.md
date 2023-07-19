@@ -322,6 +322,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
 
+### [/src/2023.04.25.537217/fix-refs.xsl](/src/2023.04.25.537217/fix-refs.xsl)
+
+bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
