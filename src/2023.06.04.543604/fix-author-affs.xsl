@@ -103,6 +103,4 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes"/>
-    
 </xsl:stylesheet>
