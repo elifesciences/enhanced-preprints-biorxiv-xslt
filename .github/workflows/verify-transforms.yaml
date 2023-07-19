@@ -17,22 +17,6 @@ jobs:
 
       - name: Check for entry for each XSL in documentation
         run: ./scripts/verify-documentation.sh
-  check-api-build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run api in docker container
-        run: |
-          docker buildx build -t epp-biorxiv-xslt:api --target api .
-          docker run -d -p 3000:80 epp-biorxiv-xslt:api
-          sleep 5 # wait for the container to start up
-
-      - name: Check api
-        run: |
-          curl --location 'http://localhost:3000' --data '<root><child>content</child></root>'
-          docker stop $(docker ps -q) # stop running containers
   project-tests:
     runs-on: ubuntu-latest
     steps:
@@ -45,25 +29,10 @@ jobs:
       - name: Run jest tests
         run: yarn test
 
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
-
-      - name: Run tests
-        run: ./project_tests.sh --log ./project-tests.log
-
       - name: Run tests in docker container
         run: |
           docker buildx build -t epp-biorxiv-xslt:test --target test .
           docker run --rm epp-biorxiv-xslt:test
-
-      - name: Output project-tests.log
-        run: cat ./project-tests.log
-
-      - name: Preserve project-tests.log as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: ./project-tests.log
   build-and-push:
     needs: [project-tests]
     runs-on: ubuntu-latest
@@ -91,14 +60,3 @@ jobs:
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITHASH \
             -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:$GITBRANCH-$GITSHORTHASH-$DATETIME \
             --platform linux/amd64,linux/arm64 --push .
-      - name: Build and push (api image)
-        run: |
-          GITHASH=$(git log -1 --pretty=format:"%H")
-          GITSHORTHASH=$(git log -1 --pretty=format:"%H" | head -c 8)
-          DATETIME=$(date -u '+%Y%m%d.%H%M')
-          GITBRANCH=$(git branch --show-current)
-          docker buildx build \
-            -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt-api:latest \
-            -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt-api:$GITHASH \
-            -t ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt-api:$GITBRANCH-$GITSHORTHASH-$DATETIME \
-            --platform linux/amd64,linux/arm64 --target api --push .
