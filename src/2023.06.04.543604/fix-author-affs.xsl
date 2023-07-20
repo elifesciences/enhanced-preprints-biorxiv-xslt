@@ -19,8 +19,8 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a1"/>
-                    <xref ref-tyoe="aff" rid="a2"/>
+                    <xref ref-type="aff" rid="a1"/>
+                    <xref ref-type="aff" rid="a2"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -28,7 +28,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a1"/>
+                    <xref ref-type="aff" rid="a1"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -36,7 +36,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a2"/>
+                    <xref ref-type="aff" rid="a2"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -44,7 +44,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a3"/>
+                    <xref ref-type="aff" rid="a3"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -52,7 +52,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a1"/>
+                    <xref ref-type="aff" rid="a1"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -60,7 +60,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a3"/>
+                    <xref ref-type="aff" rid="a3"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -70,7 +70,7 @@
                         <xsl:copy>
                             <xsl:apply-templates select="@*"/>
                             <xsl:apply-templates select="name|contrib-id"/>
-                            <xref ref-tyoe="aff" rid="a3"/>
+                            <xref ref-type="aff" rid="a3"/>
                             <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                         </xsl:copy>
                     </xsl:when>
@@ -78,7 +78,7 @@
                         <xsl:copy>
                             <xsl:apply-templates select="@*"/>
                             <xsl:apply-templates select="name|contrib-id"/>
-                            <xref ref-tyoe="aff" rid="a4"/>
+                            <xref ref-type="aff" rid="a4"/>
                             <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                         </xsl:copy>
                     </xsl:otherwise>
@@ -88,7 +88,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a1"/>
+                    <xref ref-type="aff" rid="a1"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:when>
@@ -96,7 +96,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name|contrib-id"/>
-                    <xref ref-tyoe="aff" rid="a1"/>
+                    <xref ref-type="aff" rid="a1"/>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id'))]"/>
                 </xsl:copy>
             </xsl:otherwise>
