@@ -13,8 +13,6 @@ RUN echo "#!/bin/bash\njava -jar /usr/share/java/saxon.jar -s:\$1 -xsl:\$2" > /u
 
 RUN chmod +x /usr/local/bin/apply-xslt
 
-RUN touch /tmp/JATS-archivearticle1.dtd
-
 FROM base as apply-xslt
 ENTRYPOINT ["apply-xslt"]
 
