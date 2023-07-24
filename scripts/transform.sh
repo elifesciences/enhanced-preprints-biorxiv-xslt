@@ -13,6 +13,8 @@ usage() {
 INPUT_XML_FILE=""
 XSL_FILE=""
 DOI=""
+DOCTYPE=""
+DTD=""
 SESSION_LOG_FILE=""
 SESSION_LOG_FILE_INFO=""
 
@@ -90,6 +92,23 @@ function set_doi() {
     echo "${article_id#*10.1101/}"
 }
 
+set_doctype() {
+  local xml=$1
+  sed -n 's/^.*\(<!DOCTYPE[^>]*>\).*/\1/p' "$xml"
+}
+
+set_dtd() {
+  local doctype=$1
+  echo "$doctype" | sed -n 's/.*"\(.*\.dtd\)".*/\1/p'
+}
+
+create_empty_dtd() {
+  local dtd=$1
+  if [ -n "$dtd" ]; then
+    touch "/tmp/$dtd"
+  fi
+}
+
 function handle_input_xml() {
     if [[ -n "$INPUT_XML_FILE" && -n "$(echo "$INPUT_XML_FILE" | tr -d '[:space:]')" ]]; then
         # read from variable
@@ -138,7 +157,7 @@ function restore_hexadecimal_notation() {
 }
 
 function restore_doctype() {
-    sed "s#<?xml version=\"1.0\" encoding=\"UTF-8\"?>#<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2d1 20170631//EN\" \"JATS-archivearticle1.dtd\">\n#g"
+    sed "s#<?xml version=\"1.0\" encoding=\"UTF-8\"?>#<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n${DOCTYPE}\n#g"
 }
 
 function remove_empty_lines() {
@@ -174,6 +193,9 @@ function transform_xml() {
 
 handle_input_xml | encode_xmlns_attribute | encode_hexadecimal_notation > "${INPUT_FILE}"
 DOI=$(set_doi "${INPUT_FILE}")
+DOCTYPE=$(set_doctype "${INPUT_FILE}")
+DTD=$(set_dtd "${DOCTYPE}")
+create_empty_dtd "${DTD}"
 
 # Apply XSLT transform
 if [[ -z "${XSL_FILE}" ]]; then
