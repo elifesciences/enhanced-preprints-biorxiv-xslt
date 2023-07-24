@@ -27,21 +27,24 @@ const transform = async (xml: string, transformScript: string = '/app/scripts/tr
     writeFileSync(tmpXmlPath, xml);
 
     exec(`${transformScript} --input-xml "${tmpXmlPath}" --log "${tmpLogPath}"`, (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error: ${error.message}`);
+      }
+      if (stderr) {
+        console.error(`stderr: ${stderr}`);
+      }
+
+      if (error || stderr) {
+        return reject('The transform script has failed. The errors have been logged.');
+      }
+
       const logs = readFileSync(tmpLogPath, 'utf-8').split('\n').filter(i => i !== '');
       // Remove the temporary files
       unlinkSync(tmpXmlPath);
       unlinkSync(tmpLogPath);
       rmdirSync(tmpDirPath);
 
-      if (error) {
-        console.warn(`Error: ${error.message}`);
-        reject(error);
-      }
-      if (stderr) {
-        console.warn(`stderr: ${stderr}`);
-        reject(new Error(stderr));
-      }
-      resolve({xml: stdout, logs});
+      return resolve({xml: stdout, logs});
     });
   });
 };
