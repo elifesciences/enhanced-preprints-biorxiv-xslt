@@ -14,7 +14,7 @@ app.post('/', async (req, res) => {
     const response = await transform(xmlData);
     res.json(response);
   } catch (error) {
-    res.status(500).json({ error: JSON.stringify(error) });
+    res.status(500).json({ error });
   }
 });
 
