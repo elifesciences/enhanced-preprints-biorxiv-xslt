@@ -354,6 +354,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 bioRxiv's vendors have incorrectly captured the first two authors as corresponding, when instead they should be marked as contributing equally. This xsl fixes that mistake.
 
+### [/src/2020.12.06.411850/move-credit-section.xsl](/src/2020.12.06.411850/move-credit-section.xsl)
+
+bioRxiv's vendors have inappropriately captured a section detailing author contributions within the abstract. This xsl moves that content to a section within `<back>`.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
