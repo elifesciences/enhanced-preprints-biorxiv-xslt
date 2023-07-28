@@ -358,6 +358,10 @@ bioRxiv's vendors have incorrectly captured the first two authors as correspondi
 
 bioRxiv's vendors have inappropriately captured a section detailing author contributions within the abstract. This xsl moves that content to a section within `<back>`.
 
+### [/src/2023.04.19.537449/remove-quote-marks-from-title.xsl](/src/2023.04.19.537449/remove-quote-marks-from-title.xsl)
+
+bioRxiv's vendors have included quote marks within the title of this preprint which is inappropriate. This xsl removes those quote marks.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
