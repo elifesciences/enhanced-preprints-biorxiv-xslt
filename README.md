@@ -366,6 +366,10 @@ bioRxiv's vendors have included quote marks within the title of this preprint wh
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2022.05.16.491352/add-missing-author-email.xsl](/src/2022.05.16.491352/fix-author-emails.xsl)
+
+One of the corresponding authors does not have their email listed - this obviously a mistake on the authors end. This XSL introduces the submitted email as the corresponding email for that author.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
