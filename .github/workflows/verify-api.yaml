@@ -27,6 +27,13 @@ jobs:
           docker run -d -p 3000:80 epp-biorxiv-xslt:api
           sleep 5 # wait for the container to start up
 
+      - name: Verify that api is healthy
+        run: |
+          sleep 60 # wait for the container to start up
+          if [ "$(docker inspect --format='{{.State.Health.Status}}' api-container)" != "healthy" ]; then
+            exit 1
+          fi
+
       - name: Check api
         run: |
           curl --location 'http://localhost:3000' --data '<root><child>content</child></root>'
