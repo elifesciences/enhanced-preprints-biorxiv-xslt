@@ -472,3 +472,10 @@ docker run -p 8080:80 epp-biorxiv-xslt:api
 curl --location 'http://localhost:8080' \
 --data '<root><child>content</child></root>'
 ```
+
+## Test api (with passthrough)
+```
+curl --location 'http://localhost:8080' \
+-H 'X-Passthrough: true' \
+--data '<root><child>content</child></root>'
+```

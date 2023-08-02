@@ -27,10 +27,28 @@ jobs:
           docker run -d -p 3000:80 epp-biorxiv-xslt:api
           sleep 5 # wait for the container to start up
 
+      - name: Check api (passthrough)
+        run: |
+          output=$(curl --location 'http://localhost:3000' -H 'X-Passthrough: true' --data '<root><child>content</child></root>')
+          expected_output='{"xml":"<root><child>content</child></root>","logs":["Passthrough mode!"]}';
+          if [ "$output" != "$expected_output" ]; then
+            exit 1
+          fi
+          echo "$output" | jq
+
       - name: Check api
         run: |
-          curl --location 'http://localhost:3000' --data '<root><child>content</child></root>'
-          docker stop $(docker ps -q) # stop running containers
+          output=$(curl --location 'http://localhost:3000' --data '<root><child>content</child></root>')
+          expected_output='{"xml":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<root><child>content</child></root>\n",';
+          if echo "$output" | grep -q "Passthrough mode"; then
+            exit 1
+          fi
+          echo "$output" | jq
+
+      - name: Stop running containers
+        run: |
+          docker stop $(docker ps -q)
+
   build-and-push:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
