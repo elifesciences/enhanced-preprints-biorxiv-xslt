@@ -31,10 +31,10 @@ jobs:
           reps=60; s=5; i=0
           while [ "$(docker inspect --format='{{.State.Health.Status}}' api-container)" != "healthy" ]; do
             if [ $i -ge $reps ]; then
-              echo "API is not healthy after ($reps * $s) seconds"
+              echo "API is not healthy after $(($reps * $s)) seconds"
               exit 1
             fi
-            echo "Waiting for API to become healthy ($i * $s)s"
+            echo "Waiting for API to become healthy $(($i * $s))s"
             sleep $s
             i=$((i+1))
           done
