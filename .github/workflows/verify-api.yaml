@@ -24,8 +24,21 @@ jobs:
       - name: Run api in docker container
         run: |
           docker buildx build -t epp-biorxiv-xslt:api --target api .
-          docker run -d -p 3000:80 epp-biorxiv-xslt:api
-          sleep 5 # wait for the container to start up
+          docker run -d --name api-container -p 3000:80 epp-biorxiv-xslt:api
+
+      - name: Verify that api is healthy
+        run: |
+          reps=60; s=5; i=0
+          while [ "$(docker inspect --format='{{.State.Health.Status}}' api-container)" != "healthy" ]; do
+            if [ $i -ge $reps ]; then
+              echo "API is not healthy after $(($reps * $s)) seconds"
+              exit 1
+            fi
+            echo "Waiting for API to become healthy $(($i * $s))s"
+            sleep $s
+            i=$((i+1))
+          done
+          echo "API is healthy"
 
       - name: Check api (passthrough)
         run: |
