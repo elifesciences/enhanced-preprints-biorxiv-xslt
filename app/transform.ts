@@ -10,11 +10,17 @@ import {
 import { tmpdir } from 'os';
 import { join } from 'path';
 
-const transform = async (xml: string, transformScript: string = '/app/scripts/transform.sh') : Promise<{xml: string, logs?: string[]}> => {
+const transform = async (xml: string, passthrough: boolean = false) : Promise<{xml: string, logs?: string[]}> => {
   return new Promise((resolve, reject) => {
-    if (!existsSync(transformScript)) {
+    const transformScript = '/app/scripts/transform.sh';
+    if (passthrough || !existsSync(transformScript)) {
       // If access to transformScript is not available then return xml unchanged.
-      resolve({xml});
+      resolve({
+        xml,
+        logs: [
+          'Passthrough mode!',
+        ],
+      });
       return;
     }
 
