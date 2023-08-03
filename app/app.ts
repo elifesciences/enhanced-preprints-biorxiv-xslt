@@ -11,7 +11,11 @@ app.post('/', async (req, res) => {
     if (typeof xmlData !== 'string') {
       throw new Error('request body should be a string');
     }
-    const response = await transform(xmlData);
+
+    // Check if the X-Passthrough header is set.
+    const passthroughMode = !!req.headers['x-passthrough'];
+
+    const response = await transform(xmlData, passthroughMode);
     res.json(response);
   } catch (error) {
     res.status(500).json({ error });
