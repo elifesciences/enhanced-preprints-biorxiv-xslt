@@ -28,10 +28,17 @@ jobs:
 
       - name: Verify that api is healthy
         run: |
-          sleep 60 # wait for the container to start up
-          if [ "$(docker inspect --format='{{.State.Health.Status}}' api-container)" != "healthy" ]; then
-            exit 1
-          fi
+          reps=60; s=5; i=0
+          while [ "$(docker inspect --format='{{.State.Health.Status}}' api-container)" != "healthy" ]; do
+            if [ $i -ge $reps ]; then
+              echo "API is not healthy after ($reps * $s) seconds"
+              exit 1
+            fi
+            echo "Waiting for API to become healthy ($i * $s)s"
+            sleep $s
+            i=$((i+1))
+          done
+          echo "API is healthy"
 
       - name: Check api
         run: |
