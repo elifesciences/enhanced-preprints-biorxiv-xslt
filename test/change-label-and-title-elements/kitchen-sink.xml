@@ -679,8 +679,7 @@
 </sec>
 </app>
 <app id="app2">
-<title>Appendix 2</title>
-<p>Manipulations are temporary inactivations of neuronal activity, while terminations are permanent inactivations. There are several existing methods for achieving a manipulation or a termination. Although each existing method has its own strengths, none is able to meet all three of the previously mentioned design considerations of: stable electrophysiology pre- and post-inactivation, ability to localize and control the size of the inactivation, and cross-species and large-animal compatibility.</p>
+<label>Appendix 2</label>
 <sec id="s11">
 <title>Existing Manipulation Methods</title>
 <p>Existing temporary inactivation methods include intracortical microstimulation, optogenetics, pharmacology, transcranial stimulation, cooling loops, and chemogenetics.</p>

@@ -20,7 +20,25 @@
     
     <xsl:template match="app">
         <xsl:element name="sec">
-            <xsl:apply-templates select="*|@*[name()!='content-type']"/>
+        <xsl:choose>
+            <xsl:when test="./label and ./title">
+                <xsl:apply-templates select="@*[name()!='content-type']"/>
+                <title>
+                    <xsl:copy-of select="./label/node()"/>
+                    <xsl:text> </xsl:text>
+                    <xsl:copy-of select="./title/node()"/>
+                </title>
+                <xsl:apply-templates select="*[not(name()=('label','title'))]"/>
+            </xsl:when>
+            <xsl:when test="./label and not(./title)">
+                <xsl:apply-templates select="@*[name()!='content-type']"/>
+                <title><xsl:copy-of select="./label/node()"/></title>
+                <xsl:apply-templates select="*[name()!='label']"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates select="*|@*[name()!='content-type']"/>
+            </xsl:otherwise>
+        </xsl:choose>
         </xsl:element>
     </xsl:template>
     
