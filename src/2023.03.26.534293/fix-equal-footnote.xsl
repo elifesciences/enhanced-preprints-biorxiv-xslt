@@ -20,7 +20,7 @@
                     <xsl:apply-templates select="@*"/>
                     <xsl:attribute name="equal-contrib">yes</xsl:attribute>
                     <xsl:apply-templates select="*[not(@rid='a4')]|text()"/>
-                    <xref ref-type="fn" rid="fn1">4</xref>
+                    <xref ref-type="author-notes" rid="fn1">4</xref>
                 </xsl:copy>
             </xsl:when>
             <xsl:when test="./name/surname='Jalan'">
@@ -28,7 +28,7 @@
                     <xsl:apply-templates select="@*"/>
                     <xsl:attribute name="equal-contrib">yes</xsl:attribute>
                     <xsl:apply-templates select="*[not(@rid='a4')]|text()"/>
-                    <xref ref-type="fn" rid="fn1">4</xref>
+                    <xref ref-type="author-notes" rid="fn1">4</xref>
                 </xsl:copy>
             </xsl:when>
             <xsl:otherwise>
@@ -44,7 +44,7 @@
     <xsl:template match="article[//article-meta/article-version='1.2']//article-meta/author-notes">
         <xsl:copy>
             <xsl:apply-templates select="@*|*|text()"/>
-            <fn id="fn1"><label>4</label><p>These authors contributed equally: Sana Ahmed-Seghir and Manisha Jalan</p></fn>
+            <fn fn-type="equal" id="fn1"><label>4</label><p>These authors contributed equally: Sana Ahmed-Seghir and Manisha Jalan</p></fn>
         </xsl:copy>
     </xsl:template>
 
