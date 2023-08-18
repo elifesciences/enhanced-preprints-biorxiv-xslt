@@ -382,6 +382,19 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl is to ensure that this preprint has two corresponding authors. The authors have not properly indicated this in their PDF, and as such bioRxiv have not captured this in the way the authors want.
 
+### [/src/2023.05.11.540422/fix-author-emails.xsl](/src/2023.05.11.540422/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.03.26.534293/fix-equal-footnote.xsl](/src/2023.03.26.534293/fix-equal-footnote.xsl)
+
+bioRxiv's typesetters have incorrectly captured 'These authors contributed equally: Sana Ahmed-Seghir and Manisha Jalan' as an affiliation instead of as a footnote. This will cause problems when depositing this data downstream (such as at Crossref). This XSL ensures this text is captured appropriately as an author footnote instead.
+
+### [/src/2023.05.02.539055/fix-affiliation.xsl](/src/2023.05.02.539055/fix-affiliation.xsl)
+
+Author Reza Sharif Razavian has no affiliation. This is likely because of the affiliation being missing in the source PDF. Uploading a revised preprint at this stage will cause extra confusion, and since this is a fundmental piece of data, this XSL adds in the correct affiliation for that author.
+
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
