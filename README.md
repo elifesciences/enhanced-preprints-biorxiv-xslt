@@ -390,6 +390,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 bioRxiv's typesetters have incorrectly captured 'These authors contributed equally: Sana Ahmed-Seghir and Manisha Jalan' as an affiliation instead of as a footnote. This will cause problems when depositing this data downstream (such as at Crossref). This XSL ensures this text is captured appropriately as an author footnote instead.
 
+### [/src/2023.05.02.539055/fix-affiliation.xsl](/src/2023.05.02.539055/fix-affiliation.xsl)
+
+Author Reza Sharif Razavian has no affiliation. This is likely because of the affiliation being missing in the source PDF. Uploading a revised preprint at this stage will cause extra confusion, and since this is a fundmental piece of data, this XSL adds in the correct affiliation for that author.
+
 
 # Modify bioRxiv XML in preparation for Encoda
 
