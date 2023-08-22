@@ -394,6 +394,10 @@ bioRxiv's typesetters have incorrectly captured 'These authors contributed equal
 
 Author Reza Sharif Razavian has no affiliation. This is likely because of the affiliation being missing in the source PDF. Uploading a revised preprint at this stage will cause extra confusion, and since this is a fundmental piece of data, this XSL adds in the correct affiliation for that author.
 
+### [/src/2022.09.28.509958/fix-references.xsl](/src/2022.09.28.509958/fix-references.xsl)
+
+There are various mistakes with the tagging some of the references in this article, and as a result they cannot be followed when rendered on EPP. This XSL correctes these mistakes.
+
 
 # Modify bioRxiv XML in preparation for Encoda
 
