@@ -398,6 +398,25 @@ Author Reza Sharif Razavian has no affiliation. This is likely because of the af
 
 There are various mistakes with the tagging some of the references in this article, and as a result they cannot be followed when rendered on EPP. This XSL correctes these mistakes.
 
+### [/src/2023.07.19.549786/change-digest-title.xsl](/src/2023.07.19.549786/change-digest-title.xsl)
+
+This xsl changes the title of a section in the authors abstract, so that it is not confused with an eLife digest when published as a reviewed preprint.
+
+### [/src/2022.05.22.491886/fix-author-emails.xsl](/src/2022.05.22.491886/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.03.30.534918/fix-author-emails.xsl](/src/2023.03.30.534918/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.06.06.543964/fix-author-affs.xsl](/src/2023.06.06.543964/fix-author-affs.xsl)
+
+bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
+
+### [/src/2023.05.24.23289766/fix-author-emails.xsl](/src/2023.05.24.23289766/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 # Modify bioRxiv XML in preparation for Encoda
 
