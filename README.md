@@ -398,6 +398,10 @@ Author Reza Sharif Razavian has no affiliation. This is likely because of the af
 
 There are various mistakes with the tagging some of the references in this article, and as a result they cannot be followed when rendered on EPP. This XSL correctes these mistakes.
 
+### [/src/2023.07.19.549786/change-digest-title.xsl](/src/2023.07.19.549786/change-digest-title.xsl)
+
+This xsl changes the title of a section in the authors abstract, so that it is not confused with an eLife digest when published as a reviewed preprint.
+
 
 # Modify bioRxiv XML in preparation for Encoda
 
