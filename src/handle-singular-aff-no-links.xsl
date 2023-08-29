@@ -12,8 +12,14 @@
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xsl:template match="article-meta/contrib-group[1][count(aff) = 1 and not(contrib[@contrib-type='author' and xref[@ref-type='aff']])]">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|*|text()"/>
+        </xsl:copy>
+    </xsl:template>
 
-    <xsl:template match="article-meta/contrib-group[1][count(aff) = 1]/contrib[@contrib-type='author' and not(xref[@ref-type='aff'])]">
+    <xsl:template match="article-meta/contrib-group[1][count(aff) = 1 and not(contrib[@contrib-type='author' and xref[@ref-type='aff']])]/contrib[@contrib-type='author' and not(xref[@ref-type='aff'])]">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
             <xsl:apply-templates select="*[name()!='xref']"/>
@@ -22,7 +28,7 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="article-meta/contrib-group[1][count(aff) = 1 and contrib[not(xref[@ref-type='aff'])]]/aff">
+    <xsl:template match="article-meta/contrib-group[1][count(aff) = 1 and not(contrib[@contrib-type='author' and xref[@ref-type='aff']])]/aff">
         <aff id="aff1">
             <xsl:apply-templates select="@*[name()!='id']"/>
             <label>1</label>

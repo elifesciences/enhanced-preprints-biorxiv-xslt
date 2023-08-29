@@ -418,6 +418,14 @@ bioRxiv's vendors have not attributed which authors are affiliated with which in
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.06.21.545900/fix-author-emails.xsl](/src/2023.06.21.545900/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.06.21.546014/aff-fix.xsl](/src/22023.06.21.546014/aff-fix.xsl)
+
+One author is missing an affiliation in this preprint (there's only one affiliation), which is a mistake that this xsl rectifies.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
