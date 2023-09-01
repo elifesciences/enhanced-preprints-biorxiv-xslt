@@ -13,32 +13,32 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="article[//article-meta/article-version='1.4']//article-meta//contrib[@contrib-type='author' and @corresp='yes']">
+    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author' and @corresp='yes']">
         <xsl:choose>
-            <xsl:when test="./name/surname='Rinsky'">
+            <xsl:when test="./name/surname='Suh'">
                 <xsl:copy>
                     <xsl:apply-templates select="@*|contrib-id|name"/>
-                    <email>miekari9@gmail.com</email>
+                    <email>jksuh@inha.ac.kr</email>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:when>
-            <xsl:when test="./name/surname='Aguillon'">
+            <xsl:when test="./name/surname='Ryu'">
                 <xsl:copy>
                     <xsl:apply-templates select="@*|contrib-id|name"/>
-                    <email>raphael.aguillon@outlook.fr</email>
+                    <email>rjk0929@inha.ac.kr</email>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:copy>
                     <xsl:apply-templates select="@*|contrib-id|name"/>
-                    <email>oren.levy@biu.ac.il</email>
+                    <email>jihwan.park@gist.ac.kr</email>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="article[//article-meta/article-version='1.4']//article-meta/author-notes/corresp"/>
+    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes/corresp"/>
 
 </xsl:stylesheet>
