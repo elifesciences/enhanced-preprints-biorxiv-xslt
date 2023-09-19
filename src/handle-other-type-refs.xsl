@@ -35,7 +35,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="mixed-citation[@publication-type='other' and year and (string-name or name or collab or person-group) and source]">
+    <xsl:template match="mixed-citation[@publication-type='other' and not(pub-id[lower-case(@pub-id-type)=('pmid','pmcid','doi')]) and year and (string-name or name or collab or person-group) and source]">
         <xsl:choose>
             <xsl:when test="not(article-title) and not(chapter-title)">
                 <mixed-citation publication-type="book">
