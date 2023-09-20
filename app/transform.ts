@@ -35,16 +35,18 @@ const transform = async (xml: string, passthrough: boolean = false) : Promise<{x
     exec(`${transformScript} --input-xml "${tmpXmlPath}" --log "${tmpLogPath}"`, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error: ${error.message}`);
-      }
-      if (stderr) {
-        console.error(`stderr: ${stderr}`);
-      }
-
-      if (error || stderr) {
         return reject('The transform script has failed. The errors have been logged.');
       }
 
       const logs = readFileSync(tmpLogPath, 'utf-8').split('\n').filter(i => i !== '');
+
+      // If stderr occurs then process it as a warning and attempt to resolve.
+      if (stderr) {
+        console.warn(`stderr: ${stderr}`);
+        // Add warning to logs of api response.
+        logs.push(stderr);
+      }
+
       // Remove the temporary files
       unlinkSync(tmpXmlPath);
       unlinkSync(tmpLogPath);
