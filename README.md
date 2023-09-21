@@ -450,6 +450,49 @@ This xsl fixes a reference that is erroneously captured as a report type referen
 
 This xsl fixes a reference that is erroneously captured as a book type reference when it is a journal article. This XSL can likely be removed when proper support for book references is added in encoda and EPP (that work is related to and partially covered in https://github.com/elifesciences/enhanced-preprints-issues/issues/814)
 
+### [/src/2023.02.26.530115/equation-fix.xsl](/src/2023.02.26.530115/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In [this preprint](https://doi.org/10.1101/2023.02.26.530115) the following text precedes two display equations:
+
+> In silico predictions were compared to matched phenotype data and the following accuracy metrics were calculated:
+
+```xml
+<p><italic>In silico</italic> predictions were compared to matched phenotype data and the following accuracy metrics were calculated:</p>
+<disp-formula id="ueqn1">
+<graphic xlink:href="530115v2_ueqn1.gif"/>
+</disp-formula>
+<disp-formula id="ueqn2">
+<graphic xlink:href="530115v2_ueqn2.gif"/>
+</disp-formula>
+<p>Model metabolite and reaction ... </p>
+```
+
+This is decoded/encoded by Encoda (v1.0.1) into the following JSON:
+```json
+{
+    "type": "Figure",
+    "caption": [
+      {
+        "type": "Paragraph",
+        "content": [
+          "In silico",
+          " predictions were compared to matched phenotype data and the following accuracy metrics were calculated:"
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "ImageObject",
+        "contentUrl": "87406/v2/530115v2_ueqn1.gif",
+        "meta": { "inline": false }
+      }
+    ]
+  }
+``` 
+So the preceding paragraph is captured as if it was the caption of the first display equation. This leads to confusing and inaccurate display on EPP. 
+
+The xsl adds an empty `disp-quote` element between the paragraph and display quote in order for the two to be adequately separate in the JSON.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
