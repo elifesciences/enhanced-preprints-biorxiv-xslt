@@ -491,7 +491,7 @@ This is decoded/encoded by Encoda (v1.0.1) into the following JSON:
 ``` 
 So the preceding paragraph is captured as if it was the caption of the first display equation. This leads to confusing and inaccurate display on EPP. 
 
-The xsl adds an empty `disp-quote` element between the paragraph and display quote in order for the two to be adequately separate in the JSON.
+The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
 # Modify bioRxiv XML in preparation for Encoda
 
