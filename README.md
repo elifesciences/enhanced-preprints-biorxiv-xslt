@@ -514,6 +514,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 
+### [/src/2023.05.24.542079/fix-methods-title.xsl](/src/2023.05.24.542079/fix-methods-title.xsl)
+
+This xsl ensures that the title for the materialsn and methods is capitalised consistently with the other titles in the article. As it stands (the version used of) Encoda changes the capitalisation of titles in all caps to sentence case. However, if the content of the title is within an element (for example entirely within bold), then this style is nt applied. In this article the materials and methods is bolded and in all caps, whereas other titles are in all caps but not bolded. The result in EPP is a materials and methods title in all caps, while all other titles are in sentence case. This xsl removes the bold formatting to esnure consistency.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
