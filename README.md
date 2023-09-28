@@ -501,6 +501,11 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 The authors have not provided article titles for journal references. The result is that when these are decoded by Encoda, much of the information is duplicated resulting in a really poor display on EPP. This xsl changes the publication-type for any journal refs that are missing an `<article-title>` element. The publication type becomes book, as this resolves most (but not all) of the display issues.
 
+### [/src/2023.07.03.547448/fix-author-emails.xsl](/src/2023.07.03.547448/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
