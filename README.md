@@ -518,6 +518,11 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl ensures that the title for the materialsn and methods is capitalised consistently with the other titles in the article. As it stands (the version used of) Encoda changes the capitalisation of titles in all caps to sentence case. However, if the content of the title is within an element (for example entirely within bold), then this style is nt applied. In this article the materials and methods is bolded and in all caps, whereas other titles are in all caps but not bolded. The result in EPP is a materials and methods title in all caps, while all other titles are in sentence case. This xsl removes the bold formatting to esnure consistency.
 
+### [/src/2023.04.03.535330/fix-corr-status.xsl](/src/2023.04.03.535330/fix-corr-status.xsl)
+
+The authors of this article did not include a asterisk next to the name of one of the corresponding authors in their PDF. As a result bioRxiv have not captured their corresponding author status (despite being listed elsewhere as corresponding). This xsl fixes this issue. The preprint itself hasn't/can't be corrected as a result of confusion over revised versions.
+
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
