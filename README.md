@@ -523,6 +523,10 @@ This xsl ensures that the title for the materialsn and methods is capitalised co
 The authors of this article did not include a asterisk next to the name of one of the corresponding authors in their PDF. As a result bioRxiv have not captured their corresponding author status (despite being listed elsewhere as corresponding). This xsl fixes this issue. The preprint itself hasn't/can't be corrected as a result of confusion over revised versions.
 
 
+### [/src/2023.02.27.530352/fix-author-emails.xsl](/src/2023.02.27.530352/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
