@@ -527,6 +527,10 @@ The authors of this article did not include a asterisk next to the name of one o
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.06.21.545935/fix-ref.xsl](/src/2023.06.21.545935/fix-ref.xsl)
+This xsl fixes both a reference which has been mistagged (number 55) and removes an unnecessary abstract heading in all caps. 
+
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
