@@ -15,7 +15,8 @@
     
     <xsl:template match="disp-formula/alternatives[graphic or inline-graphic]|
                          inline-formula/alternatives[inline-graphic]|
-                         table-wrap/alternatives[graphic]">
+                         table-wrap/alternatives[graphic]|
+                         boxed-text/alternatives[graphic]">
         <xsl:copy-of select="graphic|inline-graphic"/>
     </xsl:template>
     
