@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author']">
+    <xsl:template match="article[//article-meta/article-version=('1.1','1.3')]//article-meta//contrib[@contrib-type='author']">
         <xsl:choose>
             <xsl:when test="./name/surname='DeKraker'">
                 <xsl:copy>
@@ -39,7 +39,7 @@
         </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes/corresp">
+    <xsl:template match="article[//article-meta/article-version=('1.1','1.3')]//article-meta/author-notes/corresp">
         <fn id="fn1"><p>co-senior authors</p></fn>
     </xsl:template>
 
