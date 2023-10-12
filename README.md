@@ -549,6 +549,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2022.10.15.22281053/remove-tracked-changes.xsl](/src/2022.10.15.22281053/remove-tracked-changes.xsl)
+
+The authors of this preprint have included tracked changes in the file they submitted, the formatting for which has been faithfully retained by bioRxiv (despite there being no need to and this unnecessaruly emphasising content). This xsl strips that unnecessary formatting.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
