@@ -31,13 +31,18 @@
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
-<name><surname>Quiniou</surname><given-names>Valentin</given-names></name>
-
+<name-alternatives>
+ <name name-style="western"><surname>Chu</surname><given-names>J. H.</given-names></name>
+ <name name-style="eastern" xml:lang="zh"><surname>臧</surname><given-names>杰</given-names></name>
+</name-alternatives>
 
 <xref ref-type="author-notes" rid="n1">8</xref>
 </contrib>
 <contrib contrib-type="author">
+<name-alternatives>
 <name><surname>Barennes</surname><given-names>Pierre</given-names></name>
+<string-name>褚君浩</string-name>
+</name-alternatives>
 
 
 </contrib>
