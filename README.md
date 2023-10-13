@@ -553,6 +553,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 The authors of this preprint have included tracked changes in the file they submitted, the formatting for which has been faithfully retained by bioRxiv (despite there being no need to and this unnecessaruly emphasising content). This xsl strips that unnecessary formatting.
 
+### [/src/2023.08.30.23294826/fix-affiliations.xsl](/src/2023.08.30.23294826/fix-affiliations.xsl)
+
+This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on behalf of group at the end of the author list instead of the author before that.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
