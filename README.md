@@ -557,6 +557,10 @@ The authors of this preprint have included tracked changes in the file they subm
 
 This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on behalf of group at the end of the author list instead of the author before that.
 
+### [/src/2023.09.01.555873/fix-author-emails.xsl](/src/2023.09.01.555873/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
