@@ -571,6 +571,11 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 This xsl accounts for undesired behaviour in Encoda which changes the capitalisation of headings that are in all caps to sentence case.
 
+### [/src/arXiv.2302.14157/equation-fix.xsl](/src/arXiv.2302.14157/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In this preprint some text that precedes display equations is pulled in as if it is a caption for that equation which it treats as a figure.
+
+The xsl adds an empty `disp-quote` element between the paragraph and display equations in order for the two to be adequately separated in the JSON.
 
 # Modify bioRxiv XML in preparation for Encoda
 
