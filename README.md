@@ -577,6 +577,10 @@ This xsl accounts for a bug in Encoda. In this preprint some text that precedes 
 
 The xsl adds an empty `disp-quote` element between the paragraph and display equations in order for the two to be adequately separated in the JSON.
 
+### [/src/2023.08.02.551596/fix-author-names.xsl](/src/2023.08.02.551596/fix-author-names.xsl)
+
+This xsl accounts for a mistake proumlgated by biorxiv but rooted with the source manuscript file which list names as surname first, then given names. bioRxiv have capturd this incorrectly. The authors have been unresponsive about posting a new preprint so this xsl fixes the order of the names.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
