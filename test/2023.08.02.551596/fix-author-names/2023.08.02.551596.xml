@@ -31,7 +31,7 @@
 </title-group>
 <contrib-group>
 <contrib contrib-type="author"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-5853-3465</contrib-id>
-<name><surname>Zoltowska Katarzyna</surname><given-names>Marta</given-names></name>
+<name><surname>Zoltowska</surname><given-names>Katarzyna Marta</given-names></name>
 <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-5853-3465</contrib-id><xref ref-type="aff" rid="a1">1</xref></contrib>
 <contrib contrib-type="author"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-1635-9849</contrib-id>
 <name><surname>Das</surname><given-names>Utpal</given-names></name>
@@ -46,13 +46,13 @@
 <name><surname>Maesako</surname><given-names>Masato</given-names></name>
 <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-1970-2462</contrib-id><xref ref-type="aff" rid="a4">4</xref></contrib>
 <contrib contrib-type="author">
-<name><surname>Mei CQ</surname><given-names>Houser</given-names></name>
+<name><surname>Mei</surname><given-names>CQ Houser</given-names></name>
 <xref ref-type="aff" rid="a4">4</xref></contrib>
 <contrib contrib-type="author">
-<name><surname>Franco Mar&#x00ED;a</surname><given-names>Luisa</given-names></name>
+<name><surname>Franco</surname><given-names>Mar&#x00ED;a Luisa</given-names></name>
 <xref ref-type="aff" rid="a5">5</xref></contrib>
 <contrib contrib-type="author"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-2937-1772</contrib-id>
-<name><surname>Gomes Moreira</surname><given-names>Diana</given-names></name>
+<name><surname>Gomes</surname><given-names>Moreira Diana</given-names></name>
 <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-2937-1772</contrib-id><xref ref-type="aff" rid="a1">1</xref></contrib>
 <contrib contrib-type="author">
 <name><surname>Karachentsev</surname><given-names>Dmitry</given-names></name>
@@ -69,12 +69,18 @@
 <contrib contrib-type="author"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-4898-5788</contrib-id>
 <name><surname>Berezovska</surname><given-names>Oksana</given-names></name>
 <contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-4898-5788</contrib-id><xref ref-type="aff" rid="a4">4</xref></contrib>
-<contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-6408-9548</contrib-id>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-6408-9548</contrib-id>
 <name><surname>Mobley</surname><given-names>William</given-names></name>
-<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-6408-9548</contrib-id><xref ref-type="aff" rid="a2">2</xref><xref ref-type="corresp" rid="cor1">&#x002A;</xref></contrib>
-<contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-8239-559X</contrib-id>
+<email>wmobley@health.ucsd.edu</email>
+<xref ref-type="aff" rid="a2">2</xref>
+</contrib>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-8239-559X</contrib-id>
 <name><surname>Ch&#x00E1;vez-Guti&#x00E9;rrez</surname><given-names>Luc&#x00ED;a</given-names></name>
-<contrib-id contrib-id-type="orcid">http://orcid.org/0000-0002-8239-559X</contrib-id><xref ref-type="aff" rid="a1">1</xref><xref ref-type="corresp" rid="cor1">&#x002A;</xref></contrib>
+<email>lucia.chavezgutierrez@kuleuven.be</email>
+<xref ref-type="aff" rid="a1">1</xref>
+</contrib>
 <aff id="a1"><label>1</label>VIB-KU Leuven Center for Brain &#x0026; Disease Research, VIB, Leuven, Belgium</aff>
 <aff id="a2"><label>2</label>Department of Neurosciences, University of California San Diego, La Jolla, CA, United States of America</aff>
 <aff id="a3"><label>3</label>Center for Mass Spectrometry and Optical Spectroscopy (CeMOS), Mannheim University of Applied Sciences, Mannheim, Germany</aff>
@@ -83,9 +89,6 @@
 <aff id="a6"><label>6</label>Medical Faculty, Heidelberg University, Heidelberg, Germany</aff>
 <aff id="a7"><label>7</label>Mannheim Center for Translational Neuroscience (MCTN), Medical Faculty Mannheim, Heidelberg University, Heidelberg, Germany</aff>
 </contrib-group>
-<author-notes>
-<corresp id="cor1"><label>&#x002A;</label>Corresponding author Corresponding authors: Luc&#x00ED;a Ch&#x00E1;vez-Guti&#x00E9;rrez VIB-KU Leuven Center for Brain &#x0026; Disease Research Herestraat 49 bus 602 3000 Leuven, Belgium Tel.: &#x002B;3216 37 69 35 E-mail: <email>lucia.chavezgutierrez@kuleuven.be</email> Mobley William University of California, San Diego School of Medicine George Palade Labs (GPL) 359 9500 Gilman Drive La Jolla, CA 92037-0662 Tel.: 858-337-0864 E-mail: <email>wmobley@health.ucsd.edu</email></corresp>
-</author-notes>
 <pub-date pub-type="epub"><year>2023</year></pub-date>
 <elocation-id>2023.08.02.551596</elocation-id>
 <history>
