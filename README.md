@@ -585,6 +585,10 @@ This xsl accounts for a mistake proumlgated by biorxiv but rooted with the sourc
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.09.01.555812/correct-author-email.xsl](/src/2023.09.01.555812/correct-author-email.xsl)
+
+This xsl adds a missing email into the preprint. The authors have been unable to get this included in their preprint so this xsl will need to remain in place at least until a later version of the content has been published.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
