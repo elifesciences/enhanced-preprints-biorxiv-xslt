@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author' and @corresp='yes']">
+    <xsl:template match="article//article-meta//contrib[@contrib-type='author' and @corresp='yes']">
         <xsl:choose>
             <xsl:when test="./name/given-names='De-Zhu'">
                 <xsl:copy>
@@ -32,6 +32,6 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes/corresp"/>
+    <xsl:template match="article//article-meta/author-notes/corresp"/>
 
 </xsl:stylesheet>
