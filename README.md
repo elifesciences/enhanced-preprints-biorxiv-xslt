@@ -593,6 +593,10 @@ This xsl adds a missing email into the preprint. The authors have been unable to
 
 The authors have included their preregistration at the end of their preprint. This should be treated as a singular appendix in itself, instead of as a series of sections as currently captured. This xsl ensures this is captured as a single section in the back of the file.
 
+### [/src/2023.04.25.538252/ref-70-fix.xsl](/src/2023.04.25.538252/ref-70-fix.xsl)
+
+This xsl fixes the capture of reference number 70, which has been mistagged and therefore resulted in poor display.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
