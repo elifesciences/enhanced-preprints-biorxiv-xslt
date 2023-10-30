@@ -597,6 +597,10 @@ The authors have included their preregistration at the end of their preprint. Th
 
 This xsl fixes the capture of reference number 70, which has been mistagged and therefore resulted in poor display.
 
+### [/src/2023.08.10.552629/orcid-fix.xsl](/src/2023.08.10.552629/orcid-fix.xsl)
+
+This xsl fixes an incorrect orcid in 92083.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
