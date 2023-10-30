@@ -589,6 +589,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl adds a missing email into the preprint. The authors have been unable to get this included in their preprint so this xsl will need to remain in place at least until a later version of the content has been published.
 
+### [/src/2023.03.19.533319/pre-reg-sec-fix.xsl](/src/2023.03.19.533319/pre-reg-sec-fix.xsl)
+
+The authors have included their preregistration at the end of their preprint. This should be treated as a singular appendix in itself, instead of as a series of sections as currently captured. This xsl ensures this is captured as a single section in the back of the file.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
