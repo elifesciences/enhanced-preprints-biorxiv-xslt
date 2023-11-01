@@ -612,6 +612,10 @@ This xsl carries out three fixes:
 2. It corrects a title for one of the reference (no. 6)
 3. It fixes the DOIs which have been included incorrectly (in the incorrect URI format) by the authors.
 
+### [/src/2023.08.03.551564/fix-refs.xsl](/src/2023.08.03.551564/fix-refs.xsl)
+
+This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
