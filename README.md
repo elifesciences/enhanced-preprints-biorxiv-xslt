@@ -605,6 +605,13 @@ This xsl fixes an incorrect orcid in 92083.
 
 This xsl changes the caseing of the title of this preprint from all caps to sentence case.
 
+### [/src/2023.06.26.546606/various-fixes.xsl](/src/2023.06.26.546606/various-fixes.xsl)
+
+This xsl carries out three fixes:
+1. It removes the corresponding author status from one of the authors
+2. It corrects a title for one of the reference (no. 6)
+3. It fixes the DOIs which have been included incorrectly (in the incorrect URI format) by the authors.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
