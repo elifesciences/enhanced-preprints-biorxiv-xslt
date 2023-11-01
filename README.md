@@ -601,6 +601,10 @@ This xsl fixes the capture of reference number 70, which has been mistagged and 
 
 This xsl fixes an incorrect orcid in 92083.
 
+### [/src/2022.10.04.510784/title-fix.xsl](/src/2022.10.04.510784/title-fix.xsl)
+
+This xsl changes the caseing of the title of this preprint from all caps to sentence case.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
