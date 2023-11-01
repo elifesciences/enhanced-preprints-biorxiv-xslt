@@ -601,6 +601,27 @@ This xsl fixes the capture of reference number 70, which has been mistagged and 
 
 This xsl fixes an incorrect orcid in 92083.
 
+### [/src/2022.10.04.510784/title-fix.xsl](/src/2022.10.04.510784/title-fix.xsl)
+
+This xsl changes the caseing of the title of this preprint from all caps to sentence case.
+
+### [/src/2023.06.26.546606/various-fixes.xsl](/src/2023.06.26.546606/various-fixes.xsl)
+
+This xsl carries out three fixes:
+1. It removes the corresponding author status from one of the authors
+2. It corrects a title for one of the reference (no. 6)
+3. It fixes the DOIs which have been included incorrectly (in the incorrect URI format) by the authors.
+
+### [/src/2023.08.03.551564/fix-refs.xsl](/src/2023.08.03.551564/fix-refs.xsl)
+
+This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+
+### [/src/arXiv.2211.16879/equation-fix.xsl](/src/arXiv.2211.16879/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
+
+The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
