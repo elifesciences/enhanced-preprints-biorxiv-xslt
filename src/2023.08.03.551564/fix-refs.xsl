@@ -13,6 +13,10 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="article[//article-meta/article-version='1.1']//ref[@id='c50']">
+        <ref id="c50"><mixed-citation publication-type="journal"><string-name><surname>Magno</surname> <given-names>LAV</given-names></string-name>, <string-name><surname>Tenza-Ferrer</surname> <given-names>H</given-names></string-name>, <string-name><surname>Collodetti</surname> <given-names>M</given-names></string-name>, <string-name><surname>Aguiar</surname> <given-names>MFG</given-names></string-name>, <string-name><surname>Rodrigues</surname> <given-names>APC</given-names></string-name>, <string-name><surname>da Silva</surname> <given-names>RS</given-names></string-name>, <string-name><surname>Silva J do</surname> <given-names>P</given-names></string-name>, <string-name><surname>Nicolau</surname> <given-names>NF</given-names></string-name>, <string-name><surname>Rosa</surname> <given-names>DVF</given-names></string-name>, <string-name><surname>Birbrair</surname> <given-names>A</given-names></string-name>, <string-name><surname>Miranda</surname> <given-names>DM</given-names></string-name>, <string-name><surname>Romano-Silva</surname> <given-names>MA</given-names></string-name>. <year>2019</year>. <article-title>Optogenetic Stimulation of the M2 Cortex Reverts Motor Dysfunction in a Mouse Model of Parkinson&#x2019;s Disease</article-title>. <source>J Neurosci</source> <volume>39</volume>:<elocation-id>3234&#x2013;3248</elocation-id>.</mixed-citation></ref> 
+    </xsl:template>
+    
     <xsl:template match="article[//article-meta/article-version='1.1']//ref[mixed-citation[@publication-type='journal' and not(article-title)]]">
         <xsl:choose>
             <xsl:when test="@id='c4'">
