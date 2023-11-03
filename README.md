@@ -640,6 +640,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl fixes a reference which is missing key information and as a result rendering poorly on EPP.
 
+### [/src/2023.06.07.544138/fix-aff.xsl](/src/2023.06.07.544138/fix-aff.xsl)
+
+This xsl fixes an affiliaiton which erroneously contains the text ' Email:'. We've reached out to bioRxiv about it and this XSL can be removed on confirmation that they have removed this from the MECA package.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
