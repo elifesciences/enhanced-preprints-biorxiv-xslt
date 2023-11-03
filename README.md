@@ -644,6 +644,12 @@ This xsl fixes a reference which is missing key information and as a result rend
 
 This xsl fixes an affiliaiton which erroneously contains the text ' Email:'. We've reached out to bioRxiv about it and this XSL can be removed on confirmation that they have removed this from the MECA package.
 
+### [/src/2023.09.14.557827/equation-fix.xsl](/src/2023.09.14.557827/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
+
+The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
