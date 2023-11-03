@@ -628,6 +628,10 @@ This xsl accounts for a bug in Encoda. In this preprint some text that precedes 
 
 The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
+### [/src/2022.12.29.522272/fix-refs.xsl](/src/2022.12.29.522272/fix-refs.xsl)
+
+This xsl fixes a couple of references which are missing key information and as a result rendering poorly on EPP.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
