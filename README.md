@@ -127,6 +127,31 @@ This xsl is adding a missing affiliation link for all authors when there is only
 
 jats xml can accommodate alternative versions of names (e.g. westernised vs non-westernised names). When used these are tagged using [`named-alternatives`](https://jats.nlm.nih.gov/archiving/tag-library/1.3/element/name-alternatives.html). Encoda does not have support for this tagging and strips all names from the resultant JSON. This xsl deliberately mistags the alternative names so that one of them is included in a `suffix` element (which is supported by Encoda and rendered on EPP) as a workaround.
 
+### [/src/disp-quote-workaround.xsl](/src/disp-quote-workaround.xsl)
+
+jats xml uses the element `disp-quote` for display quotes. These are decoded by encoda into `QuoteBlock`s, e.g.:
+
+```json
+{
+    "type": "QuoteBlock",
+    "content": [
+      {
+        "type": "Paragraph",
+        "content": [
+          "Z-score = (value",
+          { "type": "Subscript", "content": ["P"] },
+          " – mean value",
+          { "type": "Subscript", "content": ["P1…Pn"] },
+          ")/standard deviation",
+          { "type": "Subscript", "content": ["P1…Pn"] },
+          ","
+        ]
+      }
+    ]
+  },
+```
+EPP does not currently support this content type and as a result the content within is completely lost in the HTML. This xsl strips the `disp-quote` element and includes the contents of any child paragraph elements so that (some of) the content is retained in the HTML.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
