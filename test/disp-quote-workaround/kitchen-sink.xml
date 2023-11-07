@@ -31,11 +31,17 @@
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
-<name><surname>Chu</surname><given-names>J. H.</given-names><suffix>杰 臧</suffix></name>
+<name-alternatives>
+<name name-style="western"><surname>Chu</surname><given-names>J. H.</given-names></name>
+<name name-style="eastern" xml:lang="zh"><surname>臧</surname><given-names>杰</given-names></name>
+</name-alternatives>
 <xref ref-type="author-notes" rid="n1">8</xref>
 </contrib>
 <contrib contrib-type="author">
-<name><surname>Barennes</surname><given-names>Pierre</given-names><suffix>褚君浩</suffix></name>
+<name-alternatives>
+<name><surname>Barennes</surname><given-names>Pierre</given-names></name>
+<string-name>褚君浩</string-name>
+</name-alternatives>
 </contrib>
 <contrib contrib-type="author">
 <name><surname>Mhanna</surname><given-names>Vanessa</given-names></name>
@@ -355,7 +361,7 @@
 <p><bold>Table S1.</bold> Enrichment of public <bold>&#x03B2;</bold>CDR3s in CD8&#x002B; thymocytes vs DPCD3&#x002B;.</p>
 <p><bold>Table S2.</bold> Enrichment of virus-specific <bold>&#x03B2;</bold>CDR3s from databases<sup>14,15</sup> in clustered CD8&#x002B; thymocytes.</p>
 <p><bold>Table S3.</bold> List of peptides represented on the chord plot. Related to 4I.</p>
-<disp-quote><p>This is a display quote that should be retained.</p></disp-quote>
+<p>This is a display quote that should be retained.</p>
 </sec>
 <sec sec-type="supplementary-material">
 <title>Supporting information</title>

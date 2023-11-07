@@ -127,6 +127,31 @@ This xsl is adding a missing affiliation link for all authors when there is only
 
 jats xml can accommodate alternative versions of names (e.g. westernised vs non-westernised names). When used these are tagged using [`named-alternatives`](https://jats.nlm.nih.gov/archiving/tag-library/1.3/element/name-alternatives.html). Encoda does not have support for this tagging and strips all names from the resultant JSON. This xsl deliberately mistags the alternative names so that one of them is included in a `suffix` element (which is supported by Encoda and rendered on EPP) as a workaround.
 
+### [/src/disp-quote-workaround.xsl](/src/disp-quote-workaround.xsl)
+
+jats xml uses the element `disp-quote` for display quotes. These are decoded by encoda into `QuoteBlock`s, e.g.:
+
+```json
+{
+    "type": "QuoteBlock",
+    "content": [
+      {
+        "type": "Paragraph",
+        "content": [
+          "Z-score = (value",
+          { "type": "Subscript", "content": ["P"] },
+          " – mean value",
+          { "type": "Subscript", "content": ["P1…Pn"] },
+          ")/standard deviation",
+          { "type": "Subscript", "content": ["P1…Pn"] },
+          ","
+        ]
+      }
+    ]
+  },
+```
+EPP does not currently support this content type and as a result the content within is completely lost in the HTML. This xsl strips the `disp-quote` element and includes the contents of any child paragraph elements so that (some of) the content is retained in the HTML.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
@@ -653,6 +678,16 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 ### [/src/2022.05.02.490321/add-equal-author-text.xsl](/src/2022.05.02.490321/add-equal-author-text.xsl)
 
 This xsl adds some text in the backmatter to calrify the relationship of the authors in the author list. Once support for author notes has been adequately added in Ecnoda and EPP, this xsl can be removed.
+
+### [/src/2021.12.24.474127/equation-fix.xsl](/src/2021.12.24.474127/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
+
+The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
+
+### [/src/2023.07.14.548952/ack-fix.xsl](/src/2023.07.14.548952/ack-fix.xsl)
+
+This xsl fixes the acknowledgements which have been mistagged in this preprint resulting in an empty acknoweldgements section.
 
 # Modify bioRxiv XML in preparation for Encoda
 
