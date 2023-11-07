@@ -660,6 +660,10 @@ This xsl accounts for a bug in Encoda. In this preprint some text that precedes 
 
 The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
+### [/src/2023.07.14.548952/ack-fix.xsl](/src/2023.07.14.548952/ack-fix.xsl)
+
+This xsl fixes the acknowledgements which have been mistagged in this preprint resulting in an empty acknoweldgements section.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
