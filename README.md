@@ -650,6 +650,10 @@ This xsl accounts for a bug in Encoda. In this preprint some text that precedes 
 
 The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
+### [/src/2022.05.02.490321/add-equal-author-text.xsl](/src/2022.05.02.490321/add-equal-author-text.xsl)
+
+This xsl adds some text in the backmatter to calrify the relationship of the authors in the author list. Once support for author notes has been adequately added in Ecnoda and EPP, this xsl can be removed.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
