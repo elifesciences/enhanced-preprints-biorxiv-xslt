@@ -689,6 +689,10 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 This xsl fixes the acknowledgements which have been mistagged in this preprint resulting in an empty acknoweldgements section.
 
+### [/src/2023.01.26.525679/fix-refs.xsl](/src/2023.01.26.525679/fix-refs.xsl)
+
+This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
