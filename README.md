@@ -693,6 +693,10 @@ This xsl fixes the acknowledgements which have been mistagged in this preprint r
 
 This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
+### [/src/2023.08.14.553194/fix-refs.xsl](/src/2023.08.14.553194/fix-refs.xsl)
+
+This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:

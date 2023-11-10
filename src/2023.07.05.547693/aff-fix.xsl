@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="article[//article-meta/article-version='1.2']//article-meta//contrib[@contrib-type='author' and not(xref[@ref-type='aff'])]">
+    <xsl:template match="article//article-meta//contrib[@contrib-type='author' and not(xref[@ref-type='aff'])]">
         <xsl:copy>
             <xsl:apply-templates select="@*|contrib-id|name"/>
             <xref ref-type="aff" rid="a1">1</xref>
