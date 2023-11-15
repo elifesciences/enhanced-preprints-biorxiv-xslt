@@ -709,6 +709,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 The name of one of the authors is incorrect and since bioRxiv do not permit the correction of previous preprint versions, this xsl is required in order for their name to be correct.
 
+### [/src/2021.09.24.461751/fix-author-corresp-status.xsl](/src/2021.09.24.461751/fix-author-corresp-status.xsl)
+
+This xsl adds a missing corresponding status to the last author. 
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
