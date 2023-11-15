@@ -713,6 +713,10 @@ The name of one of the authors is incorrect and since bioRxiv do not permit the 
 
 This xsl adds a missing corresponding status to the last author. 
 
+### [/src/2023.02.03.527083/fix-refs.xsl](/src/2023.02.03.527083/fix-refs.xsl)
+
+his xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
