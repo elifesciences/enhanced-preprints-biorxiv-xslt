@@ -185,7 +185,7 @@ This xsl is to better display a list in 2023.02.02.526762. The authors have used
 
 ### [/src/2023.03.13.532331/fix-author-emails.xsl](/src/2023.03.13.532331/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.01.530673/remove-list-labels.xsl](/src/2023.03.01.530673/remove-list-labels.xsl)
 
@@ -209,7 +209,7 @@ This xsl removes subscript formatting from two affiliations in 2021.08.16.455933
 
 ### [/src/2023.03.16.532898/fix-author-emails.xsl](/src/2023.03.16.532898/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.01.03.522550/fix-affs.xsl](/src/2023.01.03.522550/fix-affs.xsl)
 
@@ -229,17 +229,17 @@ Since all these changes are tagging related or covered in existing tickets, no f
 
 ### [/src/2023.01.31.526541/fix-author-emails.xsl](/src/2023.01.31.526541/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 
 ### [/src/2022.07.22.501195/fix-author-emails.xsl](/src/2022.07.22.501195/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 
 ### [/src/2022.04.14.22272888/fix-author-emails.xsl](/src/2022.04.14.22272888/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.04.535526/fix-author-emails.xsl](/src/2023.04.04.535526/fix-author-emails.xsl)
 
@@ -251,45 +251,45 @@ bioRxiv's vendors have captured a footnote (indicating the sole corrresponding a
 
 ### [/src/2023.03.27.534488/fix-author-emails.xsl](/src/2023.03.27.534488/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.09.531872/fix-author-emails.xsl](/src/2023.03.09.531872/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2022.07.27.501668/fix-author-emails.xsl](/src/2022.07.27.501668/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 Also one of the author names is incorrect in the source XML (bioRxiv seemed to have hotfixed this one, but not in the data they supply to us).
 
 ### [/src/2023.03.16.532991/fix-author-emails.xsl](/src/2023.03.16.532991/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.10.536254/fix-author-emails.xsl](/src/2023.04.10.536254/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.07.543997/fix-author-emails.xsl](/src/2023.06.07.543997/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2021.05.12.443782/fix-author-emails.xsl](/src/2021.05.12.443782/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.30.534978/fix-author-emails.xsl](/src/2023.03.30.534978/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.05.19.541463/fix-author-emails.xsl](/src/2023.05.19.541463/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.21.537849/fix-author-emails.xsl](/src/2023.04.21.537849/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.18.537352/remove-cover-letter.xsl](/src/2023.04.18.537352/remove-cover-letter.xsl)
 
@@ -297,31 +297,31 @@ This xsl is to remove a cover letter that the authors accidenatally included in 
 
 ### [/src/2021.04.26.441418/fix-author-emails.xsl](/src/2021.04.26.441418/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.01.17.524456/fix-author-emails.xsl](/src/2023.01.17.524456/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.02.24.23286398/fix-author-emails.xsl](/src/2023.02.24.23286398/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2022.10.21.513016/fix-author-emails.xsl](/src/2022.10.21.513016/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2021.11.08.467457/fix-author-emails.xsl](/src/2021.11.08.467457/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.01.543127/fix-author-emails.xsl](/src/2023.06.01.543127/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.01.543133/fix-author-emails.xsl](/src/2023.06.01.543133/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.01.543135/fix-references.xsl](/src/2023.06.01.543135/fix-references.xsl)
 
@@ -329,11 +329,11 @@ In this article, the authors have numerous reference lists which apply to foigur
 
 ### [/src/2023.04.02.535290/fix-author-emails.xsl](/src/2023.04.02.535290/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.05.535750/fix-author-emails.xsl](/src/2023.04.05.535750/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.01.530673/fix-references-in-v2.xsl](/src/2023.03.01.530673/fix-references-in-v2.xsl)
 
@@ -345,7 +345,7 @@ In this article bioRxiv's vendors have captured an empty acknowledgements sectio
 
 ### [/src/2023.04.14.536843/fix-author-emails.xsl](/src/2023.04.14.536843/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.04.543604/fix-author-affs.xsl](/src/2023.06.04.543604/fix-author-affs.xsl)
 
@@ -357,7 +357,7 @@ bioRxiv's vendors have not attributed which authors are affiliated with which in
 
 ### [/src/2020.09.14.295832/fix-author-emails.xsl](/src/2020.09.14.295832/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.12.536635/add-missing-section-title.xsl](/src/2023.04.12.536635/add-missing-section-title.xsl)
 
@@ -365,7 +365,7 @@ A mistake from bioRxiv's vendors - a title is missing from the section that cont
 
 ### [/src/2023.04.12.23288460/fix-author-emails.xsl](/src/2023.04.12.23288460/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.10.23287084/fix-refs.xsl](/src/2023.03.10.23287084/fix-refs.xsl)
 
@@ -373,11 +373,11 @@ bioRxiv's vendors have made numerous errors in the references, which have led (a
 
 ### [/src/2022.12.09.519720/fix-author-emails.xsl](/src/2022.12.09.519720/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.21.537771/fix-author-emails.xsl](/src/2023.04.21.537771/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.05.31.543136/fix-author-footnotes.xsl](/src/2023.05.31.543136/fix-author-footnotes.xsl)
 
@@ -393,7 +393,7 @@ bioRxiv's vendors have included quote marks within the title of this preprint wh
 
 ### [/src/2023.05.27.23290639/fix-author-emails.xsl](/src/2023.05.27.23290639/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2022.05.16.491352/add-missing-author-email.xsl](/src/2022.05.16.491352/fix-author-emails.xsl)
 
@@ -405,7 +405,7 @@ The author names contain typos (extra space after hyphens), and the correspondin
 
 ### [/src/2021.03.04.433999/fix-author-emails.xsl](/src/2021.03.04.433999/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2022.11.20.516954/fix-author-emails.xsl](/src/2022.11.20.516954/fix-author-emails.xsl)
 
@@ -413,7 +413,7 @@ This xsl is to ensure that this preprint has two corresponding authors. The auth
 
 ### [/src/2023.05.11.540422/fix-author-emails.xsl](/src/2023.05.11.540422/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.26.534293/fix-equal-footnote.xsl](/src/2023.03.26.534293/fix-equal-footnote.xsl)
 
@@ -433,11 +433,11 @@ This xsl changes the title of a section in the authors abstract, so that it is n
 
 ### [/src/2022.05.22.491886/fix-author-emails.xsl](/src/2022.05.22.491886/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.30.534918/fix-author-emails.xsl](/src/2023.03.30.534918/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.06.543964/fix-author-affs.xsl](/src/2023.06.06.543964/fix-author-affs.xsl)
 
@@ -445,11 +445,11 @@ bioRxiv's vendors have not attributed which authors are affiliated with which in
 
 ### [/src/2023.05.24.23289766/fix-author-emails.xsl](/src/2023.05.24.23289766/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.21.545900/fix-author-emails.xsl](/src/2023.06.21.545900/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.21.546014/aff-fix.xsl](/src/22023.06.21.546014/aff-fix.xsl)
 
@@ -457,7 +457,7 @@ One author is missing an affiliation in this preprint (there's only one affiliat
 
 ### [/src/2023.05.25.542355/fix-author-emails.xsl](/src/2023.05.25.542355/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.07.05.547693/aff-fix.xsl](/src/2023.07.05.547693/aff-fix.xsl)
 
@@ -465,11 +465,11 @@ One author is missing an affiliation in this preprint (there's only one affiliat
 
 ### [/src/2023.04.18.537395/fix-author-emails.xsl](/src/2023.04.18.537395/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.04.05.535764/fix-author-emails.xsl](/src/2023.04.05.535764/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.07.18.549506/ref-fix.xsl](/src/2023.07.18.549506/ref-fix.xsl)
 
@@ -524,7 +524,7 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 ### [/src/2023.07.13.548828/fix-author-emails.xsl](/src/2023.07.13.548828/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.07.13.548828/fix-refs.xsl](/src/2023.07.13.548828/fix-refs.xsl)
 
@@ -532,15 +532,15 @@ The authors have not provided article titles for journal references. The result 
 
 ### [/src/2023.07.03.547448/fix-author-emails.xsl](/src/2023.07.03.547448/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.09.03.556121/fix-author-emails.xsl](/src/2023.09.03.556121/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.22.533815/fix-author-emails.xsl](/src/2023.03.22.533815/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 
 ### [/src/2023.05.24.542079/fix-methods-title.xsl](/src/2023.05.24.542079/fix-methods-title.xsl)
@@ -554,7 +554,7 @@ The authors of this article did not include a asterisk next to the name of one o
 
 ### [/src/2023.02.27.530352/fix-author-emails.xsl](/src/2023.02.27.530352/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.06.21.545935/fix-ref.xsl](/src/2023.06.21.545935/fix-ref.xsl)
 This xsl fixes both a reference which has been mistagged (number 55) and removes an unnecessary abstract heading in all caps.
@@ -568,11 +568,11 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 ### [/src/2021.07.12.452102/fix-author-emails.xsl](/src/2021.07.12.452102/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.05.07.539767/fix-author-emails.xsl](/src/2023.05.07.539767/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2022.10.15.22281053/remove-tracked-changes.xsl](/src/2022.10.15.22281053/remove-tracked-changes.xsl)
 
@@ -584,7 +584,7 @@ This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on beh
 
 ### [/src/2023.09.01.555873/fix-author-emails.xsl](/src/2023.09.01.555873/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/273730/equation-fix.xsl](/src/273730/equation-fix.xsl)
 
@@ -608,7 +608,7 @@ This xsl accounts for a mistake proumlgated by biorxiv but rooted with the sourc
 
 ### [/src/2023.08.05.552131/fix-author-emails.xsl](/src/2023.08.05.552131/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.09.01.555812/correct-author-email.xsl](/src/2023.09.01.555812/correct-author-email.xsl)
 
@@ -659,7 +659,7 @@ This xsl fixes a couple of references which are missing key information and as a
 
 ### [/src/2023.02.04.527146/fix-author-emails.xsl](/src/2023.02.04.527146/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.07.30.551185/fix-ref.xsl](/src/2023.07.30.551185/fix-ref.xsl)
 
@@ -699,11 +699,11 @@ This xsl fixes numerous references which are missing key information and as a re
 
 ### [/src/2023.06.26.546470/fix-author-emails.xsl](/src/2023.06.26.546470/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.14.532631/fix-author-emails.xsl](/src/2023.03.14.532631/fix-author-emails.xsl)
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
 ### [/src/2023.03.05.531210/fix-author-name.xsl](/src/2023.03.05.531210/fix-author-name.xsl)
 
@@ -716,6 +716,10 @@ This xsl adds a missing corresponding status to the last author.
 ### [/src/2023.02.03.527083/fix-refs.xsl](/src/2023.02.03.527083/fix-refs.xsl)
 
 his xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+
+### [/src/2023.03.30.534967/fix-corr-authors.xsl](/src/2023.03.30.534967/fix-corr-authors.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author, and also that the correct authors are identified as corresponding.
 
 # Modify bioRxiv XML in preparation for Encoda
 
