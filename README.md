@@ -715,7 +715,7 @@ This xsl adds a missing corresponding status to the last author.
 
 ### [/src/2023.02.03.527083/fix-refs.xsl](/src/2023.02.03.527083/fix-refs.xsl)
 
-his xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
+This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
 ### [/src/2023.03.30.534967/fix-corr-authors.xsl](/src/2023.03.30.534967/fix-corr-authors.xsl)
 
@@ -732,6 +732,10 @@ This xsl is adds a missing email to the XML file for one of the two corresponsin
 ### [/src/2023.10.01.560355/fix-author-emails.xsl](/src/2023.10.01.560355/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.06.06.543964/fix-refs.xsl](/src/2023.06.06.543964/fix-refs.xsl)
+
+This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
 # Modify bioRxiv XML in preparation for Encoda
 
