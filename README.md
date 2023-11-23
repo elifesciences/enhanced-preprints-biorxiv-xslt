@@ -737,6 +737,12 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
+### [/src/2023.10.02.560256/equation-fix.xsl](/src/2023.10.02.560256/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
+
+The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
