@@ -747,6 +747,10 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
+### [/src/2023.05.18.541272/fix-ref.xsl](/src/2023.05.18.541272/fix-ref.xsl)
+
+This xsl fixes a mistagged reference.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
