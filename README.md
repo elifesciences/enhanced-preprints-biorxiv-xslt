@@ -763,6 +763,10 @@ This xsl fixes a mistagged reference.
 
 This xsl fixes two mistagged references.
 
+### [/src/2023.10.03.560673/fix-refs.xsl](/src/2023.10.03.560673/fix-refs.xsl)
+
+This xsl fixes two mistagged references.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
