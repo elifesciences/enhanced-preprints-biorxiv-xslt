@@ -19,7 +19,7 @@
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="contrib-id"/>
-                    <name><surname>Sulca-Garro</surname><given-names>Lidia</given-names></name>
+                    <name><surname>Sulca</surname><given-names>Lidia</given-names></name>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:when>
