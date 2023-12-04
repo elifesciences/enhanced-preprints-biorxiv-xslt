@@ -759,6 +759,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl fixes a mistagged reference.
 
+### [/src/2023.07.27.550898/fix-refs.xsl](/src/2023.07.27.550898/fix-refs.xsl)
+
+This xsl fixes two mistagged references.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
