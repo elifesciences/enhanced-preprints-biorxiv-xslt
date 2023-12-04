@@ -13,22 +13,25 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="article//article-meta//contrib[@contrib-type='author']">
+    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta//contrib[@contrib-type='author' and @corresp='yes']">
         <xsl:choose>
-            <xsl:when test="./name/surname='Garro'">
+            <xsl:when test="./name/surname='Rusconi'">
                 <xsl:copy>
-                    <xsl:apply-templates select="@*"/>
-                    <xsl:apply-templates select="contrib-id"/>
-                    <name><surname>Sulca</surname><given-names>Lidia</given-names></name>
+                    <xsl:apply-templates select="@*|name|contrib-id"/>
+                    <email>filippo.rusconi@universite-paris-saclay.fr</email>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:copy>
-                    <xsl:apply-templates select="*|@*|text()"/>
+                    <xsl:apply-templates select="@*|name|contrib-id"/>
+                    <email>michel.arthur@crc.jussieu.fr</email>
+                    <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes/corresp"/>
     
 </xsl:stylesheet>
