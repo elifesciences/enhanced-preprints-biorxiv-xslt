@@ -779,6 +779,14 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl corrects the mis-tagging of figures S1-6 and Tables S1-3 so that they are captured instead as supplementary files that are downloadable.
 
+### [/src/2022.10.28.514241/fix-refs.xsl](/src/2022.10.28.514241/fix-refs.xsl)
+
+This xsl fixes numerous mistagged references.
+
+### [/src/2023.09.15.557873/fix-ref.xsl](/src/2023.09.15.557873/fix-ref.xsl)
+
+This xsl fixes a mistagged reference.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
