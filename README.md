@@ -783,6 +783,10 @@ This xsl corrects the mis-tagging of figures S1-6 and Tables S1-3 so that they a
 
 This xsl fixes numerous mistagged references.
 
+### [/src/2023.09.15.557873/fix-ref.xsl](/src/2023.09.15.557873/fix-ref.xsl)
+
+This xsl fixes a mistagged reference.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
