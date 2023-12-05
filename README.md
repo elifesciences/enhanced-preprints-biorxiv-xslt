@@ -787,6 +787,13 @@ This xsl fixes numerous mistagged references.
 
 This xsl fixes a mistagged reference.
 
+### [/src/2023.08.02.551732/equation-fix.xsl](/src/2023.08.02.551732/equation-fix.xsl)
+
+This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
+
+The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
+
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
