@@ -23,7 +23,7 @@
                     <xsl:apply-templates select="*[name()!='name' and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:when>
-            <xsl:when test="./name/surname='Turkan'">
+            <xsl:when test="./name/surname='Turkan'"> 
                 <xsl:copy>
                     <xsl:apply-templates select="@*"/>
                     <xsl:apply-templates select="name"/>
@@ -43,5 +43,33 @@
     </xsl:template>
     
     <xsl:template match="article[//article-meta/article-version='1.1']//article-meta/author-notes/corresp"/>
+    
+    <xsl:template match="article[//article-meta/article-version='1.2']//article-meta//contrib[@contrib-type='author']">
+        <xsl:choose>
+            <xsl:when test="./name/surname='Turkan'"> 
+                <xsl:copy>
+                    <xsl:apply-templates select="@*"/>
+                    <xsl:apply-templates select="name"/>
+                    <email>halilogt@boun.edu.tr</email>
+                    <xsl:apply-templates select="*[name()!='name' and not(@ref-type='corresp')]"/>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:when test="./name/surname='Oded'">
+                <xsl:copy>
+                    <xsl:apply-templates select="@*"/>
+                    <xsl:apply-templates select="name"/>
+                    <email>lewinson@technion.ac.il</email>
+                    <xsl:apply-templates select="*[name()!='name' and not(@ref-type='corresp')]"/>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy>
+                    <xsl:apply-templates select="@*|*|text()"/>
+                </xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="article[//article-meta/article-version='1.2']//article-meta/author-notes/corresp"/>
 
 </xsl:stylesheet>
