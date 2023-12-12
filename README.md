@@ -812,6 +812,10 @@ This xsl accounts for a bug in Encoda. In this preprint some text that precedes 
 
 The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
+### [/src/2023.09.28.560045/title-fix.xsl](/src/2023.09.28.560045/title-fix.xsl)
+
+This xsl changes the caseing of the title of this preprint from all caps to sentence case.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
