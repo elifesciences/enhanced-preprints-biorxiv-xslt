@@ -826,6 +826,10 @@ This xsl accounts for a bug in Encoda. In this preprint some text that precedes 
 
 The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
+### [/src/2022.11.25.517968/fix-structure.xsl](/src/2022.11.25.517968/fix-structure.xsl)
+
+This xsl fixes the structure of the article, which has incorrect been typeset.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
