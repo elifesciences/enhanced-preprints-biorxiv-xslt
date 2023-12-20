@@ -20,6 +20,7 @@
                     <xsl:apply-templates select="@*"/>
                     <xsl:attribute name="corresp">yes</xsl:attribute>
                     <xsl:apply-templates select="name|contrib-id"/>
+                    <email>oleksiyt@bnl.gov</email>
                     <xsl:apply-templates select="*[not(name()=('name','contrib-id')) and not(@ref-type='corresp')]"/>
                 </xsl:copy>
             </xsl:when>
