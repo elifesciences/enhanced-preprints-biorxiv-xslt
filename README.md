@@ -830,6 +830,10 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 This xsl fixes the structure of the article, which has incorrect been typeset.
 
+### [/src/2023.08.22.554341/fix-m-title.xsl](/src/2023.08.22.554341/fix-m-title.xsl)
+
+This xsl changes the caseing of the materials and methods to sentence case.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
