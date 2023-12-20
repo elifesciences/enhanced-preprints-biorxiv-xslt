@@ -850,6 +850,10 @@ This xsl fixes th affiliations of all authors.
 
 This preprint contains a duplicate reference which this xsl deletes.
 
+### [/src/2023.04.11.536473/fix-corr-author.xsl](/src/2023.04.11.536473/fix-corr-author.xsl)
+
+This xsl ensures both authors of this preprint are indicated as corresponding authors.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
