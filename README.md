@@ -830,6 +830,30 @@ The xsl adds an empty `disp-quote` element between the paragraph and display equ
 
 This xsl fixes the structure of the article, which has incorrect been typeset.
 
+### [/src/2023.08.22.554341/fix-m-title.xsl](/src/2023.08.22.554341/fix-m-title.xsl)
+
+This xsl changes the caseing of the materials and methods to sentence case.
+
+### [/src/2023.10.18.562958/fix-author-emails.xsl](/src/2023.10.18.562958/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.09.12.557450/fix-author-emails.xsl](/src/2023.09.12.557450/fix-author-emails.xsl)
+
+This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+
+### [/src/2023.06.24.546394/aff-fix.xsl](/src/2023.06.24.546394/aff-fix.xsl)
+
+This xsl fixes th affiliations of all authors.
+
+### [/src/2023.10.03.560658/remove-dupe-ref.xsl](/src/2023.10.03.560658/remove-dupe-ref.xsl)
+
+This preprint contains a duplicate reference which this xsl deletes.
+
+### [/src/2023.04.11.536473/fix-corr-author.xsl](/src/2023.04.11.536473/fix-corr-author.xsl)
+
+This xsl ensures both authors of this preprint are indicated as corresponding authors.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
