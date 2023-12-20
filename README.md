@@ -846,6 +846,10 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl fixes th affiliations of all authors.
 
+### [/src/2023.10.03.560658/remove-dupe-ref.xsl](/src/2023.10.03.560658/remove-dupe-ref.xsl)
+
+This preprint contains a duplicate reference which this xsl deletes.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
