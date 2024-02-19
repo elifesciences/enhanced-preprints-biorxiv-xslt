@@ -27,12 +27,6 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 
 This xsl is a workaround for handling group authors (organisations) in both the author list and in references. Encoda converts these into a useful representation in the JSON, but there is no support for authors that are organisations in EPP client, so this needs updating.
 
-### [/src/convert-app-to-sec.xsl](/src/convert-app-to-sec.xsl)
-
-This xsl converts `<app>` elements to `<sec>` elements. `<app>` is the correct semnatic capture of appendices (and is sometimes captured within an `<app-group>` element), but encoda does not decode these. This leads to no representation of this content within the JSON, and therefore it is missing on EPP. Converting these to sections is a workaround that ensure the content is captured and rendered on EPP. An example of a preprint with appendices is 10.1101/2022.11.10.516056.
-
-Changes are required to encoda so as to decode and encode appendices, and then possible changes are required in EPP depending on how this is representated in the JSON.
-
 ### [/src/collate-reference-lists.xsl](/src/collate-reference-lists.xsl)
 
 This xsl handles multiple reference lists in a preprint. If the preprint has mutliple reference lists (an example of this is 10.1101/2022.12.20.521179), then the references from any extra reference lists are added to the first one. This means that the references are retained (although the separation of the reference lists and the extra headings cannot be retained). 
