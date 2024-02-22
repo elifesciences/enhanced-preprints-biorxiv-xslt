@@ -17,6 +17,8 @@ In the entry for each XSL file please link to the file in github.
 
 This stylesheet is transforming an XML document by adding a "label" element to any "title" element that has a preceding "label" element, and removing any "label" element that has a following "title" element. Work is required in encoda to approprately decode these labels, so that they can then be represented in the resultant JSON.
 
+The XSL also changes an `label` element (that is not followed by a `title` element) to a `title` element within `sec` and `app` elements.
+
 ### [/src/convert-doi-links-to-pub-id-elements.xsl](/src/convert-doi-links-to-pub-id-elements.xsl)
 
 This xsl converts `<ext-link>` elements within references (`<ref>`) that have a uri (in the `xlink:href` attribute) which is a DOI string, to use `<pub-id pub-id-type="doi">` tagging instead.
