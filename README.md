@@ -17,6 +17,8 @@ In the entry for each XSL file please link to the file in github.
 
 This stylesheet is transforming an XML document by adding a "label" element to any "title" element that has a preceding "label" element, and removing any "label" element that has a following "title" element. Work is required in encoda to approprately decode these labels, so that they can then be represented in the resultant JSON.
 
+The XSL also changes an `label` element (that is not followed by a `title` element) to a `title` element within `sec` and `app` elements.
+
 ### [/src/convert-doi-links-to-pub-id-elements.xsl](/src/convert-doi-links-to-pub-id-elements.xsl)
 
 This xsl converts `<ext-link>` elements within references (`<ref>`) that have a uri (in the `xlink:href` attribute) which is a DOI string, to use `<pub-id pub-id-type="doi">` tagging instead.
@@ -26,12 +28,6 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 ### [/src/workaround-for-organisation-authors.xsl](/src/workaround-for-organisation-authors.xsl)
 
 This xsl is a workaround for handling group authors (organisations) in both the author list and in references. Encoda converts these into a useful representation in the JSON, but there is no support for authors that are organisations in EPP client, so this needs updating.
-
-### [/src/convert-app-to-sec.xsl](/src/convert-app-to-sec.xsl)
-
-This xsl converts `<app>` elements to `<sec>` elements. `<app>` is the correct semnatic capture of appendices (and is sometimes captured within an `<app-group>` element), but encoda does not decode these. This leads to no representation of this content within the JSON, and therefore it is missing on EPP. Converting these to sections is a workaround that ensure the content is captured and rendered on EPP. An example of a preprint with appendices is 10.1101/2022.11.10.516056.
-
-Changes are required to encoda so as to decode and encode appendices, and then possible changes are required in EPP depending on how this is representated in the JSON.
 
 ### [/src/collate-reference-lists.xsl](/src/collate-reference-lists.xsl)
 
