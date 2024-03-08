@@ -166,7 +166,8 @@
 </front>
 <body>
 <sec id="s1">
-<title><label>1.0</label> Introduction</title>
+<label>1.0</label>
+<title>Introduction</title>
 <p>Specificity is considered a hallmark of the adaptive immune response. For T cells, specificity is mediated by T cell receptors (TCRs), which interact with peptides presented by major histocompatibility complex (MHC) molecules through their complementary-determining-region-3 (CDR3). TCRs are formed by rearrangements between hundreds of gene segments at the alpha and beta loci, theoretically generating &#x003E;10<sup>60</sup> possible sequences (<italic><xref ref-type="bibr" rid="c1">1</xref>&#x2013;<xref ref-type="bibr" rid="c3">3</xref></italic>). Each rearrangement has its probability of generation, which has been modeled to vary by about 10 orders of magnitude for the beta chain alone (<italic><xref ref-type="bibr" rid="c4">4</xref></italic>). During their development within the thymus, T cells undergo a selection largely based on the strength of their activation by thymic antigen-presenting cells that eliminates &#x003E;80% of them (<italic><xref ref-type="bibr" rid="c5">5</xref>&#x2013;<xref ref-type="bibr" rid="c7">7</xref></italic>). For each individual, this process releases a pool of T cells expressing a repertoire of approximately 10<sup>8</sup> unique TCRs (<italic><xref ref-type="bibr" rid="c8">8</xref></italic>).</p>
 <p>How evolution shaped a process that selects cells that would efficiently respond to antigens that are not yet present, i.e. from an infectious agent to come, is a central question of immunology. The paradigm is that the production and selection of a diverse enough repertoire of TCRs should always provide a proper, though rare, specificity for any given need. Expansion of such rare T cells would then provide enough fighters for an effective immune response and later enough antigen-experienced cells for immune memory (<italic><xref ref-type="bibr" rid="c9">9</xref></italic>). Thus, it is widely accepted that &#x201C;<italic>T cell-mediated immunity to infection is due to the proliferation and differentiation of rare clones in the preimmune repertoire that by chance express TCRs specific for peptide-MHC (pMHC) ligands derived from the microorganism</italic>&#x201D;(<italic><xref ref-type="bibr" rid="c10">10</xref></italic>).</p>
 <p>However, this theory is challenged by overlooked data questioning the essence of specificity. First, a child with an X-linked severe combined immunodeficiency who had a reverse mutation in a single T cell progenitor was protected from infections despite having a very restricted repertoire of only about 1,000 different TCRs (<italic><xref ref-type="bibr" rid="c11">11</xref></italic>). How such a repertoire (10<sup>&#x2212;5</sup> of a normal repertoire size) could handle the numerous infections occurring during childhood awaits explanation. Second, robust experimental and epidemiological data have highlighted the importance of heterologous immunity, i.e. immunity to one pathogen afforded by the exposure to unrelated pathogens (<italic><xref ref-type="bibr" rid="c12">12</xref>&#x2013;<xref ref-type="bibr" rid="c14">14</xref></italic>). Likewise, for example, (i) memory T cells that are specific for one virus can become activated during infection with an unrelated virus (<italic><xref ref-type="bibr" rid="c15">15</xref></italic>), (ii) there are numerous virus-specific memory phenotype T cells in unexposed individuals (<italic><xref ref-type="bibr" rid="c16">16</xref></italic>), (iii) CMV infection enhances the immune response to influenza (<italic><xref ref-type="bibr" rid="c17">17</xref></italic>) and (iv) tumor-resident memory HBV-specific T cell responses correlate with hepatocellular carcinoma outcome(<xref ref-type="bibr" rid="c18">18</xref>).</p>
@@ -522,7 +523,7 @@
 <fig id="figS7" position="float" orientation="portrait" fig-type="figure">
 <label>Figure S7.</label>
 <caption><title>Binding properties of single cell TCRs</title>
-<p><list list-type="alpha-upper">
+<p><list list-type="simple">
 <list-item><label>*</label><p>Network of tetramer-binding CDR3s from public database (VDJdb) identifying CDR3s with multiple viral specificities. Each dot represents a single CDR3. Dot are connected by edges defined by Levenshtein distance of &#x2264;1 (one AA substitution/insertion/deletion). Each dot represents a CDR3 with at least 2 specificities for 2 different viruses. The colors are related to a specific virus. The specificities of these CDR3 were identified by tetramer staining.</p></list-item>
 <list-item><label>**</label><p>Venn diagram representing specificities for 5 different viruses of the 13,557 unique virus-associated CDR3s (those from <xref rid="fig3" ref-type="fig">Figure 3e</xref>, LD&#x2264;1).</p></list-item>
 <list-item><label>***</label><p>MDS representation of MH dissimilarity index for EBV repertoire. The MH index are calculated for each repertoire specific of EBV antigen (n&#x003D;16). Each point represents a patient and each color an antigen.</p></list-item></list></p></caption>
@@ -686,7 +687,7 @@
 </sec>
 </app>
 <app id="app2">
-<title>Appendix 2</title>
+<label>Appendix 2</label>
 <sec id="s11">
 <title>Existing Manipulation Methods</title>
 <p>Existing temporary inactivation methods include intracortical microstimulation, optogenetics, pharmacology, transcranial stimulation, cooling loops, and chemogenetics.</p>

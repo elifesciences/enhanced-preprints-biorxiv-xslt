@@ -524,9 +524,9 @@
 <label>Figure S7.</label>
 <caption><title>Binding properties of single cell TCRs</title>
 <p><list list-type="alpha-upper">
-<list-item><p>Network of tetramer-binding CDR3s from public database (VDJdb) identifying CDR3s with multiple viral specificities. Each dot represents a single CDR3. Dot are connected by edges defined by Levenshtein distance of &#x2264;1 (one AA substitution/insertion/deletion). Each dot represents a CDR3 with at least 2 specificities for 2 different viruses. The colors are related to a specific virus. The specificities of these CDR3 were identified by tetramer staining.</p></list-item>
-<list-item><p>Venn diagram representing specificities for 5 different viruses of the 13,557 unique virus-associated CDR3s (those from <xref rid="fig3" ref-type="fig">Figure 3e</xref>, LD&#x2264;1).</p></list-item>
-<list-item><p>MDS representation of MH dissimilarity index for EBV repertoire. The MH index are calculated for each repertoire specific of EBV antigen (n&#x003D;16). Each point represents a patient and each color an antigen.</p></list-item></list></p></caption>
+<list-item><label>*</label><p>Network of tetramer-binding CDR3s from public database (VDJdb) identifying CDR3s with multiple viral specificities. Each dot represents a single CDR3. Dot are connected by edges defined by Levenshtein distance of &#x2264;1 (one AA substitution/insertion/deletion). Each dot represents a CDR3 with at least 2 specificities for 2 different viruses. The colors are related to a specific virus. The specificities of these CDR3 were identified by tetramer staining.</p></list-item>
+<list-item><label>**</label><p>Venn diagram representing specificities for 5 different viruses of the 13,557 unique virus-associated CDR3s (those from <xref rid="fig3" ref-type="fig">Figure 3e</xref>, LD&#x2264;1).</p></list-item>
+<list-item><label>***</label><p>MDS representation of MH dissimilarity index for EBV repertoire. The MH index are calculated for each repertoire specific of EBV antigen (n&#x003D;16). Each point represents a patient and each color an antigen.</p></list-item></list></p></caption>
 <graphic xlink:href="223354v2_figS7.tif"/>
 </fig>
 <fig id="figS8" position="float" orientation="portrait" fig-type="figure">

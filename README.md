@@ -154,6 +154,11 @@ jats xml uses the element `disp-quote` for display quotes. These are decoded by 
 ```
 EPP does not currently support this content type and as a result the content within is completely lost in the HTML. This xsl strips the `disp-quote` element and includes the contents of any child paragraph elements so that (some of) the content is retained in the HTML.
 
+### [/src/list-with-labels.xsl](/src/list-with-labels.xsl)
+
+In JATS, "[if] the `<label>` element is used in a `<list-item>`, it overrides the `@list-type` and `@prefix-word` attributes [on the `<list>` element]". Neither encoda or EPP have adequately taken this into account, and bioRxiv rely on this convention, meaning that some lists have two types of label indicator. This XSL adds the list-type attribute value `simple` when a list has list-items with labels (it will not do so if there are any list-items without labels within the list), so that only the indicator from the label is rendered in the HTML.
+
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
