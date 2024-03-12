@@ -158,6 +158,9 @@ EPP does not currently support this content type and as a result the content wit
 
 In JATS, "[if] the `<label>` element is used in a `<list-item>`, it overrides the `@list-type` and `@prefix-word` attributes [on the `<list>` element]". Neither encoda or EPP have adequately taken this into account, and bioRxiv rely on this convention, meaning that some lists have two types of label indicator. This XSL adds the list-type attribute value `simple` when a list has list-items with labels (it will not do so if there are any list-items without labels within the list), so that only the indicator from the label is rendered in the HTML.
 
+### [/src/boxed-text-workaround.xsl](/src/boxed-text-workaround.xsl)
+
+This XSL changes `<boxed-text>` into a `<sec>` element because encoda and EPP do not have adeqwuate support for this content.
 
 ## Manuscript specific XSLT
 
