@@ -162,6 +162,10 @@ In JATS, "[if] the `<label>` element is used in a `<list-item>`, it overrides th
 
 This XSL changes `<boxed-text>` into a `<sec>` element because encoda and EPP do not have adeqwuate support for this content.
 
+### [/src/conf-ref-workaround.xsl](/src/boxed-text-workaround.xsl)
+
+For conference proceeding references, the name of a conference is usually captured using the element `<conf-name>`. Encoda does not decode/encode this element, as such it is missing in the HTML rendered by EPP. Encoda also does not distinguish in the reference type (still encoded as `Article`). This XSL converts a conference reference into a journal reference (as best as possible) so that the details can be showin in the HTML. 
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
