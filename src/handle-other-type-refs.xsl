@@ -62,7 +62,7 @@
     
     <!-- chapter-title is required instead of article-title for books:
     https://github.com/stencila/encoda/blob/202d8da5e5c3381b318910df1fd8878df4b1456d/src/codecs/jats/index.ts#L1343-L1344 -->
-    <xsl:template match="mixed-citation[@publication-type='other' and source and (pub-id[lower-case(@pub-id-type)=('pmid','pmcid','doi')] and (person-group[@person-group-type='editor'] or publisher-name)) or (year and (string-name or name or collab or person-group) and publisher-name)]/article-title">
+    <xsl:template match="mixed-citation[@publication-type='other' and source and ((pub-id[lower-case(@pub-id-type)=('pmid','pmcid','doi')] and (person-group[@person-group-type='editor'] or publisher-name)) or (year and (string-name or name or collab or person-group) and publisher-name))]/article-title">
         <chapter-title>
             <xsl:apply-templates select="node()|@*"/>
         </chapter-title>
