@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="mixed-citation/etal">
+    <xsl:template match="mixed-citation/etal | mixed-citation/person-group/etal">
         <xsl:choose>
             <!-- if empty <etal/>, then include boilerplate text to include -->
             <xsl:when test="not(./*) and normalize-space(.)=''">
