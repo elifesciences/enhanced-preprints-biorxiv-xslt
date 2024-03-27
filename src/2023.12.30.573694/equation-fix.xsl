@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="article[//article-meta/article-version='1.4']//disp-formula[@id=('eqn2','eqn3','eqn6')]">
+    <xsl:template match="article[//article-meta/article-version='1.2']//disp-formula[@id=('eqn2','eqn3','eqn6')]">
         <disp-quote/>
         <xsl:text>&#xA;</xsl:text>
         <xsl:copy>
