@@ -166,6 +166,10 @@ This XSL changes `<boxed-text>` into a `<sec>` element because encoda and EPP do
 
 For conference proceeding references, the name of a conference is usually captured using the element `<conf-name>`. Encoda does not decode/encode this element, as such it is missing in the HTML rendered by EPP. Encoda also does not distinguish in the reference type (still encoded as `Article`). This XSL converts a conference reference into a journal reference (as best as possible) so that the details can be showin in the HTML. 
 
+### [/src/extra-abstract-workaround.xsl](/src/extra-abstract-workaround.xsl)
+
+This xsl accounts for 'extra' abstracts captured preprints such as graphical abstracts, impact statements and 'highlights' sections. These would most appropriately be captured as separate (additional) abstracts, but EPP/Encoda is unable to retain the content when captured this way, so this xsl moves these so that they are sections wihin the main asbtract.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
