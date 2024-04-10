@@ -84,7 +84,23 @@
 <self-uri xlink:href="223354.pdf" content-type="pdf" xlink:role="full-text"/>
 <abstract>
 <title>Abstract</title><p>T cell receptors (TCRs) are formed by stochastic gene rearrangements, theoretically generating &#x003E;10<sup>19</sup> sequences. They are selected during thymopoiesis, which releases a repertoire of about 10<sup>8</sup> unique TCRs per individual. How evolution shaped a process that produces TCRs that can effectively handle a countless and evolving set of infectious agents is a central question of immunology. The paradigm is that a diverse enough repertoire of TCRs should always provide a proper, though rare, specificity for any given need. Expansion of such rare T cells would provide enough fighters for an effective immune response and enough antigen-experienced cells for memory. We show here that human thymopoiesis releases a large population of CD8<sup>&#x002B;</sup> T cells harboring &#x03B1;/&#x03B2; paired TCRs that (i) have high generation probabilities and (ii) a preferential usage of some V and J genes, (iii) are shared between individuals and (iv) can each recognize and be activated by multiple unrelated viral peptides, notably from EBV, CMV and influenza. These polyspecific T cells may represent a first line of defense that is mobilized in response to infections before a more specific response subsequently ensures viral elimination. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2; TCRs for broad antiviral responses and heterologous immunity.</p>
-</abstract>
+<sec>
+<title>Graphical abstract</title><fig id="figa1" position="float" orientation="portrait" fig-type="figure">
+<label>Figure</label>
+<caption>
+<title>Title.</title>
+<p>Figure caption.</p>
+</caption>
+<graphic xlink:href="g-fig.tif"/>
+</fig>
+</sec><sec>
+<title>Highlights</title><list list-type="bullet">
+<list-item><p>The retina utilizes a complex energy switchboard consisting of the Krebs cycle, mini-Krebs cycle, Cahill cycle, and Cori cycle.</p></list-item>
+<list-item><p>Mini-Krebs cycle runs more efficiently than &#x2018;full&#x2019; Krebs cycle.</p></list-item>
+<list-item><p>Alanine transaminase decouples glycolysis from the Krebs cycle.</p></list-item>
+<list-item><p>Lactate, alanine, and N-acetylaspartate are distinctive energetic pathway signatures.</p></list-item>
+</list>
+</sec></abstract>
 <counts>
 <page-count count="59"/>
 </counts>
