@@ -105,7 +105,7 @@
                 </xsl:when>
                 <xsl:otherwise/>
             </xsl:choose>
-            <xsl:apply-templates select="@*|*[not(name()=$pre-caption-elems)]|text()[preceding-sibling::*[not(name()=$pre-caption-elems)]]"/>
+            <xsl:apply-templates select="*[not(name()=$pre-caption-elems)]|text()[preceding-sibling::*[not(name()=$pre-caption-elems)]]"/>
         </xsl:copy>
     </xsl:template>
     
