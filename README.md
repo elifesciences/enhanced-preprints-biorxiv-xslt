@@ -174,6 +174,51 @@ This xsl accounts for 'extra' abstracts captured preprints such as graphical abs
 
 This xsl accounts for permissions for objects within xml. Encoda will decode the `<license-p>` within the permissions for a figure (I've not checked other objects) and encode this as `licenses.content` in the JSON. EPP does not currently render this content. Therefore this XSL will convert any permissions statement for an object into a paragraph which is added onto the end of a caption.
 
+### [/src/equation-bug-workaround.xsl](/src/equation-bug-workaround.xsl)
+
+This xsl accounts for a bug in Encoda whereby in the process of converting to JSON, an equation (captured as an image) subsumes the previous paragraph and is treated as the caption of a figure. I am unsure what specific conditions cause this behaviour - it does not happen in all cases. However, for example:
+
+In [this preprint](https://doi.org/10.1101/2023.02.26.530115) the following text precedes two display equations:
+
+> In silico predictions were compared to matched phenotype data and the following accuracy metrics were calculated:
+
+```xml
+<p><italic>In silico</italic> predictions were compared to matched phenotype data and the following accuracy metrics were calculated:</p>
+<disp-formula id="ueqn1">
+<graphic xlink:href="530115v2_ueqn1.gif"/>
+</disp-formula>
+<disp-formula id="ueqn2">
+<graphic xlink:href="530115v2_ueqn2.gif"/>
+</disp-formula>
+<p>Model metabolite and reaction ... </p>
+```
+
+This is decoded/encoded by Encoda (v1.0.1) into the following JSON:
+```json
+{
+    "type": "Figure",
+    "caption": [
+      {
+        "type": "Paragraph",
+        "content": [
+          "In silico",
+          " predictions were compared to matched phenotype data and the following accuracy metrics were calculated:"
+        ]
+      }
+    ],
+    "content": [
+      {
+        "type": "ImageObject",
+        "contentUrl": "87406/v2/530115v2_ueqn1.gif",
+        "meta": { "inline": false }
+      }
+    ]
+  }
+``` 
+So the preceding paragraph is captured as if it was the caption of the first display equation. This leads to confusing and inaccurate display on EPP. 
+
+The xsl adds an empty `disp-quote` element before and after each display equation in order for it to be adequately separated in the JSON.
+
 ## Manuscript specific XSLT
 
 ### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
