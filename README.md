@@ -546,49 +546,6 @@ This xsl fixes a reference that is erroneously captured as a report type referen
 
 This xsl fixes a reference that is erroneously captured as a book type reference when it is a journal article. This XSL can likely be removed when proper support for book references is added in encoda and EPP (that work is related to and partially covered in https://github.com/elifesciences/enhanced-preprints-issues/issues/814)
 
-### [/src/2023.02.26.530115/equation-fix.xsl](/src/2023.02.26.530115/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In [this preprint](https://doi.org/10.1101/2023.02.26.530115) the following text precedes two display equations:
-
-> In silico predictions were compared to matched phenotype data and the following accuracy metrics were calculated:
-
-```xml
-<p><italic>In silico</italic> predictions were compared to matched phenotype data and the following accuracy metrics were calculated:</p>
-<disp-formula id="ueqn1">
-<graphic xlink:href="530115v2_ueqn1.gif"/>
-</disp-formula>
-<disp-formula id="ueqn2">
-<graphic xlink:href="530115v2_ueqn2.gif"/>
-</disp-formula>
-<p>Model metabolite and reaction ... </p>
-```
-
-This is decoded/encoded by Encoda (v1.0.1) into the following JSON:
-```json
-{
-    "type": "Figure",
-    "caption": [
-      {
-        "type": "Paragraph",
-        "content": [
-          "In silico",
-          " predictions were compared to matched phenotype data and the following accuracy metrics were calculated:"
-        ]
-      }
-    ],
-    "content": [
-      {
-        "type": "ImageObject",
-        "contentUrl": "87406/v2/530115v2_ueqn1.gif",
-        "meta": { "inline": false }
-      }
-    ]
-  }
-``` 
-So the preceding paragraph is captured as if it was the caption of the first display equation. This leads to confusing and inaccurate display on EPP. 
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2023.07.13.548828/fix-author-emails.xsl](/src/2023.07.13.548828/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
@@ -626,13 +583,6 @@ This xsl is to ensure that the correct email is attributed to the correct author
 ### [/src/2023.06.21.545935/fix-ref.xsl](/src/2023.06.21.545935/fix-ref.xsl)
 This xsl fixes both a reference which has been mistagged (number 55) and removes an unnecessary abstract heading in all caps.
 
-
-### [/src/2023.04.05.535396/equation-fix.xsl](/src/2023.04.05.535396/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equations is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2021.07.12.452102/fix-author-emails.xsl](/src/2021.07.12.452102/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
@@ -653,21 +603,9 @@ This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on beh
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
-### [/src/273730/equation-fix.xsl](/src/273730/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equations is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2023.07.24.550263/heading-fix.xsl](/src/2023.07.24.550263/equation-fix.xsl)
 
 This xsl accounts for undesired behaviour in Encoda which changes the capitalisation of headings that are in all caps to sentence case.
-
-### [/src/arXiv.2302.14157/equation-fix.xsl](/src/arXiv.2302.14157/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes display equations is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equations in order for the two to be adequately separated in the JSON.
 
 ### [/src/2023.08.02.551596/fix-author-names.xsl](/src/2023.08.02.551596/fix-author-names.xsl)
 
@@ -708,18 +646,6 @@ This xsl carries out three fixes:
 
 This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
-### [/src/arXiv.2211.16879/equation-fix.xsl](/src/arXiv.2211.16879/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.04.19.535725/equation-fix.xsl](/src/2023.04.19.535725/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2022.12.29.522272/fix-refs.xsl](/src/2022.12.29.522272/fix-refs.xsl)
 
 This xsl fixes a couple of references which are missing key information and as a result rendering poorly on EPP.
@@ -736,21 +662,9 @@ This xsl fixes a reference which is missing key information and as a result rend
 
 This xsl fixes an affiliaiton which erroneously contains the text ' Email:'. We've reached out to bioRxiv about it and this XSL can be removed on confirmation that they have removed this from the MECA package.
 
-### [/src/2023.09.14.557827/equation-fix.xsl](/src/2023.09.14.557827/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2022.05.02.490321/add-equal-author-text.xsl](/src/2022.05.02.490321/add-equal-author-text.xsl)
 
 This xsl adds some text in the backmatter to calrify the relationship of the authors in the author list. Once support for author notes has been adequately added in Ecnoda and EPP, this xsl can be removed.
-
-### [/src/2021.12.24.474127/equation-fix.xsl](/src/2021.12.24.474127/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
 ### [/src/2023.07.14.548952/ack-fix.xsl](/src/2023.07.14.548952/ack-fix.xsl)
 
@@ -804,12 +718,6 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
-### [/src/2023.10.02.560256/equation-fix.xsl](/src/2023.10.02.560256/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2023.10.08.561407/fix-author-emails.xsl](/src/2023.10.08.561407/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
@@ -854,13 +762,6 @@ This xsl fixes numerous mistagged references.
 
 This xsl fixes a mistagged reference.
 
-
-### [/src/2023.08.02.551732/equation-fix.xsl](/src/2023.08.02.551732/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2023.10.05.561013/fix-author-emails.xsl](/src/2023.10.05.561013/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
@@ -873,12 +774,6 @@ This xsl is to ensure that the correct email is attributed to the correct author
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
 
-### [/src/468306/equation-fix.xsl](/src/468306/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2023.09.28.560045/title-fix.xsl](/src/2023.09.28.560045/title-fix.xsl)
 
 This xsl changes the caseing of the title of this preprint from all caps to sentence case.
@@ -886,12 +781,6 @@ This xsl changes the caseing of the title of this preprint from all caps to sent
 ### [/src/2023.10.06.561235/fix-author-emails.xsl](/src/2023.10.06.561235/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2022.12.09.519818/equation-fix.xsl](/src/2022.12.09.519818/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
 ### [/src/2022.11.25.517968/fix-structure.xsl](/src/2022.11.25.517968/fix-structure.xsl)
 
@@ -921,75 +810,9 @@ This preprint contains a duplicate reference which this xsl deletes.
 
 This xsl ensures both authors of this preprint are indicated as corresponding authors.
 
-### [/src/2023.10.11.561122/equation-fix.xsl](/src/2023.10.11.561122/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
 ### [/src/2023.07.26.550718/code-workaround.xsl](/src/2023.07.26.550718/code-workaround.xsl)
 
 EPP does not render code blocks. Therefore this XSL converts the codeblocks int this article into paragraphs (with monospace formatting), so that the content is rendered.
-
-### [/src/2023.07.22.550168/equation-fix.xsl](/src/2023.07.22.550168/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.12.30.573694/equation-fix.xsl](/src/2023.12.30.573694/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2022.03.11.483978/equation-fix.xsl](/src/2022.03.11.483978/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.08.02.551720/equation-fix.xsl](/src/2023.08.02.551720/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.10.16.562488/equation-fix.xsl](/src/2023.10.16.562488/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.04.18.537072/equation-fix.xsl](/src/2023.04.18.537072/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.12.07.570537/equation-fix.xsl](/src/2023.12.07.570537/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2024.02.20.581121/equation-fix.xsl](/src/2024.02.20.581121/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2024.02.28.582617/equation-fix.xsl](/src/2024.02.28.582617/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/412858/equation-fix.xsl](/src/412858/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equation is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
 
 # Modify bioRxiv XML in preparation for Encoda
 
