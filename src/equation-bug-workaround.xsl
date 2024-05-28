@@ -13,7 +13,7 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="disp-formula">
+    <xsl:template match="disp-formula[graphic]">
         <disp-quote/>
         <xsl:text>&#xA;</xsl:text>
         <xsl:copy>
