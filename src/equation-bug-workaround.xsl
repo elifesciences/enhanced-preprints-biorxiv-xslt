@@ -13,20 +13,14 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="article[//article-meta/article-version='1.2']//disp-formula[@id='eqnS6']">
-        <xsl:copy>
-            <xsl:apply-templates select="*|@*|text()"/>
-        </xsl:copy>
-        <xsl:text>&#xA;</xsl:text>
-        <disp-quote/>
-    </xsl:template>
-
-    <xsl:template match="article[//article-meta/article-version='1.2']//disp-formula[@id='eqnS7']">
+    <xsl:template match="disp-formula[graphic]">
         <disp-quote/>
         <xsl:text>&#xA;</xsl:text>
         <xsl:copy>
             <xsl:apply-templates select="*|@*|text()"/>
         </xsl:copy>
+        <xsl:text>&#xA;</xsl:text>
+        <disp-quote/>
     </xsl:template>
     
 </xsl:stylesheet>

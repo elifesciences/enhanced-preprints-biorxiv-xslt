@@ -16,3 +16,7 @@ run_xsl_on_fixture() {
 for xsl_file in $(find "${PARENT_DIR}/src" -type f -name '*.xsl' -depth 1); do
     run_xsl_on_fixture "${xsl_file}"
 done
+
+echo "updating test case for all"
+cat test/fixtures/kitchen-sink.xml | docker run --rm -i epp-biorxiv-xslt > "test/all/kitchen-sink.xml"
+echo "done"
