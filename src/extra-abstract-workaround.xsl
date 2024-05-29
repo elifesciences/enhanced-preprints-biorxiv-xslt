@@ -15,12 +15,12 @@
     
     <xsl:template match="article-meta/abstract[not(@abstract-type)][1]">
         <abstract>
-        <xsl:apply-templates select="*|@*|text()"/>
+        <xsl:apply-templates select="*|@*|text()"/> 
         <xsl:for-each select="following-sibling::abstract[not(@abstract-type)]|parent::article-meta/abstract[@abstract-type]">
             <sec>
-                <xsl:text>&#xa;</xsl:text>
                 <xsl:apply-templates select="@id"/>
-                <xsl:copy-of select="*"/>
+                <xsl:text>&#xa;</xsl:text>
+                <xsl:apply-templates select="*"/>
                 <xsl:text>&#xa;</xsl:text>
             </sec>
         </xsl:for-each>
