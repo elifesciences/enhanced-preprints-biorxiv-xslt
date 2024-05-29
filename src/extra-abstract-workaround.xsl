@@ -18,7 +18,10 @@
         <xsl:apply-templates select="*|@*|text()"/> 
         <xsl:for-each select="following-sibling::abstract[not(@abstract-type)]|parent::article-meta/abstract[@abstract-type]">
             <sec>
-                <xsl:apply-templates select="@id|*"/>
+                <xsl:apply-templates select="@id"/>
+                <xsl:text>&#xa;</xsl:text>
+                <xsl:apply-templates select="*"/>
+                <xsl:text>&#xa;</xsl:text>
             </sec>
         </xsl:for-each>
     </abstract>
