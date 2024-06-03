@@ -121,10 +121,6 @@ In most cases the use of `publication-type="other"` is a mistake (or incorrect) 
 
 In addition some of the rules in encoda could possibly be relaxed in order to decode more of the pieces of information that are supplied.
 
-### [/src/handle-singular-aff-no-links.xsl](/src/handle-singular-aff-no-links.xsl)
-
-This xsl is adding a missing affiliation link for all authors when there is only one affiliation. When this link is missing no affiliations display for any authors in EPP because encoda relies on the link to make add the affiliation for any/all authors. This can be solved with a tagging change which has already been requested from bioRxiv.
-
 ### [/src/name-alternatives.xsl](/src/name-alternatives.xsl)
 
 jats xml can accommodate alternative versions of names (e.g. westernised vs non-westernised names). When used these are tagged using [`named-alternatives`](https://jats.nlm.nih.gov/archiving/tag-library/1.3/element/name-alternatives.html). Encoda does not have support for this tagging and strips all names from the resultant JSON. This xsl deliberately mistags the alternative names so that one of them is included in a `suffix` element (which is supported by Encoda and rendered on EPP) as a workaround.
