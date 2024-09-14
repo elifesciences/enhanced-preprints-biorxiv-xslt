@@ -565,7 +565,7 @@
 </sec>
 </app>
 <app id="app2">
-<label>Appendix 2</label>
+<title>Appendix 2</title>
 <sec id="s11">
 <title>Existing Manipulation Methods</title>
 <p>Existing temporary inactivation methods include intracortical microstimulation, optogenetics, pharmacology, transcranial stimulation, cooling loops, and chemogenetics.</p>
