@@ -307,16 +307,12 @@
 <p>TCR transductants were generated as described [Mann, Zhou, Front Immunol 2020]. Briefly, 5KC T-hybridoma cells (kindly provided by M. Nakayama, Barbara Davis Center, Aurora, CO) were transduced with the NFAT-driven fluorescent reporter ZsGreen-1 along with human CD8 by spinoculation with retroviral supernatant produced from phoenix-eco cells (ATCC CRL-3214). These cells were subsequently transduced with retroviral vectors encoding a chimeric TCR alpha gene followed by a porcine teschovirus-1 2A (P2A) peptide and a chimeric TCR beta gene synthesized by TwistBioscience. K562 cells (ATCC CCL-243) were transduced with lentiviral vectors (TakaraBio) encoding HLA-A&#x002A;02:01 or HLA-A&#x002A;03:01 by spinoculation with ultracentrifuge concentrated viral particles produced from 293T-HEK-TN cells (System biosciences), followed by sorting of cells stained with anti-human HLA-A, B, C antibody conjugated with PE-Cy7 (clone W6/32, BioLegend).</p>
 <p>TCR transductants (20,000 cells per well) were stimulated for 18 h with individual peptides at different concentrations (9 10-fold serial dilutions from 100 &#x03BC;M) in the presence of HLA-A&#x002A;02:01&#x002B; or HLA-A&#x002A;03:01&#x002B; K562 cells (50,000 cells per well), followed by analysis of ZsGreen-1 expression. Peptides (from Synpeptide) tested for the response by TCRs are GILGFVFTL (Flu MP 58&#x2013;66), GLCTLVAML (EBV BMLF1 280-288), KLGGALQAK (CMV IE1 280-288), VMNILLQYV (GAD65 114-122), VAANIVLTV (ZnT8 186-194) and other sequences selected by testing a GAD 114-122-reactive TCR by combinatorial peptide libraries, as described(<italic><xref ref-type="bibr" rid="c30">30</xref></italic>) EC50 values were calculated using the nonlinear regression log (agonist) vs. response (three parameters) equation model in GraphPad Prism 9.</p>
 <p><italic>In silico</italic> predictions were compared to matched phenotype data and the following accuracy metrics were calculated:</p>
-<disp-quote/>
 <disp-formula id="ueqn1">
 <graphic xlink:href="530115v2_ueqn1.gif"/>
 </disp-formula>
-<disp-quote/>
-<disp-quote/>
 <disp-formula id="ueqn2">
 <graphic xlink:href="530115v2_ueqn2.gif"/>
 </disp-formula>
-<disp-quote/>
 <p>Model metabolite and reaction ... </p>
 </sec>
 </sec>
