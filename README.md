@@ -176,12 +176,6 @@ This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751.
 
 The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
 
-### [/src/2023.03.01.530673/remove-list-labels.xsl](/src/2023.03.01.530673/remove-list-labels.xsl)
-
-This xsl is to better display a list in 2023.03.01.530673. bioRxiv's vendors have captured this bulleted list using the list-type `simple` but with each list-item accompanied by a label which is a bullet. While this is not ideal capture, it's still perfectly correct (maybe they wanted to use a specific bullet point character instead of whatever the default is for their platform). 
-
-On EPP `simple` lists are also rendered as bulleted lists. This is a problem - they should be rendered with no marker. The reason this is the case is because encoda does not capture the semantic information related to what list marker should be used (rather just whether it's ordered or unordered). The result of this capture in encoda is a bulleted list where each item has an extra marker followed by a new line in EPP. (Encoda also needs adjusting to better handle custom labels in lists - to not include this new line - currently these are captured as a separate paragraph, which is inappropriate - once these changes have been made EPP client will require adjusting). Changing this capture to a `bullet` type list and removing the labels means that this can be rendered appropriately on EPP in the meantime.
-
 ### [/src/2022.01.26.477944/fix-corresp-authors.xsl](/src/2022.01.26.477944/fix-corresp-authors.xsl)
 
 This xsl removes the corresponding author status from the third last author Huanhuan Li. They are marked (presumably incorrectly) as a corresponding author in the author's original PDF file, but in the 'For correspondence' statement they are not mentioned. bioRxiv have faithfully captured this status. This becomes an issue due to the differences in the way corresponding author information is rendered on bioRxiv and EPP. bioRxiv simply render the 'For correspondence' statement. EPP captures the author email under each author - as a result the email for the second last author is provided under Huanhuan Li which is incorrect. There isn't really an action here - it;s a mistake which stems from the authors and is made more visible/worse due to the way this information is rendered on EPP.
@@ -323,10 +317,6 @@ This xsl is to ensure that the correct email is attributed to the correct author
 ### [/src/2023.04.05.535750/fix-author-emails.xsl](/src/2023.04.05.535750/fix-author-emails.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.01.530673/fix-references-in-v2.xsl](/src/2023.03.01.530673/fix-references-in-v2.xsl)
-
-The second version of this article has numerous errors in the typesetting, whereby the article title for the journal references has not been captured appropriately. Instead both the article title and the journal title have been captured within a source element. Due to how Encoda is decoding this information it results in a lot of duplicated information being rendered on EPP. The XSL ensures that the article title is captured appropiately using `<article-title>` for affected references.
 
 ### [/src/2023.03.22.533725/remove-ack.xsl](/src/2023.03.22.533725/remove-ack.xsl)
 
