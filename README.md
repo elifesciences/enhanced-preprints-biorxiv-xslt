@@ -176,11 +176,6 @@ This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751.
 
 The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
 
-### [/src/2022.01.26.477944/fix-corresp-authors.xsl](/src/2022.01.26.477944/fix-corresp-authors.xsl)
-
-This xsl removes the corresponding author status from the third last author Huanhuan Li. They are marked (presumably incorrectly) as a corresponding author in the author's original PDF file, but in the 'For correspondence' statement they are not mentioned. bioRxiv have faithfully captured this status. This becomes an issue due to the differences in the way corresponding author information is rendered on bioRxiv and EPP. bioRxiv simply render the 'For correspondence' statement. EPP captures the author email under each author - as a result the email for the second last author is provided under Huanhuan Li which is incorrect. There isn't really an action here - it;s a mistake which stems from the authors and is made more visible/worse due to the way this information is rendered on EPP.
-
-
 
 ### [/src/2023.03.29.534786/fix-list-markers.xsl](/src/2023.03.29.534786/fix-list-markers.xsl)
 
