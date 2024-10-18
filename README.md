@@ -176,11 +176,6 @@ This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751.
 
 The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
 
-
-### [/src/2023.03.29.534786/fix-list-markers.xsl](/src/2023.03.29.534786/fix-list-markers.xsl)
-
-This xsl fixes the list markers in lists in figure captions in 2023.03.29.534786 (v1). We need better support for the various different types of list in EPP - this is possibly captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/640 (Encoda has already been updated for one aspect of this, EPP now needs changing as a result; the output of Encoda for when list items have labels could be improved however, as these are currently decoded as separate paragraphs). In this preprint, lists are used to refer to particular panels within an image. But since we're not displaying the correct marker based on either the `<label>` or on the `list-type` attribute, the information about which panel the text corresponds to is lost. This xsl introduces this text inside paragraphs and ensure that the figure titles are captured appropriately. 
-
 ### [/src/2021.08.16.455933/fix-affs.xsl](/src/2021.08.16.455933/fix-affs.xsl)
 
 This xsl removes subscript formatting from two affiliations in 2021.08.16.455933. This is presumably a mistake in typesetting, although it's one that _should be_ relatively innocuous. The content that is tagged as subscript is currently stripped from the resultant output in encoda, resulting in missing information and broken punctuation on EPP. Instead this would ideally be retained as subscript content (and the typesetting error would not be present in the first place).
