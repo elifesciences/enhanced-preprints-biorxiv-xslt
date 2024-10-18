@@ -170,30 +170,11 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
-
-Adjusts 2 of the affiliations where the department is being treated as an address rather than in the institution. This is an EPP client issue as we can not get at these values another way. 
-
-There may be another example in 10.1101/2022.10.21.513138:
-
-```
-<aff id="a1"><label>1</label><institution>Univ-Bordeaux, Centre de Recherche Cardio-thoracique de Bordeaux</institution>, U1045, D&#x00E9;partement de Pharmacologie, CIC1401, Pessac, <country>France</country></aff>
-```
-
-It can be fixed by treating affiliations as mixed content (pulling in the text content of aff as well as `institution`, `country` etc.), and the change has been implemented in encoda v0.121.1 - see https://github.com/elifesciences/enhanced-preprints-issues/issues/343.
-
-### [/src/2022.05.30.22275761/add-missing-aff-for-AK-v1.xsl](/src/2022.05.30.22275761/add-missing-aff-for-AK-v1.xsl)
-
-This xsl is adding a missing affiliation for the first author. Affiliations a linked to using an `<xref>` element, which is a child of the author's `<contrib contrib-type="author">` element. This was presumably a typesetting error that could be (or have been) fixed on bioRxiv's end, but we haven't established how best to feedback this kind of problem. This is one of the 'examples' we launched with back in October, and has now been published as an (old style) VOR, so I'm not sure how we want to specifically handle it.
 ### [/src/2021.09.24.461751/workaround-for-statements.xsl](/src/2021.09.24.461751/workaround-for-statements.xsl)
 
 This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751. These are decoded appropriately by encoda as `Claim` objects with the `claimType` `Proof`, but there is no support in EPP to render these items. The xsl therefore converts proofs that are captured as images to `<fig>` so that these can be rendered, and removes `<statement>` in the case where it contains content not purely captured as an image. We do not yet know how proofs might be captured in other preprints so this is retained as manuscript specific for now. 
 
 The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
-
-### [/src/2021.06.21.449261/fix-references.xsl](/src/2021.06.21.449261/fix-references.xsl)
-
-This xsl is to handle some incorrect tagging in XML file from bioRxiv, which leads to poor display (due to the different ways that our/bioRxiv's platforms render references). This has been fed back to bioRxiv for the future.
 
 ### [/src/2023.02.02.526762/remove-list-labels.xsl](/src/2023.02.02.526762/remove-list-labels.xsl)
 
@@ -638,10 +619,6 @@ This xsl is to ensure that the correct email is attributed to the correct author
 ### [/src/2023.03.05.531210/fix-author-name.xsl](/src/2023.03.05.531210/fix-author-name.xsl)
 
 The name of one of the authors is incorrect and since bioRxiv do not permit the correction of previous preprint versions, this xsl is required in order for their name to be correct.
-
-### [/src/2021.09.24.461751/fix-author-corresp-status.xsl](/src/2021.09.24.461751/fix-author-corresp-status.xsl)
-
-This xsl adds a missing corresponding status to the last author. 
 
 ### [/src/2023.02.03.527083/fix-refs.xsl](/src/2023.02.03.527083/fix-refs.xsl)
 
