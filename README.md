@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.07.05.547693/aff-fix.xsl](/src/2023.07.05.547693/aff-fix.xsl)
-
-One author is missing an affiliation in this preprint (there's only one affiliation), which is a mistake that this xsl rectifies.
-
 ### [/src/2023.07.18.549506/ref-fix.xsl](/src/2023.07.18.549506/ref-fix.xsl)
 
 This xsl fixes a reference that is erroneously captured as a report type reference when it is a journal article.
