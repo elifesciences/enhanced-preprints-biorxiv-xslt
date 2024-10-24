@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.04.12.536635/add-missing-section-title.xsl](/src/2023.04.12.536635/add-missing-section-title.xsl)
-
-A mistake from bioRxiv's vendors - a title is missing from the section that contains all the supplementary figures and tables. Since these have the same labels (e.g. 'Figure 1') as the 'main' figures/tables, this will be confusing to the reader without adding the missing title.
-
 ### [/src/2023.03.10.23287084/fix-refs.xsl](/src/2023.03.10.23287084/fix-refs.xsl)
 
 bioRxiv's vendors have made numerous errors in the references, which have led (as a result of some of the rules in Encoda which could be improved) to poor display in EPP (the duplicaiton of lots of information). This xsl ensures that the references are tagged appropriately.
