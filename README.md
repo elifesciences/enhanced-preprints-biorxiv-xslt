@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.07.19.549786/change-digest-title.xsl](/src/2023.07.19.549786/change-digest-title.xsl)
-
-This xsl changes the title of a section in the authors abstract, so that it is not confused with an eLife digest when published as a reviewed preprint.
-
 ### [/src/2023.06.06.543964/fix-author-affs.xsl](/src/2023.06.06.543964/fix-author-affs.xsl)
 
 bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
