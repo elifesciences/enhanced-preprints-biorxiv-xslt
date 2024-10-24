@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2022.11.20.516954/fix-author-emails.xsl](/src/2022.11.20.516954/fix-author-emails.xsl)
-
-This xsl is to ensure that this preprint has two corresponding authors. The authors have not properly indicated this in their PDF, and as such bioRxiv have not captured this in the way the authors want.
-
 ### [/src/2023.03.26.534293/fix-equal-footnote.xsl](/src/2023.03.26.534293/fix-equal-footnote.xsl)
 
 bioRxiv's typesetters have incorrectly captured 'These authors contributed equally: Sana Ahmed-Seghir and Manisha Jalan' as an affiliation instead of as a footnote. This will cause problems when depositing this data downstream (such as at Crossref). This XSL ensures this text is captured appropriately as an author footnote instead.
