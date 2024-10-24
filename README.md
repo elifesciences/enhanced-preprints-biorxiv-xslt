@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.06.06.543964/fix-author-affs.xsl](/src/2023.06.06.543964/fix-author-affs.xsl)
-
-bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
-
 ### [/src/2023.06.21.546014/aff-fix.xsl](/src/22023.06.21.546014/aff-fix.xsl)
 
 One author is missing an affiliation in this preprint (there's only one affiliation), which is a mistake that this xsl rectifies.
@@ -299,10 +295,6 @@ This xsl is to ensure that the correct information is included for 2 affiliation
 ### [/src/2023.08.31.555734/add-author-email.xsl](/src/2023.03.14.532631/add-author-email.xsl)
 
 This xsl is adds a missing email to the XML file for one of the two corresponsing authors.
-
-### [/src/2023.06.06.543964/fix-refs.xsl](/src/2023.06.06.543964/fix-refs.xsl)
-
-This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
 
 ### [/src/2023.05.18.541272/fix-ref.xsl](/src/2023.05.18.541272/fix-ref.xsl)
 
