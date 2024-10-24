@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2020.12.06.411850/move-credit-section.xsl](/src/2020.12.06.411850/move-credit-section.xsl)
-
-bioRxiv's vendors have inappropriately captured a section detailing author contributions within the abstract. This xsl moves that content to a section within `<back>`.
-
 ### [/src/2023.04.19.537449/remove-quote-marks-from-title.xsl](/src/2023.04.19.537449/remove-quote-marks-from-title.xsl)
 
 bioRxiv's vendors have included quote marks within the title of this preprint which is inappropriate. This xsl removes those quote marks.
