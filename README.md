@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2022.05.16.491352/add-missing-author-email.xsl](/src/2022.05.16.491352/fix-author-emails.xsl)
-
-One of the corresponding authors does not have their email listed - this obviously a mistake on the authors end. This XSL introduces the submitted email as the corresponding email for that author.
-
 ### [/src/2023.06.09.544290/fix-author-names-and-emails.xsl](/src/2023.06.09.544290/fix-author-names-and-emails.xsl)
 
 The author names contain typos (extra space after hyphens), and the corresponding author information is missing for two authors. These are due to errors in the original, but are considered important enough to correct.
