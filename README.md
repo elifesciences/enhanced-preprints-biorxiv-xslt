@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.06.09.544290/fix-author-names-and-emails.xsl](/src/2023.06.09.544290/fix-author-names-and-emails.xsl)
-
-The author names contain typos (extra space after hyphens), and the corresponding author information is missing for two authors. These are due to errors in the original, but are considered important enough to correct.
-
 ### [/src/2022.11.20.516954/fix-author-emails.xsl](/src/2022.11.20.516954/fix-author-emails.xsl)
 
 This xsl is to ensure that this preprint has two corresponding authors. The authors have not properly indicated this in their PDF, and as such bioRxiv have not captured this in the way the authors want.
