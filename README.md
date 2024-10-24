@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.05.31.543136/fix-author-footnotes.xsl](/src/2023.05.31.543136/fix-author-footnotes.xsl)
-
-bioRxiv's vendors have incorrectly captured the first two authors as corresponding, when instead they should be marked as contributing equally. This xsl fixes that mistake.
-
 ### [/src/2020.12.06.411850/move-credit-section.xsl](/src/2020.12.06.411850/move-credit-section.xsl)
 
 bioRxiv's vendors have inappropriately captured a section detailing author contributions within the abstract. This xsl moves that content to a section within `<back>`.
