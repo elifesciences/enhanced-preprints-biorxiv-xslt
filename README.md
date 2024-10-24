@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.06.01.543135/fix-references.xsl](/src/2023.06.01.543135/fix-references.xsl)
-
-In this article, the authors have numerous reference lists which apply to foigures or tables. These are captured in separate sections and they need to be placed under the section they are intended to in order to be discernable. bioRxiv have collated these all into one long reference list, but without the context providing which figure or table they belong to it is impossible to follow. This xsl moves the references into their respective sections as in the authors original PDFs. The downside is that these are not captured correctly semantically but this can be reassessed once numerous reference lists (and titles) are supported in EPP.
-
 ### [/src/2023.03.22.533725/remove-ack.xsl](/src/2023.03.22.533725/remove-ack.xsl)
 
 In this article bioRxiv's vendors have captured an empty acknowledgements section. In the original PDF this seems to be a header for other sections containing content which are sometimes placed in acknowledgements, but bioRxiv have decided to captured these as separate, sibling sections instead. This xsl simply removes the separate acknowledgements, which seems like the most approproate approach here.
