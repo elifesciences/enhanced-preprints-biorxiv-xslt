@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.03.10.23287084/fix-refs.xsl](/src/2023.03.10.23287084/fix-refs.xsl)
-
-bioRxiv's vendors have made numerous errors in the references, which have led (as a result of some of the rules in Encoda which could be improved) to poor display in EPP (the duplicaiton of lots of information). This xsl ensures that the references are tagged appropriately.
-
 ### [/src/2023.05.31.543136/fix-author-footnotes.xsl](/src/2023.05.31.543136/fix-author-footnotes.xsl)
 
 bioRxiv's vendors have incorrectly captured the first two authors as corresponding, when instead they should be marked as contributing equally. This xsl fixes that mistake.
