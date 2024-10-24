@@ -170,12 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2022.07.27.501668/fix-author-emails.xsl](/src/2022.07.27.501668/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this because they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-Also one of the author names is incorrect in the source XML (bioRxiv seemed to have hotfixed this one, but not in the data they supply to us).
-
 ### [/src/2023.06.07.543997/correct-author-emails.xsl](/src/2023.06.07.543997/correct-author-emails.xsl)
 
 This xsl fixes who is marked as corresponding author in each version of the reviewed preprint. The authors have been unable (or are unwilling) to change this themselves in their preprint.
