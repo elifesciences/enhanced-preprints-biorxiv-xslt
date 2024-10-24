@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.06.07.543997/correct-author-emails.xsl](/src/2023.06.07.543997/correct-author-emails.xsl)
-
-This xsl fixes who is marked as corresponding author in each version of the reviewed preprint. The authors have been unable (or are unwilling) to change this themselves in their preprint.
-
 ### [/src/2023.04.18.537352/remove-cover-letter.xsl](/src/2023.04.18.537352/remove-cover-letter.xsl)
 
 This xsl is to remove a cover letter that the authors accidenatally included in their original preprint. Asking them to fix this via posting a new preprint will cause further confusion at this stage as they are in the process of posting a revised preprint following review.
