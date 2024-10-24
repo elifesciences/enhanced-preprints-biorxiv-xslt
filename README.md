@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.07.18.549506/ref-fix.xsl](/src/2023.07.18.549506/ref-fix.xsl)
-
-This xsl fixes a reference that is erroneously captured as a report type reference when it is a journal article.
-
 ### [/src/2023.04.12.23288460/ref-fix.xsl](/src/2023.04.12.23288460/ref-fix.xsl)
 
 This xsl fixes a reference that is erroneously captured as a book type reference when it is a journal article. This XSL can likely be removed when proper support for book references is added in encoda and EPP (that work is related to and partially covered in https://github.com/elifesciences/enhanced-preprints-issues/issues/814)
