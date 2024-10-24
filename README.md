@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.04.12.23288460/ref-fix.xsl](/src/2023.04.12.23288460/ref-fix.xsl)
-
-This xsl fixes a reference that is erroneously captured as a book type reference when it is a journal article. This XSL can likely be removed when proper support for book references is added in encoda and EPP (that work is related to and partially covered in https://github.com/elifesciences/enhanced-preprints-issues/issues/814)
-
 ### [/src/2023.07.13.548828/fix-refs.xsl](/src/2023.07.13.548828/fix-refs.xsl)
 
 The authors have not provided article titles for journal references. The result is that when these are decoded by Encoda, much of the information is duplicated resulting in a really poor display on EPP. This xsl changes the publication-type for any journal refs that are missing an `<article-title>` element. The publication type becomes book, as this resolves most (but not all) of the display issues.
