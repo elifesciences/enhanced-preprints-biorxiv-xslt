@@ -170,15 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.02.13.528273/fix-title-list-and-affs.xsl](/src/2023.02.13.528273/fix-title-list-and-affs.xsl)
-
-This xsl carries out three main changes:
-1. It changes the title from all caps to sentence case.
-2. It ensures that both affiliations are mapped to all authors (as it stands none are displayed on EPP). This is somewhat similar to `handle-singular-aff-no-links` above, which is applied to all files (if we see further instances of this, we may consider bumping this up to all as well).
-3. It changes the capture of the list at the end of the Introduction. There already is [a ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/640) that (should?) covers better handling of labels for list markers in Encoda, which if complete would remove the need for this xsl (and result in the same or similar rendering on EPP). 
-
-Since all these changes are tagging related or covered in existing tickets, no further tickets need raising.
-
 ### [/src/2023.03.20.533567/fix-author-fn.xsl](/src/2023.03.20.533567/fix-author-fn.xsl)
 
 bioRxiv's vendors have captured a footnote (indicating the sole corrresponding author is the lead contact) as an affiliation. This xsl changes the capture of this footnote so that it is semantically correct.
