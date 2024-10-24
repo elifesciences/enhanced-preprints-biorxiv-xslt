@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.07.13.548828/fix-refs.xsl](/src/2023.07.13.548828/fix-refs.xsl)
-
-The authors have not provided article titles for journal references. The result is that when these are decoded by Encoda, much of the information is duplicated resulting in a really poor display on EPP. This xsl changes the publication-type for any journal refs that are missing an `<article-title>` element. The publication type becomes book, as this resolves most (but not all) of the display issues.
-
 ### [/src/2023.05.24.542079/fix-methods-title.xsl](/src/2023.05.24.542079/fix-methods-title.xsl)
 
 This xsl ensures that the title for the materialsn and methods is capitalised consistently with the other titles in the article. As it stands (the version used of) Encoda changes the capitalisation of titles in all caps to sentence case. However, if the content of the title is within an element (for example entirely within bold), then this style is nt applied. In this article the materials and methods is bolded and in all caps, whereas other titles are in all caps but not bolded. The result in EPP is a materials and methods title in all caps, while all other titles are in sentence case. This xsl removes the bold formatting to esnure consistency.
