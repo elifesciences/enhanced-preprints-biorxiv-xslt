@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.04.19.537449/remove-quote-marks-from-title.xsl](/src/2023.04.19.537449/remove-quote-marks-from-title.xsl)
-
-bioRxiv's vendors have included quote marks within the title of this preprint which is inappropriate. This xsl removes those quote marks.
-
 ### [/src/2022.05.16.491352/add-missing-author-email.xsl](/src/2022.05.16.491352/fix-author-emails.xsl)
 
 One of the corresponding authors does not have their email listed - this obviously a mistake on the authors end. This XSL introduces the submitted email as the corresponding email for that author.
