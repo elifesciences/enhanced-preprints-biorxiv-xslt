@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.08.10.552629/orcid-fix.xsl](/src/2023.08.10.552629/orcid-fix.xsl)
-
-This xsl fixes an incorrect orcid in 92083.
-
 ### [/src/2022.10.04.510784/title-fix.xsl](/src/2022.10.04.510784/title-fix.xsl)
 
 This xsl changes the caseing of the title of this preprint from all caps to sentence case.
