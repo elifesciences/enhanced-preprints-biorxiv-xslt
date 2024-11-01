@@ -170,9 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.06.21.545935/fix-ref.xsl](/src/2023.06.21.545935/fix-ref.xsl)
-This xsl fixes both a reference which has been mistagged (number 55) and removes an unnecessary abstract heading in all caps.
-
 ### [/src/2022.10.15.22281053/remove-tracked-changes.xsl](/src/2022.10.15.22281053/remove-tracked-changes.xsl)
 
 The authors of this preprint have included tracked changes in the file they submitted, the formatting for which has been faithfully retained by bioRxiv (despite there being no need to and this unnecessaruly emphasising content). This xsl strips that unnecessary formatting.
