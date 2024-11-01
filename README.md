@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.02.22.529599/fix-supp-files.xsl](/src/2023.02.22.529599/fix-supp-files.xsl)
-
-This xsl corrects the mis-tagging of figures S1-6 and Tables S1-3 so that they are captured instead as supplementary files that are downloadable.
-
 ### [/src/2022.10.28.514241/fix-refs.xsl](/src/2022.10.28.514241/fix-refs.xsl)
 
 This xsl fixes numerous mistagged references.
