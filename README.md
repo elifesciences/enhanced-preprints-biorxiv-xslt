@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2022.12.29.522272/fix-refs.xsl](/src/2022.12.29.522272/fix-refs.xsl)
-
-This xsl fixes a couple of references which are missing key information and as a result rendering poorly on EPP.
-
 ### [/src/2023.07.30.551185/fix-ref.xsl](/src/2023.07.30.551185/fix-ref.xsl)
 
 This xsl fixes a reference which is missing key information and as a result rendering poorly on EPP.
