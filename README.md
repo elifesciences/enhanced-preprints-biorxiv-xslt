@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.03.05.531210/fix-author-name.xsl](/src/2023.03.05.531210/fix-author-name.xsl)
-
-The name of one of the authors is incorrect and since bioRxiv do not permit the correction of previous preprint versions, this xsl is required in order for their name to be correct.
-
 ### [/src/2023.02.03.527083/fix-refs.xsl](/src/2023.02.03.527083/fix-refs.xsl)
 
 This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
