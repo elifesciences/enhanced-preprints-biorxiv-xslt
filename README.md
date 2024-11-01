@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.10.03.560658/remove-dupe-ref.xsl](/src/2023.10.03.560658/remove-dupe-ref.xsl)
-
-This preprint contains a duplicate reference which this xsl deletes.
-
 ### [/src/2023.04.11.536473/fix-corr-author.xsl](/src/2023.04.11.536473/fix-corr-author.xsl)
 
 This xsl ensures both authors of this preprint are indicated as corresponding authors.
