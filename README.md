@@ -170,14 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.06.07.544138/fix-aff.xsl](/src/2023.06.07.544138/fix-aff.xsl)
-
-This xsl fixes an affiliaiton which erroneously contains the text ' Email:'. We've reached out to bioRxiv about it and this XSL can be removed on confirmation that they have removed this from the MECA package.
-
-### [/src/2022.05.02.490321/add-equal-author-text.xsl](/src/2022.05.02.490321/add-equal-author-text.xsl)
-
-This xsl adds some text in the backmatter to calrify the relationship of the authors in the author list. Once support for author notes has been adequately added in Ecnoda and EPP, this xsl can be removed.
-
 ### [/src/2023.07.14.548952/ack-fix.xsl](/src/2023.07.14.548952/ack-fix.xsl)
 
 This xsl fixes the acknowledgements which have been mistagged in this preprint resulting in an empty acknoweldgements section.
