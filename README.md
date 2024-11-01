@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.07.24.550263/heading-fix.xsl](/src/2023.07.24.550263/heading-fix.xsl)
-
-This xsl accounts for undesired behaviour in Encoda which changes the capitalisation of headings that are in all caps to sentence case.
-
 ### [/src/2023.08.02.551596/fix-author-names.xsl](/src/2023.08.02.551596/fix-author-names.xsl)
 
 This xsl accounts for a mistake proumlgated by biorxiv but rooted with the source manuscript file which list names as surname first, then given names. bioRxiv have capturd this incorrectly. The authors have been unresponsive about posting a new preprint so this xsl fixes the order of the names.
