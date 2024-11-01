@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.08.31.555734/add-author-email.xsl](/src/2023.03.14.532631/add-author-email.xsl)
-
-This xsl is adds a missing email to the XML file for one of the two corresponsing authors.
-
 ### [/src/2023.05.18.541272/fix-ref.xsl](/src/2023.05.18.541272/fix-ref.xsl)
 
 This xsl fixes a mistagged reference.
