@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.09.15.557873/fix-ref.xsl](/src/2023.09.15.557873/fix-ref.xsl)
-
-This xsl fixes a mistagged reference.
-
 ### [/src/2023.09.28.560045/title-fix.xsl](/src/2023.09.28.560045/title-fix.xsl)
 
 This xsl changes the caseing of the title of this preprint from all caps to sentence case.
