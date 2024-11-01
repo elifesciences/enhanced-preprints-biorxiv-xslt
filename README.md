@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.03.30.534967/fix-corr-authors.xsl](/src/2023.03.30.534967/fix-corr-authors.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author, and also that the correct authors are identified as corresponding.
-
 ### [/src/2023.07.25.550518/fix-affs.xsl](/src/2023.07.25.550518/fix-affs.xsl)
 
 This xsl is to ensure that the correct information is included for 2 affiliations. bioRxiv's vendors have captured these affiliations in a poor fashion as a result of an oddity in the way the authors presented these affiliations in their preprint PDF (<sup>1</sup>Neuroscience Institute and , <sup>2</sup>Department of Neurology, School of Medicine ...). 
