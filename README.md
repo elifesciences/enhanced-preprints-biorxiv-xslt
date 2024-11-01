@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.04.11.536473/fix-corr-author.xsl](/src/2023.04.11.536473/fix-corr-author.xsl)
-
-This xsl ensures both authors of this preprint are indicated as corresponding authors.
-
 ### [/src/2023.07.26.550718/code-workaround.xsl](/src/2023.07.26.550718/code-workaround.xsl)
 
 EPP does not render code blocks. Therefore this XSL converts the codeblocks int this article into paragraphs (with monospace formatting), so that the content is rendered.
