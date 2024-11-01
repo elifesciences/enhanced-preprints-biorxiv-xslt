@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.02.03.527083/fix-refs.xsl](/src/2023.02.03.527083/fix-refs.xsl)
-
-This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
-
 ### [/src/2023.03.30.534967/fix-corr-authors.xsl](/src/2023.03.30.534967/fix-corr-authors.xsl)
 
 This xsl is to ensure that the correct email is attributed to the correct author, and also that the correct authors are identified as corresponding.
