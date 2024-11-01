@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.07.14.548952/ack-fix.xsl](/src/2023.07.14.548952/ack-fix.xsl)
-
-This xsl fixes the acknowledgements which have been mistagged in this preprint resulting in an empty acknoweldgements section.
-
 ### [/src/2023.01.26.525679/fix-refs.xsl](/src/2023.01.26.525679/fix-refs.xsl)
 
 This xsl fixes numerous references which are missing key information and as a result rendering poorly on EPP.
