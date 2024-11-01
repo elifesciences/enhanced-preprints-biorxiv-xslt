@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.08.22.554341/fix-m-title.xsl](/src/2023.08.22.554341/fix-m-title.xsl)
-
-This xsl changes the caseing of the materials and methods to sentence case.
-
 ### [/src/2023.06.24.546394/aff-fix.xsl](/src/2023.06.24.546394/aff-fix.xsl)
 
 This xsl fixes th affiliations of all authors.
