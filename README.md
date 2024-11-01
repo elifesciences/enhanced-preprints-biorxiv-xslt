@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.04.25.538252/ref-70-fix.xsl](/src/2023.04.25.538252/ref-70-fix.xsl)
-
-This xsl fixes the capture of reference number 70, which has been mistagged and therefore resulted in poor display.
-
 ### [/src/2023.08.10.552629/orcid-fix.xsl](/src/2023.08.10.552629/orcid-fix.xsl)
 
 This xsl fixes an incorrect orcid in 92083.
