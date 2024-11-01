@@ -174,8 +174,6 @@ This xsl accounts for the capture of `<code>` in XML. Encoda correctly decodes t
 
 We need support for `CodeBlock` added to EPP client. And we need Encoda to properly decode `<preformat>`.
 
-## Manuscript specific XSLT
-
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:

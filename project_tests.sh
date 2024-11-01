@@ -143,24 +143,6 @@ for manuscript_dir in ${SCRIPT_DIR}/src/*/; do
     fi
 done
 
-section_title "Checking xslt files that apply to specific manuscripts"
-for xsl_file in ${SCRIPT_DIR}/src/*/*.xsl; do
-    xsl_filename=$(basename "${xsl_file}")
-    xsl_file_dir=$(basename $(dirname "${xsl_file}"))
-
-    if [ -d "${SCRIPT_DIR}/test/${xsl_file_dir}/${xsl_filename%.*}" ]; then
-        echo "Running tests for (${xsl_file#*src/})"
-        for xml_file in ${SCRIPT_DIR}/test/${xsl_file_dir}/${xsl_filename%.*}/*.xml; do
-            transform_xml "${SCRIPT_DIR}/test/fixtures/${xsl_file_dir}/$(basename ${xml_file})" "${xsl_file}" > "${TEST_FILE}"
-
-            expected "${TEST_FILE}" "${xml_file}" "${SCRIPT_DIR}/test/fixtures/${xsl_file_dir}/$(basename ${xml_file})" "$(basename ${xml_file}) - ${xsl_file_dir}/${xsl_filename}"
-        done
-    else
-        echo "No tests exist for (${xsl_file#*test/})" >&2
-        exit 1
-    fi
-done
-
 rm "${TEST_FILE}"
 
 section_title "Verify ./scripts/process-folder.sh"
