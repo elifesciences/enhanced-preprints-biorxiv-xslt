@@ -170,10 +170,6 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2022.10.15.22281053/remove-tracked-changes.xsl](/src/2022.10.15.22281053/remove-tracked-changes.xsl)
-
-The authors of this preprint have included tracked changes in the file they submitted, the formatting for which has been faithfully retained by bioRxiv (despite there being no need to and this unnecessaruly emphasising content). This xsl strips that unnecessary formatting.
-
 ### [/src/2023.08.30.23294826/fix-affiliations.xsl](/src/2023.08.30.23294826/fix-affiliations.xsl)
 
 This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on behalf of group at the end of the author list instead of the author before that.
