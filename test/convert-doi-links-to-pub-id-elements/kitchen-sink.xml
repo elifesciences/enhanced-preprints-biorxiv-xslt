@@ -366,7 +366,11 @@
 </sec>
 <sec id="s4m">
 <title>Detection of CMV pp65-specific T cells by intracellular staining with anti-INF-&#x03B3;-PE</title>
-<p>CMVpp65 selected CTL were stimulated for 6 hours in TexMacs medium (without human serum and IL-2) with 20 &#x00B5;L PepTivator-CMVpp65 per mL of cell suspension. Brefeldin-A was added at 10 &#x00B5;g/ml. Negative control (CTL without stimulation) and positive control (CTL stimulated with PMA-ionomycin) were also included. Stimulation with irrelevant peptides was also performed with PepTivator-CMV IE-1 (Miltenyi (130-093-494) and PepTivator-EBV BZLF1 (Miltenyi (130-093-612). Cells were then stained with anti-CD8-FITC, fixed, permeabilized and intracellularly stained with anti-INF-&#x03B3;-PE.</p>
+<p>CMVpp65 <code>test()</code> selected CTL were stimulated for 6 hours in TexMacs medium (without human serum and IL-2) with 20 &#x00B5;L PepTivator-CMVpp65 per mL of cell suspension. Brefeldin-A was added at 10 &#x00B5;g/ml. Negative control (CTL without stimulation) and positive control (CTL stimulated with PMA-ionomycin) were also included. Stimulation with irrelevant peptides was also performed with PepTivator-CMV IE-1 (Miltenyi (130-093-494) and PepTivator-EBV BZLF1 (Miltenyi (130-093-612). Cells were then stained with anti-CD8-FITC, fixed, permeabilized and intracellularly stained with anti-INF-&#x03B3;-PE.</p>
+<code>
+for $y in $x ....
+return :shrug:
+</code>
 </sec>
 <sec id="s4n">
 <title>Peptide dose-response of TCR transductants</title>

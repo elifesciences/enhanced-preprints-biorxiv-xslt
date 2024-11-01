@@ -168,6 +168,12 @@ This xsl accounts for 'extra' abstracts captured preprints such as graphical abs
 
 This xsl accounts for permissions for objects within xml. Encoda will decode the `<license-p>` within the permissions for a figure (I've not checked other objects) and encode this as `licenses.content` in the JSON. EPP does not currently render this content. Therefore this XSL will convert any permissions statement for an object into a paragraph which is added onto the end of a caption.
 
+### [/src/code-workaround.xsl](/src/code-workaround.xsl)
+
+This xsl accounts for the capture of `<code>` in XML. Encoda correctly decodes this as `CodeBlock`, but EPP client does not currently render that content. If the `<code>` is inline this XSL will change it to `<monospace>`, otherwise if it's a block of code it will be changed to `<preformat>` (which incidentally is inappropriately decoded as a `paragraph` by Encoda, but at least surfaces the content). 
+
+We need support for `CodeBlock` added to EPP client. And we need Encoda to properly decode `<preformat>`.
+
 ## Manuscript specific XSLT
 
 # Modify bioRxiv XML in preparation for Encoda
