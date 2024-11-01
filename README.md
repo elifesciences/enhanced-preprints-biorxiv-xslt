@@ -170,11 +170,7 @@ This xsl accounts for permissions for objects within xml. Encoda will decode the
 
 ## Manuscript specific XSLT
 
-### [/src/2023.08.30.23294826/fix-affiliations.xsl](/src/2023.08.30.23294826/fix-affiliations.xsl)
-
-This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on behalf of group at the end of the author list instead of the author before that.
-
-### [/src/2023.07.24.550263/heading-fix.xsl](/src/2023.07.24.550263/equation-fix.xsl)
+### [/src/2023.07.24.550263/heading-fix.xsl](/src/2023.07.24.550263/heading-fix.xsl)
 
 This xsl accounts for undesired behaviour in Encoda which changes the capitalisation of headings that are in all caps to sentence case.
 
