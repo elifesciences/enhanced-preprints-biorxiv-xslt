@@ -56,7 +56,7 @@
 <contrib contrib-type="author" corresp="yes"><name><surname>Klatzmann</surname><given-names>David</given-names></name><xref ref-type="aff" rid="aff1">1</xref><xref ref-type="corresp" rid="cor1">&#x002A;</xref></contrib>
 <contrib contrib-type="author"><collab>the Brain Interfacing Laboratory</collab><xref ref-type="aff" rid="aff1">1</xref></contrib>
 <on-behalf-of>the other Brain Interfacing Laboratory</on-behalf-of>
-<aff id="aff1"><label>1</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
+<aff id="aff1"><label>1</label><institution-wrap><institution-id institution-id-type="https://ror.org/04tz2h245"/><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution></institution-wrap>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
 </contrib-group>
 <author-notes>
 <fn id="n1" fn-type="present-address"><label>8</label><p>Present Institution: Parean biotechnologies, Saint-Malo, France</p></fn>
