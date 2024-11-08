@@ -80,6 +80,8 @@ Gets decoded into:
 
 `Sloan Kettering Institute, Memorial Sloan Kettering Cancer CenterCell Biology Program, ,, New York, NY, USA` is not an acceptable rendering of this affiliation. As a result this xsl simply removes all `<institution>` elements from within aff, to skip this behaviour, and render the affiliation as originally provided. 
 
+It also strips any institution-ids (introduced as part of the Production process) from affiliations, as these are not intended for display.
+
 This can be solved in mutliple ways. One is to ask bioRxiv to not treat their affiliations as mixed-content - which has already been done. Another is for encoda to be adjusted so as to retain the original order of the content as it is supplied (I'm unsure if this will be possible).
 
 ### [/src/remove-issue-from-refs.xsl](/src/remove-issue-from-refs.xsl)

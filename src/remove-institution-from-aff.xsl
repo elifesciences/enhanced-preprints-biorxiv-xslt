@@ -6,7 +6,7 @@
     version="3.0">
     
     <xsl:output method="xml"
-        encoding="UTF-8"/>
+        encoding="UTF-8"/> 
     
     <xsl:template match="*|@*|text()|comment()|processing-instruction()">
         <xsl:copy>
@@ -16,6 +16,10 @@
     
     <xsl:template match="institution[ancestor::aff]">
         <xsl:apply-templates select="*|text()"/>
+    </xsl:template>
+    
+    <xsl:template match="institution-wrap[ancestor::aff]">
+        <xsl:apply-templates select="institution"/>
     </xsl:template>
     
 </xsl:stylesheet>
