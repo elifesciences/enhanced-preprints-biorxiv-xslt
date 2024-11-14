@@ -27,18 +27,19 @@
     
     <xsl:template match="def-item">
         <list-item>
-            <xsl:apply-templates select="*"/>
+            <p>
+                <xsl:apply-templates select="*"/>
+            </p>
         </list-item>
     </xsl:template>
     
     <xsl:template match="def-item/term">
-         <p>
-             <xsl:apply-templates select="*|text()"/>
-         </p>
+         <xsl:apply-templates select="*|text()"/>
+         <xsl:text>: </xsl:text>
     </xsl:template>
     
     <xsl:template match="def-item/def">
-        <xsl:apply-templates select="*"/>
+        <xsl:apply-templates select="p/(*|text())"/>
     </xsl:template>
     
 </xsl:stylesheet>

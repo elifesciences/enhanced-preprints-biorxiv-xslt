@@ -103,7 +103,7 @@
 <collab>the Brain Interfacing Laboratory</collab>
 </contrib>
 <on-behalf-of>the other Brain Interfacing Laboratory</on-behalf-of>
-<aff><label>1</label><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
+<aff><label>1</label><institution-wrap><institution-id institution-id-type="https://ror.org/04tz2h245"/><institution>Center for research in agricultural genomics, CRAG (CSIC-IRTA-UAB-UB)</institution></institution-wrap>, <addr-line>campus UAB, Cerdanyola del Vall&#x00E8;s</addr-line>, <postal-code>08193</postal-code> <city>Barcelona</city>, <state>Catalonia</state>, <country>Spain</country></aff>
 </contrib-group>
 <author-notes>
 <fn id="n1" fn-type="present-address"><label>8</label><p>Present Institution: Parean biotechnologies, Saint-Malo, France</p></fn>
@@ -137,6 +137,34 @@
 <self-uri xlink:href="223354.pdf" content-type="pdf" xlink:role="full-text"/>
 <abstract>
 <title>Abstract</title><p>T cell receptors (TCRs) are formed by stochastic gene rearrangements, theoretically generating &#x003E;10<sup>19</sup> sequences. They are selected during thymopoiesis, which releases a repertoire of about 10<sup>8</sup> unique TCRs per individual. How evolution shaped a process that produces TCRs that can effectively handle a countless and evolving set of infectious agents is a central question of immunology. The paradigm is that a diverse enough repertoire of TCRs should always provide a proper, though rare, specificity for any given need. Expansion of such rare T cells would provide enough fighters for an effective immune response and enough antigen-experienced cells for memory. We show here that human thymopoiesis releases a large population of CD8<sup>&#x002B;</sup> T cells harboring &#x03B1;/&#x03B2; paired TCRs that (i) have high generation probabilities and (ii) a preferential usage of some V and J genes, (iii) are shared between individuals and (iv) can each recognize and be activated by multiple unrelated viral peptides, notably from EBV, CMV and influenza. These polyspecific T cells may represent a first line of defense that is mobilized in response to infections before a more specific response subsequently ensures viral elimination. Our results support an evolutionary selection of polyspecific &#x03B1;/&#x03B2; TCRs for broad antiviral responses and heterologous immunity.</p>
+</abstract>
+<abstract abstract-type="graphical">
+<title>Graphical abstract</title>
+<fig id="figa1" position="float" orientation="portrait" fig-type="figure">
+<label>Figure</label>
+<caption>
+<title>Title.</title>
+<p>Figure caption.</p>
+</caption>
+<graphic xlink:href="g-fig.tif"/>
+<permissions>
+<copyright-statement>© 2014, copyright holder</copyright-statement>
+<copyright-year>2014</copyright-year>
+<copyright-holder>copyright holder</copyright-holder>
+<license>
+<license-p>Panel D is reproduced from published under a <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License (CC BY-NC-ND 4.0)</ext-link></license-p>
+</license>
+</permissions>
+</fig>
+</abstract>
+<abstract>
+<title>Highlights</title>
+<list list-type="bullet">
+<list-item><p>The retina utilizes a complex energy switchboard consisting of the Krebs cycle, mini-Krebs cycle, Cahill cycle, and Cori cycle.</p></list-item>
+<list-item><p>Mini-Krebs cycle runs more efficiently than &#x2018;full&#x2019; Krebs cycle.</p></list-item>
+<list-item><p>Alanine transaminase decouples glycolysis from the Krebs cycle.</p></list-item>
+<list-item><p>Lactate, alanine, and N-acetylaspartate are distinctive energetic pathway signatures.</p></list-item>
+</list>
 </abstract>
 <counts>
 <page-count count="59"/>
@@ -338,12 +366,24 @@
 </sec>
 <sec id="s4m">
 <title>Detection of CMV pp65-specific T cells by intracellular staining with anti-INF-&#x03B3;-PE</title>
-<p>CMVpp65 selected CTL were stimulated for 6 hours in TexMacs medium (without human serum and IL-2) with 20 &#x00B5;L PepTivator-CMVpp65 per mL of cell suspension. Brefeldin-A was added at 10 &#x00B5;g/ml. Negative control (CTL without stimulation) and positive control (CTL stimulated with PMA-ionomycin) were also included. Stimulation with irrelevant peptides was also performed with PepTivator-CMV IE-1 (Miltenyi (130-093-494) and PepTivator-EBV BZLF1 (Miltenyi (130-093-612). Cells were then stained with anti-CD8-FITC, fixed, permeabilized and intracellularly stained with anti-INF-&#x03B3;-PE.</p>
+<p>CMVpp65 <code>test()</code> selected CTL were stimulated for 6 hours in TexMacs medium (without human serum and IL-2) with 20 &#x00B5;L PepTivator-CMVpp65 per mL of cell suspension. Brefeldin-A was added at 10 &#x00B5;g/ml. Negative control (CTL without stimulation) and positive control (CTL stimulated with PMA-ionomycin) were also included. Stimulation with irrelevant peptides was also performed with PepTivator-CMV IE-1 (Miltenyi (130-093-494) and PepTivator-EBV BZLF1 (Miltenyi (130-093-612). Cells were then stained with anti-CD8-FITC, fixed, permeabilized and intracellularly stained with anti-INF-&#x03B3;-PE.</p>
+<code>
+for $y in $x ....
+return :shrug:
+</code>
 </sec>
 <sec id="s4n">
 <title>Peptide dose-response of TCR transductants</title>
 <p>TCR transductants were generated as described [Mann, Zhou, Front Immunol 2020]. Briefly, 5KC T-hybridoma cells (kindly provided by M. Nakayama, Barbara Davis Center, Aurora, CO) were transduced with the NFAT-driven fluorescent reporter ZsGreen-1 along with human CD8 by spinoculation with retroviral supernatant produced from phoenix-eco cells (ATCC CRL-3214). These cells were subsequently transduced with retroviral vectors encoding a chimeric TCR alpha gene followed by a porcine teschovirus-1 2A (P2A) peptide and a chimeric TCR beta gene synthesized by TwistBioscience. K562 cells (ATCC CCL-243) were transduced with lentiviral vectors (TakaraBio) encoding HLA-A&#x002A;02:01 or HLA-A&#x002A;03:01 by spinoculation with ultracentrifuge concentrated viral particles produced from 293T-HEK-TN cells (System biosciences), followed by sorting of cells stained with anti-human HLA-A, B, C antibody conjugated with PE-Cy7 (clone W6/32, BioLegend).</p>
 <p>TCR transductants (20,000 cells per well) were stimulated for 18 h with individual peptides at different concentrations (9 10-fold serial dilutions from 100 &#x03BC;M) in the presence of HLA-A&#x002A;02:01&#x002B; or HLA-A&#x002A;03:01&#x002B; K562 cells (50,000 cells per well), followed by analysis of ZsGreen-1 expression. Peptides (from Synpeptide) tested for the response by TCRs are GILGFVFTL (Flu MP 58&#x2013;66), GLCTLVAML (EBV BMLF1 280-288), KLGGALQAK (CMV IE1 280-288), VMNILLQYV (GAD65 114-122), VAANIVLTV (ZnT8 186-194) and other sequences selected by testing a GAD 114-122-reactive TCR by combinatorial peptide libraries, as described(<italic><xref ref-type="bibr" rid="c30">30</xref></italic>) EC50 values were calculated using the nonlinear regression log (agonist) vs. response (three parameters) equation model in GraphPad Prism 9.</p>
+<p><italic>In silico</italic> predictions were compared to matched phenotype data and the following accuracy metrics were calculated:</p>
+<disp-formula id="ueqn1">
+<graphic xlink:href="530115v2_ueqn1.gif"/>
+</disp-formula>
+<disp-formula id="ueqn2">
+<graphic xlink:href="530115v2_ueqn2.gif"/>
+</disp-formula>
+<p>Model metabolite and reaction ... </p>
 </sec>
 </sec>
 <sec id="s5">
@@ -361,6 +401,7 @@
 <p><bold>Table S1.</bold> Enrichment of public <bold>&#x03B2;</bold>CDR3s in CD8&#x002B; thymocytes vs DPCD3&#x002B;.</p>
 <p><bold>Table S2.</bold> Enrichment of virus-specific <bold>&#x03B2;</bold>CDR3s from databases<sup>14,15</sup> in clustered CD8&#x002B; thymocytes.</p>
 <p><bold>Table S3.</bold> List of peptides represented on the chord plot. Related to 4I.</p>
+<disp-quote><p>This is a display quote that should be retained.</p></disp-quote>
 </sec>
 <sec sec-type="supplementary-material">
 <title>Supporting information</title>
@@ -436,7 +477,7 @@
 <ref id="c61"><label>61.</label><mixed-citation publication-type="other"><string-name><given-names>J. H.</given-names> <surname>Krijthe</surname></string-name>, <article-title>Rtsne: T-distributed stochastic neighbor embedding using Barnes-Hut implementation</article-title>. <italic>R package version 0.13</italic>, URL <ext-link ext-link-type="uri" xlink:href="https://github.com/jkrijthe/Rtsne">https://github.com/jkrijthe/Rtsne</ext-link> (<year>2015</year>).</mixed-citation></ref>
 <ref id="c62"><label>62.</label><mixed-citation publication-type="other"><string-name><given-names>Z.</given-names> <surname>Sethna</surname></string-name>, <string-name><given-names>Y.</given-names> <surname>Elhanati</surname></string-name>, C. G. C. Jr, <string-name><given-names>T.</given-names> <surname>Mora</surname></string-name>, <article-title>OLGA: fast computation of generation probabilities of B- and T-cell receptor amino acid sequences and motifs</article-title>, <volume>8</volume>.</mixed-citation></ref>
 <ref id="c63"><label>63.</label><mixed-citation publication-type="journal"><string-name><surname>Liu</surname> <given-names>Y</given-names></string-name>, <string-name><surname>Brincat</surname> <given-names>SL</given-names></string-name>, <string-name><surname>Miller</surname> <given-names>EK</given-names></string-name>, <string-name><surname>Hasselmo</surname> <given-names>ME</given-names></string-name>. <article-title>A Geometric Characterization of Population Coding in the Prefrontal Cortex and Hippocampus during a Paired-Associate Learning Task</article-title>. <source>Journal of Cognitive Neuroscience</source>. <year>2020</year> 8; <volume>32</volume>(<issue>8</issue>). doi: 10.1162/jocn{\_}a{\_}01569.</mixed-citation></ref>
-<ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref><ref id="c65"><label>65.</label><mixed-citation publication-type="journal"><string-name><given-names>M. S.</given-names> <surname>Kowalczyk</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell RNA-seq reveals changes in cell cycle and differentiation programs upon aging of hematopoietic stem cells</article-title>. <source>Genome Res</source> <volume>25</volume>, <fpage>1860</fpage>&#x2013;<lpage>1872</lpage> (<year>2015</year>).</mixed-citation></ref><ref id="c66"><label>66.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Reversed graph embedding resolves complex single-cell trajectories</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>979</fpage>&#x2013;<lpage>982</lpage> (<year>2017</year>).</mixed-citation></ref><ref id="c67"><label>67.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell mRNA quantification and differential analysis with Census</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>309</fpage>&#x2013;<lpage>315</lpage> (<year>2017</year>).</mixed-citation></ref><ref id="c68"><label>68.</label><mixed-citation publication-type="other"><string-name><surname>Nykanen</surname> <given-names>L</given-names></string-name>, <string-name><surname>Nykanen</surname>, <given-names>I.</given-names></string-name> (<year>1991</year>) <article-title>Distilled beverages</article-title>. <source>Volatile Compounds in Foods and Beverages</source>, ed <string-name><surname>Maarse</surname> <given-names>H</given-names></string-name> (<publisher-name>Dekker Inc, New York</publisher-name>), pp <fpage>548</fpage>&#x2013;<lpage>580</lpage>.</mixed-citation></ref></ref-list>
+<ref id="c64"><label>64.</label><mixed-citation publication-type="journal"><string-name><given-names>T.</given-names> <surname>Stuart</surname></string-name> <etal>et al.</etal>, <article-title>Comprehensive Integration of Single-Cell Data</article-title>. <source>Cell</source> <volume>177</volume>, <fpage>1888</fpage>&#x2013;<lpage>1902</lpage>.<page-range>e1821</page-range> (<year>2019</year>).</mixed-citation></ref><ref id="c65"><label>65.</label><mixed-citation publication-type="journal"><string-name><given-names>M. S.</given-names> <surname>Kowalczyk</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell RNA-seq reveals changes in cell cycle and differentiation programs upon aging of hematopoietic stem cells</article-title>. <source>Genome Res</source> <volume>25</volume>, <fpage>1860</fpage>&#x2013;<lpage>1872</lpage> (<year>2015</year>).</mixed-citation></ref><ref id="c66"><label>66.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Reversed graph embedding resolves complex single-cell trajectories</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>979</fpage>&#x2013;<lpage>982</lpage> (<year>2017</year>).</mixed-citation></ref><ref id="c67"><label>67.</label><mixed-citation publication-type="journal"><string-name><given-names>X.</given-names> <surname>Qiu</surname></string-name> <etal>et al.</etal>, <article-title>Single-cell mRNA quantification and differential analysis with Census</article-title>. <source>Nat Methods</source> <volume>14</volume>, <fpage>309</fpage>&#x2013;<lpage>315</lpage> (<year>2017</year>).</mixed-citation></ref><ref id="c68"><label>68.</label><mixed-citation publication-type="other"><string-name><surname>Nykanen</surname> <given-names>L</given-names></string-name>, <string-name><surname>Nykanen</surname>, <given-names>I.</given-names></string-name> (<year>1991</year>) <article-title>Distilled beverages</article-title>. <source>Volatile Compounds in Foods and Beverages</source>, ed <string-name><surname>Maarse</surname> <given-names>H</given-names></string-name> (<publisher-name>Dekker Inc, New York</publisher-name>), pp <fpage>548</fpage>&#x2013;<lpage>580</lpage>.</mixed-citation></ref><ref id="c69"><label>69.</label><mixed-citation publication-type="confproc"><string-name><surname>Flatla</surname>, <given-names>D. R.</given-names></string-name> <article-title>Accessibility for individuals with color vision deficiency</article-title>. in <conf-name>Proc. 24th Annu. ACM Symp. Adjun. User Interface Softw. Technol</conf-name>. <fpage>31</fpage>–<lpage>34</lpage> (<publisher-name>Association for Computing Machinery</publisher-name>, <year>2011</year>). doi:<pub-id pub-id-type="doi">10.1145/2046396.2046412</pub-id>.</mixed-citation></ref></ref-list>
 <ack>
 <title>Acknowledgments:</title>
 <p>The authors would like to express their gratitude to the organ donors and their families who allowed the collection of samples for research under sad circumstances. The authors would also like to thank Prof. Pascal Leprince, Dr. Guillaume Lebreton, and Dr. Marina Rigolet of the cardiac surgery team, Prof. Bruno Riou and the graft coordination team of the Piti&#x00E9;-Salp&#x00EA;tri&#x00E8;re hospital for their invaluable contribution to sample collection. The authors thank the UMR 8199 LIGAN-PM Genomics platform (Lille, France) for efficient sequencing. We also thank Thierry Mora, and Aleksandra Walczak for helpful discussion.</p>
@@ -523,9 +564,9 @@
 <label>Figure S7.</label>
 <caption><title>Binding properties of single cell TCRs</title>
 <p><list list-type="alpha-upper">
-<list-item><p>Network of tetramer-binding CDR3s from public database (VDJdb) identifying CDR3s with multiple viral specificities. Each dot represents a single CDR3. Dot are connected by edges defined by Levenshtein distance of &#x2264;1 (one AA substitution/insertion/deletion). Each dot represents a CDR3 with at least 2 specificities for 2 different viruses. The colors are related to a specific virus. The specificities of these CDR3 were identified by tetramer staining.</p></list-item>
-<list-item><p>Venn diagram representing specificities for 5 different viruses of the 13,557 unique virus-associated CDR3s (those from <xref rid="fig3" ref-type="fig">Figure 3e</xref>, LD&#x2264;1).</p></list-item>
-<list-item><p>MDS representation of MH dissimilarity index for EBV repertoire. The MH index are calculated for each repertoire specific of EBV antigen (n&#x003D;16). Each point represents a patient and each color an antigen.</p></list-item></list></p></caption>
+<list-item><label>*</label><p>Network of tetramer-binding CDR3s from public database (VDJdb) identifying CDR3s with multiple viral specificities. Each dot represents a single CDR3. Dot are connected by edges defined by Levenshtein distance of &#x2264;1 (one AA substitution/insertion/deletion). Each dot represents a CDR3 with at least 2 specificities for 2 different viruses. The colors are related to a specific virus. The specificities of these CDR3 were identified by tetramer staining.</p></list-item>
+<list-item><label>**</label><p>Venn diagram representing specificities for 5 different viruses of the 13,557 unique virus-associated CDR3s (those from <xref rid="fig3" ref-type="fig">Figure 3e</xref>, LD&#x2264;1).</p></list-item>
+<list-item><label>***</label><p>MDS representation of MH dissimilarity index for EBV repertoire. The MH index are calculated for each repertoire specific of EBV antigen (n&#x003D;16). Each point represents a patient and each color an antigen.</p></list-item></list></p></caption>
 <graphic xlink:href="223354v2_figS7.tif"/>
 </fig>
 <fig id="figS8" position="float" orientation="portrait" fig-type="figure">

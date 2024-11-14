@@ -21,4 +21,10 @@
 
   <xsl:template match="label[following-sibling::title[1]]"/>
 
+  <xsl:template match="sec[not(title) and *[1][name()='label']]/label[1]|app[not(title) and *[1][name()='label']]/label[1]">
+    <title>
+      <xsl:apply-templates select="node()"/>
+    </title>
+  </xsl:template>
+
 </xsl:stylesheet>

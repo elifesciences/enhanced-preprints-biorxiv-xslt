@@ -17,6 +17,8 @@ In the entry for each XSL file please link to the file in github.
 
 This stylesheet is transforming an XML document by adding a "label" element to any "title" element that has a preceding "label" element, and removing any "label" element that has a following "title" element. Work is required in encoda to approprately decode these labels, so that they can then be represented in the resultant JSON.
 
+The XSL also changes an `label` element (that is not followed by a `title` element) to a `title` element within `sec` and `app` elements.
+
 ### [/src/convert-doi-links-to-pub-id-elements.xsl](/src/convert-doi-links-to-pub-id-elements.xsl)
 
 This xsl converts `<ext-link>` elements within references (`<ref>`) that have a uri (in the `xlink:href` attribute) which is a DOI string, to use `<pub-id pub-id-type="doi">` tagging instead.
@@ -26,12 +28,6 @@ This xsl converts `<ext-link>` elements within references (`<ref>`) that have a 
 ### [/src/workaround-for-organisation-authors.xsl](/src/workaround-for-organisation-authors.xsl)
 
 This xsl is a workaround for handling group authors (organisations) in both the author list and in references. Encoda converts these into a useful representation in the JSON, but there is no support for authors that are organisations in EPP client, so this needs updating.
-
-### [/src/convert-app-to-sec.xsl](/src/convert-app-to-sec.xsl)
-
-This xsl converts `<app>` elements to `<sec>` elements. `<app>` is the correct semnatic capture of appendices (and is sometimes captured within an `<app-group>` element), but encoda does not decode these. This leads to no representation of this content within the JSON, and therefore it is missing on EPP. Converting these to sections is a workaround that ensure the content is captured and rendered on EPP. An example of a preprint with appendices is 10.1101/2022.11.10.516056.
-
-Changes are required to encoda so as to decode and encode appendices, and then possible changes are required in EPP depending on how this is representated in the JSON.
 
 ### [/src/collate-reference-lists.xsl](/src/collate-reference-lists.xsl)
 
@@ -84,6 +80,8 @@ Gets decoded into:
 
 `Sloan Kettering Institute, Memorial Sloan Kettering Cancer CenterCell Biology Program, ,, New York, NY, USA` is not an acceptable rendering of this affiliation. As a result this xsl simply removes all `<institution>` elements from within aff, to skip this behaviour, and render the affiliation as originally provided. 
 
+It also strips any institution-ids (introduced as part of the Production process) from affiliations, as these are not intended for display.
+
 This can be solved in mutliple ways. One is to ask bioRxiv to not treat their affiliations as mixed-content - which has already been done. Another is for encoda to be adjusted so as to retain the original order of the content as it is supplied (I'm unsure if this will be possible).
 
 ### [/src/remove-issue-from-refs.xsl](/src/remove-issue-from-refs.xsl)
@@ -109,16 +107,6 @@ Encoda [currently only decodes](https://github.com/stencila/encoda/blob/202d8da5
 
 This xsl will convert any `fpage` found in a reference that does not also have an `lpage` or `elocation-id` to `elocation-id`, so that it can be decoded by encoda and rendered by EPP.
 
-### [/src/handle-other-type-refs.xsl](/src/handle-other-type-refs.xsl)
-
-This xsl seeks to introduce approriate `publication-type` values for references, based on what child elements or content is present, so that it can be better decoded by encoda and therefore better rendered by EPP. It be inappropriate in some cases to change the `publication-type` (for example when not enough semantic information is provided, or conflicting tags are present as a result of errors), so this xsl will not change all instances.
-
-Encoda has [certain rules](https://github.com/stencila/encoda/blob/202d8da5e5c3381b318910df1fd8878df4b1456d/src/codecs/jats/index.ts#L1295-L1446) that dictate how a reference is decoded. One thing that affects how a reference is decoded is what `publication-type` it is captured as in the XML. Typesetters may use the `publication-type` '`other`' when uncertain of what kind of content is being captured as a reference. Encoda provides less support for content when it's captured as `publication-type="other"`, resulting in fragmented or missing reference information on EPP.
-
-In most cases the use of `publication-type="other"` is a mistake (or incorrect) - ideally vendors would always capture the correct semantic publication type (and this has been fed back to bioRxiv) - but determining the correct type of reference (and what information should be included and how to appropriately capture it) requires a level of attention or manual intervention that we can't expect to be introduced in the near term. 
-
-In addition some of the rules in encoda could possibly be relaxed in order to decode more of the pieces of information that are supplied.
-
 ### [/src/handle-singular-aff-no-links.xsl](/src/handle-singular-aff-no-links.xsl)
 
 This xsl is adding a missing affiliation link for all authors when there is only one affiliation. When this link is missing no affiliations display for any authors in EPP because encoda relies on the link to make add the affiliation for any/all authors. This can be solved with a tagging change which has already been requested from bioRxiv.
@@ -127,463 +115,56 @@ This xsl is adding a missing affiliation link for all authors when there is only
 
 jats xml can accommodate alternative versions of names (e.g. westernised vs non-westernised names). When used these are tagged using [`named-alternatives`](https://jats.nlm.nih.gov/archiving/tag-library/1.3/element/name-alternatives.html). Encoda does not have support for this tagging and strips all names from the resultant JSON. This xsl deliberately mistags the alternative names so that one of them is included in a `suffix` element (which is supported by Encoda and rendered on EPP) as a workaround.
 
-## Manuscript specific XSLT
+### [/src/disp-quote-workaround.xsl](/src/disp-quote-workaround.xsl)
 
-### [/src/2022.07.26.501569/move-ecole-into-institution.xsl](/src/2022.07.26.501569/move-ecole-into-institution.xsl)
+jats xml uses the element `disp-quote` for display quotes. These are decoded by encoda into `QuoteBlock`s, e.g.:
 
-Adjusts 2 of the affiliations where the department is being treated as an address rather than in the institution. This is an EPP client issue as we can not get at these values another way. 
-
-There may be another example in 10.1101/2022.10.21.513138:
-
-```
-<aff id="a1"><label>1</label><institution>Univ-Bordeaux, Centre de Recherche Cardio-thoracique de Bordeaux</institution>, U1045, D&#x00E9;partement de Pharmacologie, CIC1401, Pessac, <country>France</country></aff>
-```
-
-It can be fixed by treating affiliations as mixed content (pulling in the text content of aff as well as `institution`, `country` etc.), and the change has been implemented in encoda v0.121.1 - see https://github.com/elifesciences/enhanced-preprints-issues/issues/343.
-
-### [/src/2022.05.30.22275761/add-missing-aff-for-AK-v1.xsl](/src/2022.05.30.22275761/add-missing-aff-for-AK-v1.xsl)
-
-This xsl is adding a missing affiliation for the first author. Affiliations a linked to using an `<xref>` element, which is a child of the author's `<contrib contrib-type="author">` element. This was presumably a typesetting error that could be (or have been) fixed on bioRxiv's end, but we haven't established how best to feedback this kind of problem. This is one of the 'examples' we launched with back in October, and has now been published as an (old style) VOR, so I'm not sure how we want to specifically handle it.
-### [/src/2021.09.24.461751/workaround-for-statements.xsl](/src/2021.09.24.461751/workaround-for-statements.xsl)
-
-This xsl is a workaround for `<statement>` tags for Proofs in 2021.09.24.461751. These are decoded appropriately by encoda as `Claim` objects with the `claimType` `Proof`, but there is no support in EPP to render these items. The xsl therefore converts proofs that are captured as images to `<fig>` so that these can be rendered, and removes `<statement>` in the case where it contains content not purely captured as an image. We do not yet know how proofs might be captured in other preprints so this is retained as manuscript specific for now. 
-
-The work to enable rendering these proofs in EPP is captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/359, and this workaround unblocks publication of RP 84141 (https://github.com/elifesciences/enhanced-preprints-import/issues/66).
-
-### [/src/2021.06.21.449261/fix-references.xsl](/src/2021.06.21.449261/fix-references.xsl)
-
-This xsl is to handle some incorrect tagging in XML file from bioRxiv, which leads to poor display (due to the different ways that our/bioRxiv's platforms render references). This has been fed back to bioRxiv for the future.
-
-### [/src/2023.02.02.526762/remove-list-labels.xsl](/src/2023.02.02.526762/remove-list-labels.xsl)
-
-This xsl is to better display a list in 2023.02.02.526762. The authors have used a non-standard list-item indicator - a hyphen - which has been captured as the `<label>` for each `<list-item>`. This is perfectly acceptable capture in the XML, but it is not supported by encoda. In addition the list has the `list-type` `simple`, but is rendered as a bulleted list in EPP. Encoda needs updating to handle custom labels for list items, as in this case, and EPP needs updating to render simple lists without indicators, and to be able to render any custom list-item labels.
-
-### [/src/2023.03.13.532331/fix-author-emails.xsl](/src/2023.03.13.532331/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.01.530673/remove-list-labels.xsl](/src/2023.03.01.530673/remove-list-labels.xsl)
-
-This xsl is to better display a list in 2023.03.01.530673. bioRxiv's vendors have captured this bulleted list using the list-type `simple` but with each list-item accompanied by a label which is a bullet. While this is not ideal capture, it's still perfectly correct (maybe they wanted to use a specific bullet point character instead of whatever the default is for their platform). 
-
-On EPP `simple` lists are also rendered as bulleted lists. This is a problem - they should be rendered with no marker. The reason this is the case is because encoda does not capture the semantic information related to what list marker should be used (rather just whether it's ordered or unordered). The result of this capture in encoda is a bulleted list where each item has an extra marker followed by a new line in EPP. (Encoda also needs adjusting to better handle custom labels in lists - to not include this new line - currently these are captured as a separate paragraph, which is inappropriate - once these changes have been made EPP client will require adjusting). Changing this capture to a `bullet` type list and removing the labels means that this can be rendered appropriately on EPP in the meantime.
-
-### [/src/2022.01.26.477944/fix-corresp-authors.xsl](/src/2022.01.26.477944/fix-corresp-authors.xsl)
-
-This xsl removes the corresponding author status from the third last author Huanhuan Li. They are marked (presumably incorrectly) as a corresponding author in the author's original PDF file, but in the 'For correspondence' statement they are not mentioned. bioRxiv have faithfully captured this status. This becomes an issue due to the differences in the way corresponding author information is rendered on bioRxiv and EPP. bioRxiv simply render the 'For correspondence' statement. EPP captures the author email under each author - as a result the email for the second last author is provided under Huanhuan Li which is incorrect. There isn't really an action here - it;s a mistake which stems from the authors and is made more visible/worse due to the way this information is rendered on EPP.
-
-
-
-### [/src/2023.03.29.534786/fix-list-markers.xsl](/src/2023.03.29.534786/fix-list-markers.xsl)
-
-This xsl fixes the list markers in lists in figure captions in 2023.03.29.534786 (v1). We need better support for the various different types of list in EPP - this is possibly captured in https://github.com/elifesciences/enhanced-preprints-issues/issues/640 (Encoda has already been updated for one aspect of this, EPP now needs changing as a result; the output of Encoda for when list items have labels could be improved however, as these are currently decoded as separate paragraphs). In this preprint, lists are used to refer to particular panels within an image. But since we're not displaying the correct marker based on either the `<label>` or on the `list-type` attribute, the information about which panel the text corresponds to is lost. This xsl introduces this text inside paragraphs and ensure that the figure titles are captured appropriately. 
-
-### [/src/2021.08.16.455933/fix-affs.xsl](/src/2021.08.16.455933/fix-affs.xsl)
-
-This xsl removes subscript formatting from two affiliations in 2021.08.16.455933. This is presumably a mistake in typesetting, although it's one that _should be_ relatively innocuous. The content that is tagged as subscript is currently stripped from the resultant output in encoda, resulting in missing information and broken punctuation on EPP. Instead this would ideally be retained as subscript content (and the typesetting error would not be present in the first place).
-
-### [/src/2023.03.16.532898/fix-author-emails.xsl](/src/2023.03.16.532898/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.01.03.522550/fix-affs.xsl](/src/2023.01.03.522550/fix-affs.xsl)
-
-This xsl is to ensure that the correct information is included for 4 affiliations. bioRxiv's vendors have captured these affiliations in a poor fashion as a result of an oddity in the way the authors presented these affiliations in their preprint PDF (Departments of <sup>3</sup>Medicine, <sup>4</sup>Human Genetics and <sup>5</sup>Biochemistry, McGill University, Montréal, Québec, Canada H3T 1E2). 
-
-No change is required related to this either in encoda or on EPP.
-
-### [/src/2023.02.13.528273/fix-title-list-and-affs.xsl](/src/2023.02.13.528273/fix-title-list-and-affs.xsl)
-
-This xsl carries out three main changes:
-1. It changes the title from all caps to sentence case.
-2. It ensures that both affiliations are mapped to all authors (as it stands none are displayed on EPP). This is somewhat similar to `handle-singular-aff-no-links` above, which is applied to all files (if we see further instances of this, we may consider bumping this up to all as well).
-3. It changes the capture of the list at the end of the Introduction. There already is [a ticket](https://github.com/elifesciences/enhanced-preprints-issues/issues/640) that (should?) covers better handling of labels for list markers in Encoda, which if complete would remove the need for this xsl (and result in the same or similar rendering on EPP). 
-
-Since all these changes are tagging related or covered in existing tickets, no further tickets need raising.
-
-
-### [/src/2023.01.31.526541/fix-author-emails.xsl](/src/2023.01.31.526541/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-
-### [/src/2022.07.22.501195/fix-author-emails.xsl](/src/2022.07.22.501195/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-
-### [/src/2022.04.14.22272888/fix-author-emails.xsl](/src/2022.04.14.22272888/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.04.535526/fix-author-emails.xsl](/src/2023.04.04.535526/fix-author-emails.xsl)
-
-This xsl fixes the complete mess that the authors and bioRxiv have made in terms of identifying who is a corresonding author.  The first author is the only one who's provided an email, and no other contact information is available, so they will have to be corresponding. Similarly bioRxiv's vendors have incorrectly captured both last authors as corresponding authors (instead of as equal authors, as they should be).
-
-### [/src/2023.03.20.533567/fix-author-fn.xsl](/src/2023.03.20.533567/fix-author-fn.xsl)
-
-bioRxiv's vendors have captured a footnote (indicating the sole corrresponding author is the lead contact) as an affiliation. This xsl changes the capture of this footnote so that it is semantically correct.
-
-### [/src/2023.03.27.534488/fix-author-emails.xsl](/src/2023.03.27.534488/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.09.531872/fix-author-emails.xsl](/src/2023.03.09.531872/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2022.07.27.501668/fix-author-emails.xsl](/src/2022.07.27.501668/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-Also one of the author names is incorrect in the source XML (bioRxiv seemed to have hotfixed this one, but not in the data they supply to us).
-
-### [/src/2023.03.16.532991/fix-author-emails.xsl](/src/2023.03.16.532991/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.10.536254/fix-author-emails.xsl](/src/2023.04.10.536254/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.07.543997/fix-author-emails.xsl](/src/2023.06.07.543997/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2021.05.12.443782/fix-author-emails.xsl](/src/2021.05.12.443782/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.30.534978/fix-author-emails.xsl](/src/2023.03.30.534978/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.05.19.541463/fix-author-emails.xsl](/src/2023.05.19.541463/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.21.537849/fix-author-emails.xsl](/src/2023.04.21.537849/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.18.537352/remove-cover-letter.xsl](/src/2023.04.18.537352/remove-cover-letter.xsl)
-
-This xsl is to remove a cover letter that the authors accidenatally included in their original preprint. Asking them to fix this via posting a new preprint will cause further confusion at this stage as they are in the process of posting a revised preprint following review.
-
-### [/src/2021.04.26.441418/fix-author-emails.xsl](/src/2021.04.26.441418/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.01.17.524456/fix-author-emails.xsl](/src/2023.01.17.524456/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.02.24.23286398/fix-author-emails.xsl](/src/2023.02.24.23286398/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2022.10.21.513016/fix-author-emails.xsl](/src/2022.10.21.513016/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2021.11.08.467457/fix-author-emails.xsl](/src/2021.11.08.467457/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.01.543127/fix-author-emails.xsl](/src/2023.06.01.543127/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.01.543133/fix-author-emails.xsl](/src/2023.06.01.543133/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.01.543135/fix-references.xsl](/src/2023.06.01.543135/fix-references.xsl)
-
-In this article, the authors have numerous reference lists which apply to foigures or tables. These are captured in separate sections and they need to be placed under the section they are intended to in order to be discernable. bioRxiv have collated these all into one long reference list, but without the context providing which figure or table they belong to it is impossible to follow. This xsl moves the references into their respective sections as in the authors original PDFs. The downside is that these are not captured correctly semantically but this can be reassessed once numerous reference lists (and titles) are supported in EPP.
-
-### [/src/2023.04.02.535290/fix-author-emails.xsl](/src/2023.04.02.535290/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.05.535750/fix-author-emails.xsl](/src/2023.04.05.535750/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.01.530673/fix-references-in-v2.xsl](/src/2023.03.01.530673/fix-references-in-v2.xsl)
-
-The second version of this article has numerous errors in the typesetting, whereby the article title for the journal references has not been captured appropriately. Instead both the article title and the journal title have been captured within a source element. Due to how Encoda is decoding this information it results in a lot of duplicated information being rendered on EPP. The XSL ensures that the article title is captured appropiately using `<article-title>` for affected references.
-
-### [/src/2023.03.22.533725/remove-ack.xsl](/src/2023.03.22.533725/remove-ack.xsl)
-
-In this article bioRxiv's vendors have captured an empty acknowledgements section. In the original PDF this seems to be a header for other sections containing content which are sometimes placed in acknowledgements, but bioRxiv have decided to captured these as separate, sibling sections instead. This xsl simply removes the separate acknowledgements, which seems like the most approproate approach here.
-
-### [/src/2023.04.14.536843/fix-author-emails.xsl](/src/2023.04.14.536843/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.04.543604/fix-author-affs.xsl](/src/2023.06.04.543604/fix-author-affs.xsl)
-
-bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
-
-### [/src/2023.04.25.537217/fix-refs.xsl](/src/2023.04.25.537217/fix-refs.xsl)
-
-bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
-
-### [/src/2020.09.14.295832/fix-author-emails.xsl](/src/2020.09.14.295832/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.12.536635/add-missing-section-title.xsl](/src/2023.04.12.536635/add-missing-section-title.xsl)
-
-A mistake from bioRxiv's vendors - a title is missing from the section that contains all the supplementary figures and tables. Since these have the same labels (e.g. 'Figure 1') as the 'main' figures/tables, this will be confusing to the reader without adding the missing title.
-
-### [/src/2023.04.12.23288460/fix-author-emails.xsl](/src/2023.04.12.23288460/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.10.23287084/fix-refs.xsl](/src/2023.03.10.23287084/fix-refs.xsl)
-
-bioRxiv's vendors have made numerous errors in the references, which have led (as a result of some of the rules in Encoda which could be improved) to poor display in EPP (the duplicaiton of lots of information). This xsl ensures that the references are tagged appropriately.
-
-### [/src/2022.12.09.519720/fix-author-emails.xsl](/src/2022.12.09.519720/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.21.537771/fix-author-emails.xsl](/src/2023.04.21.537771/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.05.31.543136/fix-author-footnotes.xsl](/src/2023.05.31.543136/fix-author-footnotes.xsl)
-
-bioRxiv's vendors have incorrectly captured the first two authors as corresponding, when instead they should be marked as contributing equally. This xsl fixes that mistake.
-
-### [/src/2020.12.06.411850/move-credit-section.xsl](/src/2020.12.06.411850/move-credit-section.xsl)
-
-bioRxiv's vendors have inappropriately captured a section detailing author contributions within the abstract. This xsl moves that content to a section within `<back>`.
-
-### [/src/2023.04.19.537449/remove-quote-marks-from-title.xsl](/src/2023.04.19.537449/remove-quote-marks-from-title.xsl)
-
-bioRxiv's vendors have included quote marks within the title of this preprint which is inappropriate. This xsl removes those quote marks.
-
-### [/src/2023.05.27.23290639/fix-author-emails.xsl](/src/2023.05.27.23290639/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2022.05.16.491352/add-missing-author-email.xsl](/src/2022.05.16.491352/fix-author-emails.xsl)
-
-One of the corresponding authors does not have their email listed - this obviously a mistake on the authors end. This XSL introduces the submitted email as the corresponding email for that author.
-
-### [/src/2023.06.09.544290/fix-author-names-and-emails.xsl](/src/2023.06.09.544290/fix-author-names-and-emails.xsl)
-
-The author names contain typos (extra space after hyphens), and the corresponding author information is missing for two authors. These are due to errors in the original, but are considered important enough to correct.
-
-### [/src/2021.03.04.433999/fix-author-emails.xsl](/src/2021.03.04.433999/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2022.11.20.516954/fix-author-emails.xsl](/src/2022.11.20.516954/fix-author-emails.xsl)
-
-This xsl is to ensure that this preprint has two corresponding authors. The authors have not properly indicated this in their PDF, and as such bioRxiv have not captured this in the way the authors want.
-
-### [/src/2023.05.11.540422/fix-author-emails.xsl](/src/2023.05.11.540422/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.26.534293/fix-equal-footnote.xsl](/src/2023.03.26.534293/fix-equal-footnote.xsl)
-
-bioRxiv's typesetters have incorrectly captured 'These authors contributed equally: Sana Ahmed-Seghir and Manisha Jalan' as an affiliation instead of as a footnote. This will cause problems when depositing this data downstream (such as at Crossref). This XSL ensures this text is captured appropriately as an author footnote instead.
-
-### [/src/2023.05.02.539055/fix-affiliation.xsl](/src/2023.05.02.539055/fix-affiliation.xsl)
-
-Author Reza Sharif Razavian has no affiliation. This is likely because of the affiliation being missing in the source PDF. Uploading a revised preprint at this stage will cause extra confusion, and since this is a fundmental piece of data, this XSL adds in the correct affiliation for that author.
-
-### [/src/2022.09.28.509958/fix-references.xsl](/src/2022.09.28.509958/fix-references.xsl)
-
-There are various mistakes with the tagging some of the references in this article, and as a result they cannot be followed when rendered on EPP. This XSL correctes these mistakes.
-
-### [/src/2023.07.19.549786/change-digest-title.xsl](/src/2023.07.19.549786/change-digest-title.xsl)
-
-This xsl changes the title of a section in the authors abstract, so that it is not confused with an eLife digest when published as a reviewed preprint.
-
-### [/src/2022.05.22.491886/fix-author-emails.xsl](/src/2022.05.22.491886/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.03.30.534918/fix-author-emails.xsl](/src/2023.03.30.534918/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.06.543964/fix-author-affs.xsl](/src/2023.06.06.543964/fix-author-affs.xsl)
-
-bioRxiv's vendors have not attributed which authors are affiliated with which institutions in the XML. As a result none of the affiliations or relationships between them and the authors are present in the reviewed preprint HTML. This xsl attributes the correct affiliaitons to all the authors.
-
-### [/src/2023.05.24.23289766/fix-author-emails.xsl](/src/2023.05.24.23289766/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.21.545900/fix-author-emails.xsl](/src/2023.06.21.545900/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.21.546014/aff-fix.xsl](/src/22023.06.21.546014/aff-fix.xsl)
-
-One author is missing an affiliation in this preprint (there's only one affiliation), which is a mistake that this xsl rectifies.
-
-### [/src/2023.05.25.542355/fix-author-emails.xsl](/src/2023.05.25.542355/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.07.05.547693/aff-fix.xsl](/src/2023.07.05.547693/aff-fix.xsl)
-
-One author is missing an affiliation in this preprint (there's only one affiliation), which is a mistake that this xsl rectifies.
-
-### [/src/2023.04.18.537395/fix-author-emails.xsl](/src/2023.04.18.537395/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.04.05.535764/fix-author-emails.xsl](/src/2023.04.05.535764/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.07.18.549506/ref-fix.xsl](/src/2023.07.18.549506/ref-fix.xsl)
-
-This xsl fixes a reference that is erroneously captured as a report type reference when it is a journal article.
-
-### [/src/2023.04.12.23288460/ref-fix.xsl](/src/2023.04.12.23288460/ref-fix.xsl)
-
-This xsl fixes a reference that is erroneously captured as a book type reference when it is a journal article. This XSL can likely be removed when proper support for book references is added in encoda and EPP (that work is related to and partially covered in https://github.com/elifesciences/enhanced-preprints-issues/issues/814)
-
-### [/src/2023.02.26.530115/equation-fix.xsl](/src/2023.02.26.530115/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In [this preprint](https://doi.org/10.1101/2023.02.26.530115) the following text precedes two display equations:
-
-> In silico predictions were compared to matched phenotype data and the following accuracy metrics were calculated:
-
-```xml
-<p><italic>In silico</italic> predictions were compared to matched phenotype data and the following accuracy metrics were calculated:</p>
-<disp-formula id="ueqn1">
-<graphic xlink:href="530115v2_ueqn1.gif"/>
-</disp-formula>
-<disp-formula id="ueqn2">
-<graphic xlink:href="530115v2_ueqn2.gif"/>
-</disp-formula>
-<p>Model metabolite and reaction ... </p>
-```
-
-This is decoded/encoded by Encoda (v1.0.1) into the following JSON:
 ```json
 {
-    "type": "Figure",
-    "caption": [
+    "type": "QuoteBlock",
+    "content": [
       {
         "type": "Paragraph",
         "content": [
-          "In silico",
-          " predictions were compared to matched phenotype data and the following accuracy metrics were calculated:"
+          "Z-score = (value",
+          { "type": "Subscript", "content": ["P"] },
+          " – mean value",
+          { "type": "Subscript", "content": ["P1…Pn"] },
+          ")/standard deviation",
+          { "type": "Subscript", "content": ["P1…Pn"] },
+          ","
         ]
       }
-    ],
-    "content": [
-      {
-        "type": "ImageObject",
-        "contentUrl": "87406/v2/530115v2_ueqn1.gif",
-        "meta": { "inline": false }
-      }
     ]
-  }
-``` 
-So the preceding paragraph is captured as if it was the caption of the first display equation. This leads to confusing and inaccurate display on EPP. 
+  },
+```
+EPP does not currently support this content type and as a result the content within is completely lost in the HTML. This xsl strips the `disp-quote` element and includes the contents of any child paragraph elements so that (some of) the content is retained in the HTML.
 
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
+### [/src/list-with-labels.xsl](/src/list-with-labels.xsl)
 
-### [/src/2023.07.13.548828/fix-author-emails.xsl](/src/2023.07.13.548828/fix-author-emails.xsl)
+In JATS, "[if] the `<label>` element is used in a `<list-item>`, it overrides the `@list-type` and `@prefix-word` attributes [on the `<list>` element]". Neither encoda or EPP have adequately taken this into account, and bioRxiv rely on this convention, meaning that some lists have two types of label indicator. This XSL adds the list-type attribute value `simple` when a list has list-items with labels (it will not do so if there are any list-items without labels within the list), so that only the indicator from the label is rendered in the HTML.
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+### [/src/boxed-text-workaround.xsl](/src/boxed-text-workaround.xsl)
 
-### [/src/2023.07.13.548828/fix-refs.xsl](/src/2023.07.13.548828/fix-refs.xsl)
+This XSL changes `<boxed-text>` into a `<sec>` element because encoda and EPP do not have adeqwuate support for this content.
 
-The authors have not provided article titles for journal references. The result is that when these are decoded by Encoda, much of the information is duplicated resulting in a really poor display on EPP. This xsl changes the publication-type for any journal refs that are missing an `<article-title>` element. The publication type becomes book, as this resolves most (but not all) of the display issues.
+### [/src/conf-ref-workaround.xsl](/src/boxed-text-workaround.xsl)
 
-### [/src/2023.07.03.547448/fix-author-emails.xsl](/src/2023.07.03.547448/fix-author-emails.xsl)
+For conference proceeding references, the name of a conference is usually captured using the element `<conf-name>`. Encoda does not decode/encode this element, as such it is missing in the HTML rendered by EPP. Encoda also does not distinguish in the reference type (still encoded as `Article`). This XSL converts a conference reference into a journal reference (as best as possible) so that the details can be showin in the HTML. 
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+### [/src/extra-abstract-workaround.xsl](/src/extra-abstract-workaround.xsl)
 
-### [/src/2023.09.03.556121/fix-author-emails.xsl](/src/2023.09.03.556121/fix-author-emails.xsl)
+This xsl accounts for 'extra' abstracts captured preprints such as graphical abstracts, impact statements and 'highlights' sections. These would most appropriately be captured as separate (additional) abstracts, but EPP/Encoda is unable to retain the content when captured this way, so this xsl moves these so that they are sections wihin the main asbtract.
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+### [/src/permissions-workaround.xsl](/src/permissions-workaround.xsl)
 
-### [/src/2023.03.22.533815/fix-author-emails.xsl](/src/2023.03.22.533815/fix-author-emails.xsl)
+This xsl accounts for permissions for objects within xml. Encoda will decode the `<license-p>` within the permissions for a figure (I've not checked other objects) and encode this as `licenses.content` in the JSON. EPP does not currently render this content. Therefore this XSL will convert any permissions statement for an object into a paragraph which is added onto the end of a caption.
 
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+### [/src/code-workaround.xsl](/src/code-workaround.xsl)
 
+This xsl accounts for the capture of `<code>` in XML. Encoda correctly decodes this as `CodeBlock`, but EPP client does not currently render that content. If the `<code>` is inline this XSL will change it to `<monospace>`, otherwise if it's a block of code it will be changed to `<preformat>` (which incidentally is inappropriately decoded as a `paragraph` by Encoda, but at least surfaces the content). 
 
-### [/src/2023.05.24.542079/fix-methods-title.xsl](/src/2023.05.24.542079/fix-methods-title.xsl)
-
-This xsl ensures that the title for the materialsn and methods is capitalised consistently with the other titles in the article. As it stands (the version used of) Encoda changes the capitalisation of titles in all caps to sentence case. However, if the content of the title is within an element (for example entirely within bold), then this style is nt applied. In this article the materials and methods is bolded and in all caps, whereas other titles are in all caps but not bolded. The result in EPP is a materials and methods title in all caps, while all other titles are in sentence case. This xsl removes the bold formatting to esnure consistency.
-
-### [/src/2023.04.03.535330/fix-corr-status.xsl](/src/2023.04.03.535330/fix-corr-status.xsl)
-
-The authors of this article did not include a asterisk next to the name of one of the corresponding authors in their PDF. As a result bioRxiv have not captured their corresponding author status (despite being listed elsewhere as corresponding). This xsl fixes this issue. The preprint itself hasn't/can't be corrected as a result of confusion over revised versions.
-
-
-### [/src/2023.02.27.530352/fix-author-emails.xsl](/src/2023.02.27.530352/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.06.21.545935/fix-ref.xsl](/src/2023.06.21.545935/fix-ref.xsl)
-This xsl fixes both a reference which has been mistagged (number 55) and removes an unnecessary abstract heading in all caps.
-
-
-### [/src/2023.04.05.535396/equation-fix.xsl](/src/2023.04.05.535396/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equations is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2021.07.12.452102/fix-author-emails.xsl](/src/2021.07.12.452102/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2023.05.07.539767/fix-author-emails.xsl](/src/2023.05.07.539767/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/2022.10.15.22281053/remove-tracked-changes.xsl](/src/2022.10.15.22281053/remove-tracked-changes.xsl)
-
-The authors of this preprint have included tracked changes in the file they submitted, the formatting for which has been faithfully retained by bioRxiv (despite there being no need to and this unnecessaruly emphasising content). This xsl strips that unnecessary formatting.
-
-### [/src/2023.08.30.23294826/fix-affiliations.xsl](/src/2023.08.30.23294826/fix-affiliations.xsl)
-
-This xsl fixes a mistake from bioRxiv which assigns an affiliation to the on behalf of group at the end of the author list instead of the author before that.
-
-### [/src/2023.09.01.555873/fix-author-emails.xsl](/src/2023.09.01.555873/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
-
-### [/src/273730/equation-fix.xsl](/src/273730/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes a display equations is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equation in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.07.24.550263/heading-fix.xsl](/src/2023.07.24.550263/equation-fix.xsl)
-
-This xsl accounts for undesired behaviour in Encoda which changes the capitalisation of headings that are in all caps to sentence case.
-
-### [/src/arXiv.2302.14157/equation-fix.xsl](/src/arXiv.2302.14157/equation-fix.xsl)
-
-This xsl accounts for a bug in Encoda. In this preprint some text that precedes display equations is pulled in as if it is a caption for that equation which it treats as a figure.
-
-The xsl adds an empty `disp-quote` element between the paragraph and display equations in order for the two to be adequately separated in the JSON.
-
-### [/src/2023.08.02.551596/fix-author-names.xsl](/src/2023.08.02.551596/fix-author-names.xsl)
-
-This xsl accounts for a mistake proumlgated by biorxiv but rooted with the source manuscript file which list names as surname first, then given names. bioRxiv have capturd this incorrectly. The authors have been unresponsive about posting a new preprint so this xsl fixes the order of the names.
-
-### [/src/2023.08.05.552131/fix-author-emails.xsl](/src/2023.08.05.552131/fix-author-emails.xsl)
-
-This xsl is to ensure that the correct email is attributed to the correct author. bioRxiv capture author emails addresses in a `<corresp>` inside the author notes. They do this becuase they intend to show the content as a string, instead of displaying the emails under each author it relates to. We have asked them to change this capture (capturing the email under the respecitve author contrib, as done in this xsl).
+We need support for `CodeBlock` added to EPP client. And we need Encoda to properly decode `<preformat>`.
 
 # Modify bioRxiv XML in preparation for Encoda
 
