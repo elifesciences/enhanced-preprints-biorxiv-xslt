@@ -42,7 +42,7 @@ ENV PORT 80
 CMD [ "node", "dist/server.js" ]
 
 # Add a healthcheck
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f http://localhost:80/ -d '<test></test>' || exit 1
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl  -H 'X-Passthrough: true' -f http://localhost:80/ -d '<test></test>' || exit 1
 
 FROM base as prod
 WORKDIR /app
