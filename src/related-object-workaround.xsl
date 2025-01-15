@@ -92,14 +92,14 @@
                                 <xsl:when test="position() = 1">
                                     <xsl:element name="ext-link">
                                         <xsl:attribute name="ext-link-type">uri</xsl:attribute>
-                                        <xsl:apply-templates select="@xlink:href|*|comment()|processing-instruction()"/>
+                                        <xsl:apply-templates select="@xlink:href|*|text()|comment()|processing-instruction()"/>
                                     </xsl:element>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:text>; </xsl:text>
                                     <xsl:element name="ext-link">
                                         <xsl:attribute name="ext-link-type">uri</xsl:attribute>
-                                        <xsl:apply-templates select="@xlink:href|*|comment()|processing-instruction()"/>
+                                        <xsl:apply-templates select="@xlink:href|*|text()|comment()|processing-instruction()"/>
                                     </xsl:element>
                                 </xsl:otherwise>
                             </xsl:choose>
