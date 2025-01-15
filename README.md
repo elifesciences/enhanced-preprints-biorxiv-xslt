@@ -166,6 +166,45 @@ This xsl accounts for the capture of `<code>` in XML. Encoda correctly decodes t
 
 We need support for `CodeBlock` added to EPP client. And we need Encoda to properly decode `<preformat>`.
 
+### [/src/related-object-workaround.xsl](/src/related-object-workaround.xsl)
+
+The `<related-object>` tag is used to capture clinical trial numbers (see tagging guidance [here](https://jats4r.niso.org/clinical-trials/)). Encoda does not adequately support for this element, either ignoring it or stripping the embedded link and attribute values when present.
+
+For example, for a JATS4R complicant tagged clinical trial number in a structured abtsract:
+
+```xml
+<sec>
+<title>Clinical trial number:</title>
+<p><related-object content-type="pre-results" document-id="dummy-trial" document-id-type="clinical-trial-number" source-id="DRKS" source-id-type="registry-name" source-type="clinical-trials-registry" xlink:href="https://drks.de/search/en/trial/dummy-trial">dummy-trial</related-object>.</p>
+</sec>
+```
+
+The output in Encoda is missing the link:
+
+```json
+[
+    ...,
+    {
+        "type": "Heading",
+        "id": "",
+        "depth": 1,
+        "content": [
+            "Clinical trial number:"
+        ]
+    },
+    {
+        "type": "Paragraph",
+        "content": [
+            "dummy-trial",
+            "."
+        ]
+    }
+    ...,
+]
+```
+
+Since `related-object` can be used in numerous places, this xsl replaces the element with a hyperlink (`<ext-link>`) and if necessary moves it to a different locaiton in the text so that it can be surfaced by EPP.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
