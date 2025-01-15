@@ -591,5 +591,11 @@ return :shrug:
 </app>
 </app-group>
 <sec><title>Abbreviations</title><list list-type="simple"><list-item><p><italic>I</italic><sub><italic>Ks</italic></sub>: delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></list-item><list-item><p>LQTS: long QT syndrome</p></list-item><list-item><p>DIDS: 4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></list-item><list-item><p>SITS: 4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></list-item><list-item><p>HMR1556: (3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></list-item><list-item><p>G-V: conductance-voltage relationship</p></list-item><list-item><p><italic>k</italic>: slope factor</p></list-item><list-item><p>V<sub>1/2</sub>: voltage at half-maximal activation</p></list-item><list-item><p>WT: wild type</p></list-item><list-item><p>ps-<italic>I</italic><sub><italic>Ks</italic></sub>: pseudo-KCNE1-KCNQ1</p></list-item><list-item><p>MD: molecular dynamics</p></list-item><list-item><p>MM: molecular mechanics</p></list-item><list-item><p>PBSA: Poisson-Boltzmann surface area</p></list-item><list-item><p>GBSA: generalized Born surface area.</p></list-item></list></sec>
-<sec sec-type="additional-information"><title>Additional information</title><sec><p>Clinical trial number: <ext-link ext-link-type="uri" xlink:href="https://drks.de/search/en/trial/dummy-trial-2"/>.</p></sec></sec></back>
+<sec sec-type="additional-information">
+<title>Additional information</title>
+<sec>
+<p>Clinical trial number: <ext-link ext-link-type="uri" xlink:href="https://drks.de/search/en/trial/dummy-trial-2"/>.</p>
+</sec>
+</sec>
+</back>
 </article>

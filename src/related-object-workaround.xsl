@@ -44,8 +44,8 @@
     <xsl:template match="article[descendant::article-meta/related-object[@xlink:href!='' and @document-id-type='clinical-trial-number']]/back/sec[@sec-type='additional-information' or matches(lower-case(title[1]),'^additional information$')]">
         <xsl:copy>
             <xsl:apply-templates select="*|@*|text()|comment()|processing-instruction()"/>
-            <xsl:text>&#xa;</xsl:text>
             <xsl:element name="sec">
+                <xsl:text>&#xa;</xsl:text>
                 <xsl:element name="p">
                     <xsl:text>Clinical trial number: </xsl:text>
                     <xsl:for-each select="ancestor::article//article-meta/related-object[@xlink:href!='' and @document-id-type='clinical-trial-number']">
@@ -67,7 +67,9 @@
                     </xsl:for-each>
                     <xsl:text>.</xsl:text>
                 </xsl:element>
+                <xsl:text>&#xa;</xsl:text>
             </xsl:element>
+            <xsl:text>&#xa;</xsl:text>
         </xsl:copy>
     </xsl:template>
     
@@ -76,34 +78,39 @@
     <xsl:template match="article[descendant::article-meta/related-object[@xlink:href!='' and @document-id-type='clinical-trial-number']]/back[not(sec[@sec-type='additional-information' or matches(lower-case(title[1]),'^additional information$')])]">
         <xsl:copy>
             <xsl:apply-templates select="*|@*|text()|comment()|processing-instruction()"/>
-            <xsl:text>&#xa;</xsl:text>
             <xsl:element name="sec">
                 <xsl:attribute name="sec-type">additional-information</xsl:attribute>
+                <xsl:text>&#xa;</xsl:text>
                 <xsl:element name="title">Additional information</xsl:element>
+                <xsl:text>&#xa;</xsl:text>
                 <xsl:element name="sec">
-                <xsl:element name="p">
-                    <xsl:text>Clinical trial number: </xsl:text>
-                    <xsl:for-each select="ancestor::article//article-meta/related-object[@xlink:href!='' and @document-id-type='clinical-trial-number']">
-                        <xsl:choose>
-                            <xsl:when test="position() = 1">
-                                <xsl:element name="ext-link">
-                                    <xsl:attribute name="ext-link-type">uri</xsl:attribute>
-                                    <xsl:apply-templates select="@xlink:href|*|comment()|processing-instruction()"/>
-                                </xsl:element>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:text>; </xsl:text>
-                                <xsl:element name="ext-link">
-                                    <xsl:attribute name="ext-link-type">uri</xsl:attribute>
-                                    <xsl:apply-templates select="@xlink:href|*|comment()|processing-instruction()"/>
-                                </xsl:element>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:for-each>
-                    <xsl:text>.</xsl:text>
+                    <xsl:text>&#xa;</xsl:text>
+                    <xsl:element name="p">
+                        <xsl:text>Clinical trial number: </xsl:text>
+                        <xsl:for-each select="ancestor::article//article-meta/related-object[@xlink:href!='' and @document-id-type='clinical-trial-number']">
+                            <xsl:choose>
+                                <xsl:when test="position() = 1">
+                                    <xsl:element name="ext-link">
+                                        <xsl:attribute name="ext-link-type">uri</xsl:attribute>
+                                        <xsl:apply-templates select="@xlink:href|*|comment()|processing-instruction()"/>
+                                    </xsl:element>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>; </xsl:text>
+                                    <xsl:element name="ext-link">
+                                        <xsl:attribute name="ext-link-type">uri</xsl:attribute>
+                                        <xsl:apply-templates select="@xlink:href|*|comment()|processing-instruction()"/>
+                                    </xsl:element>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        <xsl:text>.</xsl:text>
+                    </xsl:element>
+                    <xsl:text>&#xa;</xsl:text>
                 </xsl:element>
+                <xsl:text>&#xa;</xsl:text>
             </xsl:element>
-            </xsl:element>
+            <xsl:text>&#xa;</xsl:text>
         </xsl:copy>
     </xsl:template>
 
