@@ -10,7 +10,17 @@ import {
 import { tmpdir } from 'os';
 import { join } from 'path';
 
-const transform = async (xml: string, passthrough: boolean = false) : Promise<{xml: string, logs?: string[]}> => {
+type TransformArgs = {
+  xml: string,
+  passthrough?: boolean,
+};
+
+type TransformResponse = {
+  xml: string,
+  logs?: string[],
+};
+
+const transform = async ({ xml, passthrough }: TransformArgs) : Promise<TransformResponse> => {
   return new Promise((resolve, reject) => {
     const transformScript = '/app/scripts/transform.sh';
     if (passthrough || !existsSync(transformScript)) {

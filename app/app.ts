@@ -7,15 +7,15 @@ app.use(bodyParser.text({type: '*/*', limit: '50mb'}));
 
 app.post('/', async (req, res) => {
   try {
-    const xmlData = req.body;
-    if (typeof xmlData !== 'string') {
+    const xml = req.body;
+    if (typeof xml !== 'string') {
       throw new Error('request body should be a string');
     }
 
     // Check if the X-Passthrough header is set.
-    const passthroughMode = !!req.headers['x-passthrough'];
+    const passthrough = !!req.headers['x-passthrough'];
 
-    const response = await transform(xmlData, passthroughMode);
+    const response = await transform({ xml, passthrough });
     res.json(response);
   } catch (error) {
     res.status(500).json({ error });
