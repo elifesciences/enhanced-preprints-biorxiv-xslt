@@ -314,3 +314,10 @@ curl --location 'http://localhost:8080' \
 -H 'X-Passthrough: true' \
 --data '<root><child>content</child></root>'
 ```
+
+## Test api (with blacklist)
+```
+curl --location 'http://localhost:8080' \
+-H 'X-Blacklist: permissions-workaround.xsl,workaround-for-organisation-authors.xsl' \
+--data '<root><child>content</child></root>'
+```

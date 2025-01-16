@@ -6,11 +6,12 @@ TRANSFORM_FILE="$(mktemp)"
 OUTPUT_FILE="$(mktemp)"
 
 usage() {
-    echo "Usage: $0 [--input-xml INPUT_XML_FILE] [-l|--log SESSION_LOG_FILE] [--log-info SESSION_LOG_FILE_INFO] [XSL_FILE]"
+    echo "Usage: $0 [-i|--input-xml INPUT_XML_FILE] [-b|--blacklist BLACKLIST] [-l|--log SESSION_LOG_FILE] [--log-info SESSION_LOG_FILE_INFO] [--] [XSL_FILE]"
     exit 1
 }
 
 INPUT_XML_FILE=""
+BLACKLIST=""
 XSL_FILE=""
 DOI=""
 DOCTYPE=""
@@ -30,6 +31,10 @@ while [[ "$#" -gt 0 ]]; do
         ;;
     -i | --input-xml)
         INPUT_XML_FILE="$2"
+        shift 2
+        ;;
+    -b | --blacklist)
+        BLACKLIST="$2"
         shift 2
         ;;
     -h | --help)
@@ -164,31 +169,52 @@ function remove_empty_lines() {
     sed '/^$/d'
 }
 
+function blacklist_xslt() {
+    local xslt_filename=${1#*src/}
+    
+    # Convert BLACKLIST string to an array
+    IFS=',' read -r -a blacklist_array <<< "$BLACKLIST"
+    
+    # Check if xslt_filename is in the blacklist
+    for entry in "${blacklist_array[@]}"; do
+        if [[ "$xslt_filename" == "$entry" ]]; then
+            write_to_log "${xslt_filename} blacklisted"
+            return 0
+        fi
+    done
+    
+    return 1
+}
+
 function transform_xml() {
     local xslt_output=$(mktemp)
     local xslt_file_dir=$(mktemp -d)
     local xslt_file="${xslt_file_dir}/$(basename ${2})"
 
-    cat "${2}" | encode_hexadecimal_notation > "${xslt_file}"
-
-    if command -v apply-xslt >/dev/null 2>&1; then
-        apply-xslt "${1}" "${xslt_file}" > "${xslt_output}"
+    if blacklist_xslt "${2}"; then
+        cat "${1}"
     else
-        # Check if Docker image exists
-        if [[ "$(docker images -q epp-biorxiv-xslt:apply 2>/dev/null)" == "" ]]; then
-            # Build Docker image
-            docker buildx build -t epp-biorxiv-xslt:apply --target apply-xslt ${PARENT_DIR}
+        cat "${2}" | encode_hexadecimal_notation > "${xslt_file}"
+    
+        if command -v apply-xslt >/dev/null 2>&1; then
+            apply-xslt "${1}" "${xslt_file}" > "${xslt_output}"
+        else
+            # Check if Docker image exists
+            if [[ "$(docker images -q epp-biorxiv-xslt:apply 2>/dev/null)" == "" ]]; then
+                # Build Docker image
+                docker buildx build -t epp-biorxiv-xslt:apply --target apply-xslt ${PARENT_DIR}
+            fi
+    
+            docker run --rm -i -v "${1}:/tmp/input.xml" -v "${xslt_file}:/tmp/stylesheet.xsl" epp-biorxiv-xslt:apply /tmp/input.xml /tmp/stylesheet.xsl > "${xslt_output}"
         fi
-
-        docker run --rm -i -v "${1}:/tmp/input.xml" -v "${xslt_file}:/tmp/stylesheet.xsl" epp-biorxiv-xslt:apply /tmp/input.xml /tmp/stylesheet.xsl > "${xslt_output}"
+    
+        write_to_log_xslt "${2}" "${1}" "${xslt_output}"
+    
+        cat "${xslt_output}"
+    
+        rm -f "${xslt_output}"
+        rm -rf "${xslt_file_dir}"
     fi
-
-    write_to_log_xslt "${2}" "${1}" "${xslt_output}"
-
-    cat "${xslt_output}"
-
-    rm -f "${xslt_output}"
-    rm -rf "${xslt_file_dir}"
 }
 
 handle_input_xml | encode_xmlns_attribute | encode_hexadecimal_notation > "${INPUT_FILE}"

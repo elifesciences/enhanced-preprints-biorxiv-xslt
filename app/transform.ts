@@ -13,6 +13,7 @@ import { join } from 'path';
 type TransformArgs = {
   xml: string,
   passthrough?: boolean,
+  blacklist?: string,
 };
 
 type TransformResponse = {
@@ -20,7 +21,7 @@ type TransformResponse = {
   logs?: string[],
 };
 
-const transform = async ({ xml, passthrough }: TransformArgs) : Promise<TransformResponse> => {
+const transform = async ({ xml, passthrough, blacklist }: TransformArgs) : Promise<TransformResponse> => {
   return new Promise((resolve, reject) => {
     const transformScript = '/app/scripts/transform.sh';
     if (passthrough || !existsSync(transformScript)) {
@@ -42,7 +43,7 @@ const transform = async ({ xml, passthrough }: TransformArgs) : Promise<Transfor
     // Write the input xml to the temporary file
     writeFileSync(tmpXmlPath, xml);
 
-    exec(`${transformScript} --input-xml "${tmpXmlPath}" --log "${tmpLogPath}"`, (error, stdout, stderr) => {
+    exec(`${transformScript} --input-xml "${tmpXmlPath}" --log "${tmpLogPath}" --blacklist "${(blacklist ?? '')}"`, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error: ${error.message}`);
         return reject('The transform script has failed. The errors have been logged.');

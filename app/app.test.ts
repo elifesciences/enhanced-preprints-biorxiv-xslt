@@ -3,7 +3,7 @@ import request from 'supertest';
 import app from './app';
 
 describe('POST /', () => {
-  it('should convert xml to json and add timestamp', async () => {
+  it('should convert xml to json', async () => {
     const xml = '<root><child>content</child></root>';
     const res = await request(app).post('/').send(xml);
 

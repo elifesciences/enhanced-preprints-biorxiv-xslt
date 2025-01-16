@@ -15,7 +15,14 @@ app.post('/', async (req, res) => {
     // Check if the X-Passthrough header is set.
     const passthrough = !!req.headers['x-passthrough'];
 
-    const response = await transform({ xml, passthrough });
+    // Check if the X-Blacklist header is set.
+    const blacklist = req.headers['x-blacklist'] ?? '';
+
+    const response = await transform({
+      xml,
+      passthrough,
+      blacklist: typeof blacklist !== 'string' ? blacklist.join(',') : blacklist,
+    });
     res.json(response);
   } catch (error) {
     res.status(500).json({ error });
