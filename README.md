@@ -211,7 +211,7 @@ This xslt introduces the labels for `<supplementary-material>` into the (title w
 
 This is a workaround until the Encoda JSON output can be improved to surface all content within labels and captions for supplementary material, currently captured in this ticket: https://github.com/elifesciences/enhanced-preprints-issues/issues/1233. Once that ticket is complete, this XSLT can be removed.
 
-As time of writing, for an an `object.type == "Link"` EPP will only surface the `.content` (and `.target`) in the HTML (`.title` appear to be unhandled).
+At time of writing, for an `object.type == "Link"` EPP will surface the `.content` (and `.target`) in the HTML (`.title` appears to be unhandled, but this where Encoda outputs the label).
 
 As a result of this xslt, the encoda output changes from, for example:
 ```json
@@ -244,8 +244,6 @@ to:
   ]
 }
 ```
-
-So that the label is surfaced.
 
 # Modify bioRxiv XML in preparation for Encoda
 
