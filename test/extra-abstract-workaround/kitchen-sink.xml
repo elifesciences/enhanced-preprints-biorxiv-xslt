@@ -406,8 +406,33 @@ return :shrug:
 <sec sec-type="supplementary-material">
 <title>Supporting information</title>
 <supplementary-material>
-<label>Supplemental figures</label>
+<label>Supp file 1</label>
 <media xlink:href="supplements/468444_file02.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<label>Supp file 2</label>
+<caption>
+<p>This is a para.</p>
+</caption>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<label>Supp file 3</label>
+<caption>
+<title>This is a title</title>
+<p>This is a para.</p>
+</caption>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<label>Supp file 4.</label>
+<caption>
+<title>This is a title</title>
+</caption>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
 </sec>
 </body>
