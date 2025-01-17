@@ -370,11 +370,11 @@
 </sec>
 <sec id="s4m">
 <title>Detection of CMV pp65-specific T cells by intracellular staining with anti-INF-&#x03B3;-PE</title>
-<p>CMVpp65 <monospace>test()</monospace> selected CTL were stimulated for 6 hours in TexMacs medium (without human serum and IL-2) with 20 &#x00B5;L PepTivator-CMVpp65 per mL of cell suspension. Brefeldin-A was added at 10 &#x00B5;g/ml. Negative control (CTL without stimulation) and positive control (CTL stimulated with PMA-ionomycin) were also included. Stimulation with irrelevant peptides was also performed with PepTivator-CMV IE-1 (Miltenyi (130-093-494) and PepTivator-EBV BZLF1 (Miltenyi (130-093-612). Cells were then stained with anti-CD8-FITC, fixed, permeabilized and intracellularly stained with anti-INF-&#x03B3;-PE.</p>
-<preformat>
+<p>CMVpp65 <code>test()</code> selected CTL were stimulated for 6 hours in TexMacs medium (without human serum and IL-2) with 20 &#x00B5;L PepTivator-CMVpp65 per mL of cell suspension. Brefeldin-A was added at 10 &#x00B5;g/ml. Negative control (CTL without stimulation) and positive control (CTL stimulated with PMA-ionomycin) were also included. Stimulation with irrelevant peptides was also performed with PepTivator-CMV IE-1 (Miltenyi (130-093-494) and PepTivator-EBV BZLF1 (Miltenyi (130-093-612). Cells were then stained with anti-CD8-FITC, fixed, permeabilized and intracellularly stained with anti-INF-&#x03B3;-PE.</p>
+<code>
 for $y in $x ....
 return :shrug:
-</preformat>
+</code>
 </sec>
 <sec id="s4n">
 <title>Peptide dose-response of TCR transductants</title>
@@ -411,27 +411,24 @@ return :shrug:
 <title>Supporting information</title>
 <supplementary-material>
 <label>Supp file 1</label>
+<caption><title><bold>Supp file 1</bold></title></caption>
 <media xlink:href="supplements/468444_file02.pdf"/>
 </supplementary-material>
 <supplementary-material>
 <label>Supp file 2</label>
-<caption>
-<p>This is a para.</p>
-</caption>
+<caption><title><bold>Supp file 2. </bold></title><p>This is a para.</p></caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
 <supplementary-material>
 <label>Supp file 3</label>
-<caption>
-<title>This is a title</title>
+<caption><title><bold>Supp file 3. </bold>This is a title</title>
 <p>This is a para.</p>
 </caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
 <supplementary-material>
 <label>Supp file 4.</label>
-<caption>
-<title>This is a title</title>
+<caption><title><bold>Supp file 4. </bold>This is a title</title>
 </caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
