@@ -341,6 +341,35 @@ return :shrug:
 <p><bold>Table S3.</bold> List of peptides represented on the chord plot. Related to 4I.</p>
 <p>This is a display quote that should be retained.</p>
 </sec>
+<sec sec-type="supplementary-material">
+<title>Supporting information</title>
+<supplementary-material>
+<label>Supp file 1</label>
+<caption><title><bold>Supp file 1</bold></title></caption>
+<media xlink:href="supplements/468444_file02.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<label>Supp file 2</label>
+<caption><title><bold>Supp file 2. </bold></title><p>This is a para.</p></caption>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<label>Supp file 3</label>
+<caption><title><bold>Supp file 3. </bold>This is a title</title>
+<p>This is a para.</p>
+</caption>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<label>Supp file 4.</label>
+<caption><title><bold>Supp file 4. </bold>This is a title</title>
+</caption>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+<supplementary-material>
+<media xlink:href="supplements/468444_file03.pdf"/>
+</supplementary-material>
+</sec>
 </body>
 <back>
 <ref-list>
