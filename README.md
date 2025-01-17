@@ -205,7 +205,7 @@ The output in Encoda is missing the link:
 
 Since `related-object` can be used in numerous places, this xsl replaces the element with a hyperlink (`<ext-link>`) and if necessary moves it to a different locaiton in the text so that it can be surfaced by EPP.
 
-### [/src/related-object-workaround.xsl](/src/related-object-workaround.xsl)
+### [/src/supplementary-materials-label.xsl](/src/supplementary-materials-label.xsl)
 
 This xslt introduces the labels for `<supplementary-material>` into the (title within the) caption. If there is no existing caption with a title, then one is created for the purposes of surfacing the label in EPP. 
 
