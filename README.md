@@ -205,6 +205,48 @@ The output in Encoda is missing the link:
 
 Since `related-object` can be used in numerous places, this xsl replaces the element with a hyperlink (`<ext-link>`) and if necessary moves it to a different locaiton in the text so that it can be surfaced by EPP.
 
+### [/src/related-object-workaround.xsl](/src/related-object-workaround.xsl)
+
+This xslt introduces the labels for `<supplementary-material>` into the (title within the) caption. If there is no existing caption with a title, then one is created for the purposes of surfacing the label in EPP. 
+
+This is a workaround until the Encoda JSON output can be improved to surface all content within labels and captions for supplementary material, currently captured in this ticket: https://github.com/elifesciences/enhanced-preprints-issues/issues/1233. Once that ticket is complete, this XSLT can be removed.
+
+As time of writing, for an an `object.type == "Link"` EPP will only surface the `.content` (and `.target`) in the HTML (`.title` appear to be unhandled).
+
+As a result of this xslt, the encoda output changes from, for example:
+```json
+{
+  "type": "Link",
+  "target": "supplements/562203_file05.pdf",
+  "title": "This is the label",
+  "content": [
+    "This is the title",
+    "This is the caption"
+  ]
+}
+```
+
+to:
+```json
+{
+  "type": "Link",
+  "target": "supplements/562203_file05.pdf",
+  "title": "This is the label",
+  "content": [
+    {
+      "type": "Strong",
+      "content": [
+        "This is the label. "
+      ]
+    },
+    "This is the title",
+    "This is the caption"
+  ]
+}
+```
+
+So that the label is surfaced.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
