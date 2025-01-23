@@ -356,7 +356,7 @@ return :shrug:
 <supplementary-material>
 <label>Supp file 3</label>
 <caption><title><bold>Supp file 3. </bold>This is a title</title>
-<p>This is a para.</p>
+<p> This is a para.</p>
 </caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
