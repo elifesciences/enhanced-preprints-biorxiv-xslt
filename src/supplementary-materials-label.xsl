@@ -54,6 +54,14 @@
         <xsl:apply-templates select="*[not(name()=('label','caption'))]|caption/following-sibling::text()|comment()|processing-instruction()"/>
       </xsl:copy>
     </xsl:template>
-                  
+    
+    <!-- Add a space at the start of paras that follow a title or another para -->
+    <xsl:template match="supplementary-material/caption/p[preceding-sibling::title or preceding-sibling::p]">
+      <xsl:copy>
+        <xsl:apply-templates select="@*"/>
+        <xsl:text> </xsl:text>
+        <xsl:apply-templates select="text()|*|comment()|processing-instruction()"/>
+      </xsl:copy>
+    </xsl:template>
 
 </xsl:stylesheet>
