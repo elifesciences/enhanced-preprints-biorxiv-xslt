@@ -416,7 +416,7 @@ return :shrug:
 <supplementary-material>
 <label>Supp file 2</label>
 <caption>
-<p>This is a para.</p>
+<p>This is a para. <ext-link ext-link-type="uri" xlink:href="https://elifesciences.org/">a <italic>link</italic></ext-link>.</p>
 </caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>

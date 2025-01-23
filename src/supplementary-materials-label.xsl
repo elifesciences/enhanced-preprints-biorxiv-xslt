@@ -63,5 +63,15 @@
         <xsl:apply-templates select="text()|*|comment()|processing-instruction()"/>
       </xsl:copy>
     </xsl:template>
+  
+  <!-- Strip links from captions as these break the download links currently -->
+    <xsl:template match="supplementary-material//ext-link">
+      <xsl:apply-templates select="text()|*|comment()|processing-instruction()"/>
+    </xsl:template>
+  
+  <!-- Strip citations from captions as these break the download links currently -->
+    <xsl:template match="supplementary-material//xref">
+      <xsl:apply-templates select="text()|*|comment()|processing-instruction()"/>
+    </xsl:template>
 
 </xsl:stylesheet>
