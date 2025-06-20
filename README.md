@@ -245,6 +245,10 @@ to:
 
 This xsl accounts for the capture of `<version>` in XML, used to denote the version of a software package used in a reference. Encoda does not capture this information currently, so this xsl converts the `<version>` to a `<comment>` element, so that it can be surfaced on EPP.
 
+### [/src/funding-workaround.xsl](/src/funding-workaround.xsl)
+
+This xsl produces a section (`<sec>`) in back that is populated with sturctured funding information provided in the article metadata (`<funding-group>`).
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
