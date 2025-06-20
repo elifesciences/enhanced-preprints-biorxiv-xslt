@@ -107,6 +107,54 @@
 <list-item><p>Lactate, alanine, and N-acetylaspartate are distinctive energetic pathway signatures.</p></list-item>
 </list>
 </sec></abstract>
+<funding-group>
+<award-group id="funding-1">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00hhkn466</institution-id>
+<institution>Japan Society for the Promotion of Science</institution>
+</institution-wrap>
+</funding-source>
+<award-id>Some ID</award-id>
+</award-group>
+<award-group id="funding-1a">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00hhkn466</institution-id>
+<institution>Japan Society for the Promotion of Science</institution>
+</institution-wrap>
+</funding-source>
+<award-id>Another ID</award-id>
+</award-group>
+<award-group id="funding-2">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00097mb19</institution-id>
+<institution>Japan Science and Technology Agency</institution>
+</institution-wrap>
+</funding-source>
+<award-id award-id-type="doi">10.52926/jpmjfr204l</award-id>
+<principal-award-recipient>
+<name><surname>Klatzmann</surname><given-names>David</given-names></name>
+</principal-award-recipient>
+</award-group>
+<award-group id="funding-3">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/04hjbmv12</institution-id>
+<institution>Takeda (Japan)</institution>
+</institution-wrap>
+</funding-source>
+</award-group>
+<award-group id="funding-3a">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00jep9q10</institution-id>
+<institution>KOSÉ Cosmetology Research Foundation</institution>
+</institution-wrap>
+</funding-source>
+</award-group>
+</funding-group>
 <counts>
 <page-count count="59"/>
 </counts>
@@ -620,9 +668,18 @@ return :shrug:
 </app>
 </app-group>
 <sec><title>Abbreviations</title><list list-type="simple"><list-item><p><italic>I</italic><sub><italic>Ks</italic></sub>: delayed cardiac rectifier K<sup>&#x002B;</sup> current</p></list-item><list-item><p>LQTS: long QT syndrome</p></list-item><list-item><p>DIDS: 4,4&#x2019;-diisothiocyano-2,2&#x2019;-stilbenedisulfonic acid</p></list-item><list-item><p>SITS: 4-acetamido-4&#x2019;-isothiocyanatostilbene-2,2&#x2019;-disulfonic acid</p></list-item><list-item><p>HMR1556: (3R,4S)-(&#x002B;)-N-[3-hydroxy-2,2-dimethyl-6-(4,4,4-trifluorobutoxy) chroman-4-yl]-N-methylmethanesulfonamide</p></list-item><list-item><p>G-V: conductance-voltage relationship</p></list-item><list-item><p><italic>k</italic>: slope factor</p></list-item><list-item><p>V<sub>1/2</sub>: voltage at half-maximal activation</p></list-item><list-item><p>WT: wild type</p></list-item><list-item><p>ps-<italic>I</italic><sub><italic>Ks</italic></sub>: pseudo-KCNE1-KCNQ1</p></list-item><list-item><p>MD: molecular dynamics</p></list-item><list-item><p>MM: molecular mechanics</p></list-item><list-item><p>PBSA: Poisson-Boltzmann surface area</p></list-item><list-item><p>GBSA: generalized Born surface area.</p></list-item></list></sec>
-<sec sec-type="additional-information">
+<sec id="d1e1" sec-type="additional-information">
 <title>Additional information</title>
 <sec>
+<title>Funding</title>
+<p><bold>Japan Society for the Promotion of Science (Some ID)</bold></p>
+<p><bold>Japan Society for the Promotion of Science (Another ID)</bold></p>
+<p><bold>Japan Science and Technology Agency</bold></p>
+<p><ext-link ext-link-type="uri" xlink:href="https://doi.org/10.52926/jpmjfr204l">https://doi.org/10.52926/jpmjfr204l</ext-link></p>
+<list list-type="bullet">
+<list-item><p>David Klatzmann</p></list-item></list>
+<p><bold>Takeda (Japan)</bold></p>
+<p><bold>KOSÉ Cosmetology Research Foundation</bold></p></sec><sec>
 <p>Clinical trial number: <ext-link ext-link-type="uri" xlink:href="https://drks.de/search/en/trial/dummy-trial-2">dummy-trial-2</ext-link>.</p>
 </sec>
 </sec>

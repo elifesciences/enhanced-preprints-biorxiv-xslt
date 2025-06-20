@@ -125,6 +125,54 @@
 <list-item><p>Lactate, alanine, and N-acetylaspartate are distinctive energetic pathway signatures.</p></list-item>
 </list>
 </abstract>
+<funding-group>
+<award-group id="funding-1">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00hhkn466</institution-id>
+<institution>Japan Society for the Promotion of Science</institution>
+</institution-wrap>
+</funding-source>
+<award-id>Some ID</award-id>
+</award-group>
+<award-group id="funding-1a">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00hhkn466</institution-id>
+<institution>Japan Society for the Promotion of Science</institution>
+</institution-wrap>
+</funding-source>
+<award-id>Another ID</award-id>
+</award-group>
+<award-group id="funding-2">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00097mb19</institution-id>
+<institution>Japan Science and Technology Agency</institution>
+</institution-wrap>
+</funding-source>
+<award-id award-id-type="doi">10.52926/jpmjfr204l</award-id>
+<principal-award-recipient>
+<name><surname>Klatzmann</surname><given-names>David</given-names></name>
+</principal-award-recipient>
+</award-group>
+<award-group id="funding-3">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/04hjbmv12</institution-id>
+<institution>Takeda (Japan)</institution>
+</institution-wrap>
+</funding-source>
+</award-group>
+<award-group id="funding-3a">
+<funding-source>
+<institution-wrap>
+<institution-id institution-id-type="ror">https://ror.org/00jep9q10</institution-id>
+<institution>KOSÉ Cosmetology Research Foundation</institution>
+</institution-wrap>
+</funding-source>
+</award-group>
+</funding-group>
 <counts>
 <page-count count="59"/>
 </counts>

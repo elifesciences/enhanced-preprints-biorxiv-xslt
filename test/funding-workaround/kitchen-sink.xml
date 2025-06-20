@@ -151,8 +151,16 @@
 <caption>
 <title>Title.</title>
 <p>Figure caption.</p>
-<p>© 2014, copyright holder. Panel D is reproduced from published under a <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License (CC BY-NC-ND 4.0)</ext-link></p></caption>
+</caption>
 <graphic xlink:href="g-fig.tif"/>
+<permissions>
+<copyright-statement>© 2014, copyright holder</copyright-statement>
+<copyright-year>2014</copyright-year>
+<copyright-holder>copyright holder</copyright-holder>
+<license>
+<license-p>Panel D is reproduced from published under a <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License (CC BY-NC-ND 4.0)</ext-link></license-p>
+</license>
+</permissions>
 </fig>
 </abstract>
 <abstract>
@@ -891,5 +899,17 @@ return :shrug:
 <ref id="c69"><label>69.</label><mixed-citation publication-type="confproc"><string-name><surname>Flatla</surname>, <given-names>D. R.</given-names></string-name> <article-title>Accessibility for individuals with color vision deficiency</article-title>. in <conf-name>Proc. 24th Annu. ACM Symp. Adjun. User Interface Softw. Technol</conf-name>. <fpage>31</fpage>–<lpage>34</lpage> (<publisher-name>Association for Computing Machinery</publisher-name>, <year>2011</year>). doi:<pub-id pub-id-type="doi">10.1145/2046396.2046412</pub-id>.</mixed-citation></ref>
 <ref id="c70"><mixed-citation publication-type="software"><person-group person-group-type="author"><string-name><surname>Huwaldt</surname> <given-names>JA.</given-names></string-name></person-group> <year>2005</year>. <source>Plot Digitizer</source> <version>v2.4.1</version>.</mixed-citation></ref>
 </ref-list>
+<sec id="d1e1" sec-type="additional-information">
+<title>Additional information</title>
+<sec>
+<title>Funding</title>
+<p><bold>Japan Society for the Promotion of Science (Some ID)</bold></p>
+<p><bold>Japan Society for the Promotion of Science (Another ID)</bold></p>
+<p><bold>Japan Science and Technology Agency</bold></p>
+<p><ext-link ext-link-type="uri" xlink:href="https://doi.org/10.52926/jpmjfr204l">https://doi.org/10.52926/jpmjfr204l</ext-link></p>
+<list list-type="bullet">
+<list-item><p>David Klatzmann</p></list-item></list>
+<p><bold>Takeda (Japan)</bold></p>
+<p><bold>KOSÉ Cosmetology Research Foundation</bold></p></sec></sec>
 </back>
 </article>
