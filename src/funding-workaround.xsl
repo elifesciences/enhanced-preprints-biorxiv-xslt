@@ -72,6 +72,7 @@
             <xsl:apply-templates select="*|@*|text()|comment()|processing-instruction()"/>
             <xsl:if test="not(./sec[@sec-type='additional-information'])">
                 <xsl:element name="sec">
+                    <xsl:attribute name="id"><xsl:value-of select="generate-id(parent::article)"/></xsl:attribute>
                     <xsl:attribute name="sec-type">additional-information</xsl:attribute>
                     <xsl:text>&#xa;</xsl:text>
                     <xsl:element name="title">Additional information</xsl:element>

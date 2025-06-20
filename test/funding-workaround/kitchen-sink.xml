@@ -899,7 +899,7 @@ return :shrug:
 <ref id="c69"><label>69.</label><mixed-citation publication-type="confproc"><string-name><surname>Flatla</surname>, <given-names>D. R.</given-names></string-name> <article-title>Accessibility for individuals with color vision deficiency</article-title>. in <conf-name>Proc. 24th Annu. ACM Symp. Adjun. User Interface Softw. Technol</conf-name>. <fpage>31</fpage>–<lpage>34</lpage> (<publisher-name>Association for Computing Machinery</publisher-name>, <year>2011</year>). doi:<pub-id pub-id-type="doi">10.1145/2046396.2046412</pub-id>.</mixed-citation></ref>
 <ref id="c70"><mixed-citation publication-type="software"><person-group person-group-type="author"><string-name><surname>Huwaldt</surname> <given-names>JA.</given-names></string-name></person-group> <year>2005</year>. <source>Plot Digitizer</source> <version>v2.4.1</version>.</mixed-citation></ref>
 </ref-list>
-<sec sec-type="additional-information">
+<sec id="d1e1" sec-type="additional-information">
 <title>Additional information</title>
 <sec>
 <title>Funding</title>
