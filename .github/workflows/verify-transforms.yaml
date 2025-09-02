@@ -31,6 +31,11 @@ jobs:
     needs: [project-tests]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+      packages: write
     steps:
       - uses: actions/checkout@v3
       - name: Set up QEMU
@@ -61,3 +66,8 @@ jobs:
             ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:latest
             ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:${{ github.sha }}
             ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt:master-${{ steps.commit_sha.outputs.commit_sha }}-${{ steps.date.outputs.date }}
+      - name: Generate artefact attestation
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-name: ghcr.io/elifesciences/enhanced-preprints-biorxiv-xslt
+          subject-digest: ${{ steps.build-push.outputs.digest }}
