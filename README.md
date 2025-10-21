@@ -249,6 +249,10 @@ This xsl accounts for the capture of `<version>` in XML, used to denote the vers
 
 This xsl produces a section (`<sec>`) in back that is populated with sturctured funding information provided in the article metadata (`<funding-group>`).
 
+### [/src/attrib-workaround.xsl](/src/funding-workaround.xsl)
+
+This xsl accounts for attrib for objects within xml. Encoda will decode the `<attrib>` within an object and encode this in `.content` in the JSON. EPP does not currently render this content (except when there;s an image). Therefore this XSL will convert any attrib for an object into a paragraph which is added onto the end of a caption.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
