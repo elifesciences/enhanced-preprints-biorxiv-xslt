@@ -30,7 +30,7 @@
     </xsl:template>
     
     <!-- handle objects which don't already have a caption, but do have attrib -->
-    <xsl:template match="*[name()=$attrib-elems and not(caption)]">
+    <xsl:template match="*[name()=$attrib-elems and attrib and not(caption)]">
         <!-- elements that must be placed before caption according to JATS DTD -->
         <xsl:variable name="pre-caption-elems" select="('label','object-id')"/>
         <xsl:copy>

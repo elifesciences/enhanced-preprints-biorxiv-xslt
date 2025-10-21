@@ -96,7 +96,7 @@
 <caption>
 <title>Title.</title>
 <p>Figure caption.</p>
-<p>© 2014, copyright holder. Panel D is reproduced from published under a <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License (CC BY-NC-ND 4.0)</ext-link></p></caption>
+<p>Photo in panel <italic>A</italic> credited to some photographer.</p><p>© 2014, copyright holder. Panel D is reproduced from published under a <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License (CC BY-NC-ND 4.0)</ext-link></p></caption>
 <graphic xlink:href="g-fig.tif"/>
 </fig>
 </sec><sec>
