@@ -19,12 +19,6 @@ This stylesheet is transforming an XML document by adding a "label" element to a
 
 The XSL also changes an `label` element (that is not followed by a `title` element) to a `title` element within `sec` and `app` elements.
 
-### [/src/convert-doi-links-to-pub-id-elements.xsl](/src/convert-doi-links-to-pub-id-elements.xsl)
-
-This xsl converts `<ext-link>` elements within references (`<ref>`) that have a uri (in the `xlink:href` attribute) which is a DOI string, to use `<pub-id pub-id-type="doi">` tagging instead.
-
-`<pub-id pub-id-type="doi">` is preferred capture, and this should be fed back to bioRxiv. In addition, encoda needs to be able to appropriately decode `<ext-link>` elements in references, so that these can be represented in the JSON, because it is otherwise perfectly acceptable capture in JATS (for example, when the link is not a DOI).
-
 ### [/src/workaround-for-organisation-authors.xsl](/src/workaround-for-organisation-authors.xsl)
 
 This xsl is a workaround for handling group authors (organisations) in both the author list and in references. Encoda converts these into a useful representation in the JSON, but there is no support for authors that are organisations in EPP client, so this needs updating.
