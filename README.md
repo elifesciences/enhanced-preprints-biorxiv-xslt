@@ -247,6 +247,10 @@ This xsl produces a section (`<sec>`) in back that is populated with sturctured 
 
 This xsl accounts for attrib for objects within xml. Encoda will decode the `<attrib>` within an object and encode this in `.content` in the JSON. EPP does not currently render this content (except when there;s an image). Therefore this XSL will convert any attrib for an object into a paragraph which is added onto the end of a caption.
 
+### [/src/ref-accession.xsl](/src/ref-accession.xsl)
+
+This xsl accounts for accession numbers in references, which use the tagging `< pub-id-type="accession">`. EPP does not render this content and it's possible that Encoda does not decode/encode it. The xsl adds ID itself as a `<comment>` and the link (where present) as an `<ext-link>`.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
