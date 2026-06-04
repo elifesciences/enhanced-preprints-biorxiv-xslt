@@ -1,7 +1,7 @@
 ARG node_version=18.16-slim
 
 # Base stage for building Java app
-FROM openjdk:11 as base
+FROM eclipse-temurin:11-jre as base
 
 RUN apt-get update && apt-get install -y wget libxml2-utils
 
