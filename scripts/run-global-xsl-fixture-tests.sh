@@ -9,6 +9,7 @@ run_xsl_on_fixture() {
     local xsl_file_path="${1}"
     local xsl_filename=$(basename -- "$xsl_file_path" .xsl)
     echo "updating test case for ${xsl_filename}"
+    mkdir -p "test/${xsl_filename}"
     cat test/fixtures/kitchen-sink.xml | docker run --rm -i epp-biorxiv-xslt "/app/src/${xsl_filename}.xsl" > "test/${xsl_filename}/kitchen-sink.xml"
     echo "done ${xsl_filename}"
 }
@@ -18,5 +19,6 @@ for xsl_file in $(find "${PARENT_DIR}/src" -type f -name '*.xsl' -depth 1); do
 done
 
 echo "updating test case for all"
+mkdir -p "test/all"
 cat test/fixtures/kitchen-sink.xml | docker run --rm -i epp-biorxiv-xslt > "test/all/kitchen-sink.xml"
 echo "done"

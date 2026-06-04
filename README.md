@@ -255,6 +255,10 @@ This xsl accounts for accession numbers in references, which use the tagging `< 
 
 JATS version 1.4 uses [`<collab-wrap>`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/element/collab-wrap.html) and [`<collab-name>`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/element/collab-name.html) instead of [`<collab>`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/element/collab.html). This xsl maps the details in `<collab-wrap>` and `<collab-name>` back into `<collab>`.
 
+### [/src/mimetype.xsl](/src/mimetype.xsl)
+
+JATS version 1.4 recomends combining the [`mimetype`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/attribute/mimetype.html) and [`mime-subtype`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/attribute/mime-subtype.html) attributes. This xsl splits them up per previous version guidelines.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
