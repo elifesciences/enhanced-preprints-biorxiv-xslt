@@ -299,7 +299,7 @@
 <list-item><p>The number of public &#x03B2;CDR3s in CD8<sup>&#x002B;</sup> thymocytes is independent of the number of HLA-I alleles shared. Each dot represents the number of &#x03B2;CDR3s shared between two donors in the first 18,000 CD8<sup>&#x002B;</sup> thymocytes. There is no significant difference in the number of public &#x03B2;CDR3s according to the number of HLA-I alleles shared(p&#x003E;0.1, Mann-Whitney test). The number of public &#x03B2;CDR3s is independent of the number of HLA alleles shared.</p></list-item>
 <list-item><p>Public convergence of &#x03B2;CDR3 recognition properties during thymopoiesis. CDR3 connections between individuals. The top 1,500 &#x03B2;CDR3s were sampled from DPCD3<sup>&#x002B;</sup> (upper square) and CD8<sup>&#x002B;</sup> (lower square) cells from each individual and pooled. The CDR3s are clustered based on LD&#x2264;1 with colour and size both representing the level of sharing between individuals for each CDR3.</p></list-item>
 <list-item><p>Convergence of public &#x03B2;CDR3 specificities during thymopoiesis. Bar plots representing the percentage of CDR3s from an individual that are connected to CDR3s of other individuals, for DPCD3<sup>&#x002B;</sup> and CD8<sup>&#x002B;</sup> thymocytes. The first two bars represent CDR3s that are not connected (n&#x003D;1). The number of unconnected nodes in DPCD3<sup>&#x002B;</sup> is higher than in CD8<sup>&#x002B;</sup> (&#x002A;p&#x003D;0.002). The other bars represent the percentage of CDR3s connected between individuals. The number of nodes connected to 3 to 10 individuals is significantly higher in CD8<sup>&#x002B;</sup> than in DPCD3<sup>&#x002B;</sup> cells (&#x002A;p&#x003C;0.01, multiple t-test).</p></list-item></list></p></caption>
-<graphic mimetype="image/tiff" xlink:href="223354v2_fig2.tif"/>
+<graphic xlink:href="223354v2_fig2.tif" mimetype="image" mime-subtype="tiff"/>
 </fig>
 </sec>
 <sec id="s2c">
@@ -469,24 +469,27 @@ return :shrug:
 <title>Supporting information</title>
 <supplementary-material>
 <label>Supp file 1</label>
-<caption><title><bold>Supp file 1</bold></title></caption>
 <media xlink:href="supplements/468444_file02.pdf"/>
 </supplementary-material>
 <supplementary-material>
 <label>Supp file 2</label>
-<caption><title><bold>Supp file 2. </bold></title><p>This is a para. a <italic>link</italic>.</p></caption>
+<caption>
+<p>This is a para. <ext-link ext-link-type="uri" xlink:href="https://elifesciences.org/">a <italic>link</italic></ext-link>.</p>
+</caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
 <supplementary-material>
 <label>Supp file 3</label>
-<caption><title><bold>Supp file 3. </bold>This is a title</title>
-<p> This is a para.</p>
+<caption>
+<title>This is a title</title>
+<p>This is a para.</p>
 </caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
 <supplementary-material>
 <label>Supp file 4.</label>
-<caption><title><bold>Supp file 4. </bold>This is a title</title>
+<caption>
+<title>This is a title</title>
 </caption>
 <media xlink:href="supplements/468444_file03.pdf"/>
 </supplementary-material>
