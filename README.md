@@ -251,6 +251,10 @@ This xsl accounts for attrib for objects within xml. Encoda will decode the `<at
 
 This xsl accounts for accession numbers in references, which use the tagging `< pub-id-type="accession">`. EPP does not render this content and it's possible that Encoda does not decode/encode it. The xsl adds ID itself as a `<comment>` and the link (where present) as an `<ext-link>`.
 
+### [/src/collab-wrap.xsl](/src/collab-wrap.xsl)
+
+JATS version 1.4 uses [`<collab-wrap>`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/element/collab-wrap.html) and [`<collab-name>`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/element/collab-name.html) instead of [`<collab>`](https://jats.nlm.nih.gov/archiving/tag-library/1.4/element/collab.html). This xsl maps the details in `<collab-wrap>` and `<collab-name>` back into `<collab>`.
+
 # Modify bioRxiv XML in preparation for Encoda
 
 Prerequisites:
